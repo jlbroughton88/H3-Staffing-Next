@@ -12,7 +12,7 @@ class MyApp extends App {
       <Auth0Provider
         domain={process.env.DOMAIN}
         clientId={process.env.CLIENT_ID}
-        redirectUrl={process.env.REDIRECT_URI}
+        redirectUri={process.env.REDIRECT_URI}
       >
         {/* REPLACE THIS DIV WITH USER CONTEXT PROVIDER */}
         <Layout>

@@ -428,7 +428,7 @@ class MyApp extends next_app__WEBPACK_IMPORTED_MODULE_1___default.a {
     return __jsx(use_auth0_hooks__WEBPACK_IMPORTED_MODULE_4__["Auth0Provider"], {
       domain: process.env.DOMAIN,
       clientId: process.env.CLIENT_ID,
-      redirectUrl: process.env.REDIRECT_URI,
+      redirectUri: process.env.REDIRECT_URI,
       __source: {
         fileName: _jsxFileName,
         lineNumber: 12
