@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/jlbroughton88/H3-Staffing-Next#readme",
   "dependencies": {
+    "@zeit/next-sass": "^1.0.1",
     "next": "^9.2.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0"
