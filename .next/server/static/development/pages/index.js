@@ -2335,92 +2335,184 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _public_static_css_navbar_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../public/static/css/navbar.scss */ "./public/static/css/navbar.scss");
-/* harmony import */ var _public_static_css_navbar_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_public_static_css_navbar_scss__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! next/router */ "next/router");
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var use_auth0_hooks__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! use-auth0-hooks */ "use-auth0-hooks");
+/* harmony import */ var use_auth0_hooks__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(use_auth0_hooks__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _public_static_css_navbar_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../public/static/css/navbar.scss */ "./public/static/css/navbar.scss");
+/* harmony import */ var _public_static_css_navbar_scss__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_public_static_css_navbar_scss__WEBPACK_IMPORTED_MODULE_4__);
 var _jsxFileName = "/Users/JacobBroughton/coding/work/H3-Staffing-Next/pages/comps/navbar.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
- // import { useAuth0 } from "../../contexts/auth-context";
+
+
 
 
 
 const Navbar = () => {
-  //   const { isLoading, loginWithRedirect, logout, user } = useAuth0();
-  //   let authorized;
-  //   useEffect(() => {
-  //     if(user) {
-  //           if (user.email === "jlbroughton88@gmail.com" || user.email === "ablue@h3staffing.com" || user.email === "deberry@deberrycompany.com") {
-  //       authorized = true;
-  //     } else {
-  //       let navLogOut = document.getElementById("navLogOut");
-  //       navLogOut.style.borderBottom = "2px solid #333";
-  //     }
-  //     }
-  //   }, [user])
+  const {
+    pathname,
+    query
+  } = Object(next_router__WEBPACK_IMPORTED_MODULE_2__["useRouter"])();
+  const {
+    isAuthenticated,
+    isLoading,
+    login,
+    logout,
+    user
+  } = Object(use_auth0_hooks__WEBPACK_IMPORTED_MODULE_3__["useAuth"])();
+  let authorized;
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(() => {
+    if (user) {
+      if (user.email === "jlbroughton88@gmail.com" || user.email === "ablue@h3staffing.com" || user.email === "deberry@deberrycompany.com") {
+        authorized = true;
+      } else {
+        let navLogOut = document.getElementById("navLogOut");
+        navLogOut.style.borderBottom = "2px solid #333";
+      }
+    }
+  }, [user]);
   return __jsx("nav", {
     className: "navMother",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 22
+      lineNumber: 27
     },
     __self: undefined
   }, __jsx("div", {
     className: "navMain",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 23
+      lineNumber: 28
     },
     __self: undefined
   }, __jsx("section", {
     className: "leftNav",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 24
+      lineNumber: 29
     },
     __self: undefined
   }, __jsx("div", {
     className: "logoDiv",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 25
+      lineNumber: 30
     },
     __self: undefined
   }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
     href: "/",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 26
+      lineNumber: 31
     },
     __self: undefined
   }, __jsx("a", {
     className: "logo",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 27
+      lineNumber: 32
     },
     __self: undefined
   }, "H3 Staffing")))), __jsx("section", {
     className: "rightNav",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 31
+      lineNumber: 36
     },
     __self: undefined
   }, __jsx("div", {
     className: "loginLogoutSect",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 32
+      lineNumber: 37
     },
     __self: undefined
-  }, __jsx("div", {
+  }, !isLoading && !user && __jsx("div", {
     className: "loggedOutSect",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 34
+      lineNumber: 39
     },
     __self: undefined
-  }, "Log In")))));
+  }, __jsx("div", {
+    className: "navLogIn",
+    onClick: () => login({
+      appState: {
+        returnTo: {
+          pathname,
+          query
+        }
+      }
+    }),
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 40
+    },
+    __self: undefined
+  }, "Log In")), !isLoading && user && __jsx("div", {
+    className: "loggedInSect",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 51
+    },
+    __self: undefined
+  }, __jsx("div", {
+    className: "navLinkStack",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 52
+    },
+    __self: undefined
+  }, __jsx("div", {
+    className: "navLogOut",
+    id: "navLogOut",
+    onClick: () => logout({
+      returnTo: "https://h3-staffing.now.sh/"
+    }),
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 53
+    },
+    __self: undefined
+  }, " ", "Log Out"), (user.email === "jlbroughton88@gmail.com" || user.email === "ablue@h3staffing.com" || user.email === "deberry@deberrycompany.com") && __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    href: "/blogpost",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 68
+    },
+    __self: undefined
+  }, __jsx("a", {
+    className: "blogPostBtn",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 69
+    },
+    __self: undefined
+  }, "Post Blog"))), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    className: "navPicLink",
+    to: "/profile",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 73
+    },
+    __self: undefined
+  }, __jsx("a", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 74
+    },
+    __self: undefined
+  }, __jsx("img", {
+    className: "navPicture",
+    src: user.picture,
+    alt: user.given_name ? user.given_name : user.nickname + "'s picture",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 75
+    },
+    __self: undefined
+  }))))))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Navbar);
@@ -3553,6 +3645,17 @@ module.exports = require("core-js/library/fn/weak-map");
 
 /***/ }),
 
+/***/ "next/router":
+/*!******************************!*\
+  !*** external "next/router" ***!
+  \******************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("next/router");
+
+/***/ }),
+
 /***/ "prop-types":
 /*!*****************************!*\
   !*** external "prop-types" ***!
@@ -3605,6 +3708,17 @@ module.exports = require("react-is");
 /***/ (function(module, exports) {
 
 module.exports = require("url");
+
+/***/ }),
+
+/***/ "use-auth0-hooks":
+/*!**********************************!*\
+  !*** external "use-auth0-hooks" ***!
+  \**********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("use-auth0-hooks");
 
 /***/ })
 

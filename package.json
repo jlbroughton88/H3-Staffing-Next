@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/jlbroughton88/H3-Staffing-Next#readme",
   "dependencies": {
+    "@auth0/nextjs-auth0": "^0.10.0",
     "@zeit/next-sass": "^1.0.1",
     "next": "^9.2.2",
     "next-fonts": "^1.0.3",
@@ -30,6 +31,7 @@
     "node-sass": "^4.13.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "react-helmet": "^5.2.1"
+    "react-helmet": "^5.2.1",
+    "use-auth0-hooks": "^0.7.0"
   }
 }

@@ -406,10 +406,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _comps_layout_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./comps/layout.js */ "./pages/comps/layout.js");
 /* harmony import */ var react_helmet__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-helmet */ "react-helmet");
 /* harmony import */ var react_helmet__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_helmet__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var use_auth0_hooks__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! use-auth0-hooks */ "use-auth0-hooks");
+/* harmony import */ var use_auth0_hooks__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(use_auth0_hooks__WEBPACK_IMPORTED_MODULE_4__);
 var _jsxFileName = "/Users/JacobBroughton/coding/work/H3-Staffing-Next/pages/_app.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
 
 
 
@@ -422,41 +425,44 @@ class MyApp extends next_app__WEBPACK_IMPORTED_MODULE_1___default.a {
       Component,
       pageProps
     } = this.props;
-    return __jsx("div", {
+    return __jsx(use_auth0_hooks__WEBPACK_IMPORTED_MODULE_4__["Auth0Provider"], {
+      domain: process.env.DOMAIN,
+      clientId: process.env.CLIENT_ID,
+      redirectUrl: process.env.REDIRECT_URI,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 11
+        lineNumber: 12
       },
       __self: this
     }, __jsx(_comps_layout_js__WEBPACK_IMPORTED_MODULE_2__["default"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 13
+        lineNumber: 18
       },
       __self: this
     }, __jsx(Component, _extends({}, pageProps, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 14
+        lineNumber: 19
       },
       __self: this
     }))), __jsx(react_helmet__WEBPACK_IMPORTED_MODULE_3__["Helmet"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 17
+        lineNumber: 22
       },
       __self: this
     }, __jsx("meta", {
       charSet: "utf-8",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 18
+        lineNumber: 23
       },
       __self: this
     }), __jsx("title", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 19
+        lineNumber: 24
       },
       __self: this
     }, "H3 Staffing"), __jsx("meta", {
@@ -464,7 +470,7 @@ class MyApp extends next_app__WEBPACK_IMPORTED_MODULE_1___default.a {
       content: "Based in Charlotte, NC",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 20
+        lineNumber: 25
       },
       __self: this
     })));
@@ -565,6 +571,17 @@ module.exports = require("styled-jsx/style");
 /***/ (function(module, exports) {
 
 module.exports = require("url");
+
+/***/ }),
+
+/***/ "use-auth0-hooks":
+/*!**********************************!*\
+  !*** external "use-auth0-hooks" ***!
+  \**********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("use-auth0-hooks");
 
 /***/ })
 

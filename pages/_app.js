@@ -2,13 +2,18 @@ import React from "react";
 import App from "next/app";
 import Layout from "./comps/layout.js";
 import { Helmet } from "react-helmet"
+import { Auth0Provider } from "use-auth0-hooks";
 
 class MyApp extends App {
   render() {
     const { Component, pageProps } = this.props;
 
     return (
-      <div>
+      <Auth0Provider
+        domain={process.env.DOMAIN}
+        clientId={process.env.CLIENT_ID}
+        redirectUrl={process.env.REDIRECT_URI}
+      >
         {/* REPLACE THIS DIV WITH USER CONTEXT PROVIDER */}
         <Layout>
           <Component {...pageProps} />
@@ -19,7 +24,7 @@ class MyApp extends App {
           <title>H3 Staffing</title>
           <meta name="description" content="Based in Charlotte, NC" />
         </Helmet>
-      </div>
+      </Auth0Provider>
     );
   }
 }

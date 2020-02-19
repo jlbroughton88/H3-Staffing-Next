@@ -1,3 +1,15 @@
 {
-    "version": 2
+    "version": 2,
+    "build": {
+        "env" : {
+            "CLIENT_ID": "@h3_clientid",
+            "DOMAIN":  "@h3_domain",
+            "REDIRECT_URI": "https://h3-staffing.now.sh/"
+        }
+    },
+    "env": {
+        "CLIENT_ID": "@h3_clientid",
+        "DOMAIN":  "@h3_domain",
+        "REDIRECT_URI": "https://h3-staffing.now.sh/"
+    }
 }
