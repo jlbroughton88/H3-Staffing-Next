@@ -1,0 +1,177 @@
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+.navMother {
+    margin-bottom: 15px;
+    .navMain {
+      display: flex;
+      flex-direction: row;
+      height: auto;
+      color: #ffffff;
+      .leftNav {
+        width: 50%;
+        position: relative;
+        .logoDiv {
+          color: #333;
+          height: calc( 100% - 30px);
+          display: flex;
+          align-items: flex-start;
+          justify-content: flex-start;
+          padding: 30px 0 0 30px;
+  
+          .logo {
+            font-size: 1.5rem;
+          }
+        }
+      }
+      .rightNav {
+        width: 50%;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        .loginLogoutSect {
+          padding-right: 30px;
+          padding-top: 30px;
+          text-align: center;
+  
+          .loggedOutSect {
+            padding-bottom: 15px;
+            .navLogIn {
+              height: 25px;
+              color: #333;
+              padding: 1px 10px;
+              border-radius: 5px;
+              font-size: 1rem;
+              font-weight: 500;
+              background: #ffffff;
+              border: 1px solid #333;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              cursor: pointer;
+            }
+          }
+          .loggedInSect {
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: row;
+  
+            .navLinkStack{
+              display: flex;
+              flex-direction: column;
+            }
+            .navLogOut {
+              height: 25px;
+              color: #333;
+              padding: 1px 5px;
+              // border-radius: 5px;
+              font-size: 1rem;
+              font-weight: 500;
+              background: #ffffff;
+              border-bottom: 1px solid #333;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              cursor: pointer;
+            }
+  
+            .blogPostBtn {
+              height: 25px;
+              color: #333;
+              padding: 1px 5px;
+              // border-radius: 5px;
+              font-size: 0.85rem;
+              font-weight: 500;
+              background: #ffffff;
+              border-top: 1px solid #333;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            }
+  
+            .navPicLink {
+              height: 50px;
+              margin-left: 10px;
+              .navPicture {
+                height: auto;
+                width: 50px;
+                border-radius: 5px;
+                align-self: center;
+              }
+            }
+          }
+        }
+      }
+    }
+  
+  
+    @media(min-width: 601px) {
+      .navLogOut{
+        border-bottom: none!important;
+      }
+    }
+    @media (max-width: 600px) {
+      position: absolute;
+      width: 100%;
+       margin-bottom: 15px;
+       .navMain {
+        .leftNav {
+          .logoDiv {
+            padding: 15px 0 0 15px;
+            .logo {
+             background: #333;
+             color: #fff;
+             padding: 5px 10px;
+             border-radius: 3px;
+            }
+          }
+        }
+        .rightNav {
+          .loginLogoutSect {
+            padding: 0;
+            .loggedOutSect {
+              padding: 0;
+              padding: 15px 15px 0 0;
+              .navLogIn {
+              }
+            }
+            .loggedInSect {
+              padding: 9px 15px 0 0;
+  
+              .navPicLink {
+                height: 45px;
+                .navPicture {
+                  width: 45px;
+                }
+              }
+              .navLogOut {
+                height: 20px;
+                font-size: 0.85rem;
+                padding: 5px 10px 2px 10px;
+                border-top-left-radius: 3px;
+                border-top-right-radius: 3px;; 
+                border: 2px solid #333;
+                border-bottom: none;;
+              }   
+                .blogPostBtn {
+                  height: 20px;
+                  font-size: 0.85rem;
+                  padding: 2px 10px 5px 10px;
+                  border-bottom-left-radius: 3px;
+                  border-bottom-right-radius: 3px;;
+                  padding: 5px 10px;
+                  border: 2px solid #333;
+                  border-top: none;;
+                }
+            }
+          }
+        }
+      }
+    }
+  }
+  

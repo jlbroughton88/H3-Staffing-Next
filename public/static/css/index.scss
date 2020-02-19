@@ -1,0 +1,1236 @@
+// Open Sans Regular
+@font-face {
+  font-family: "Open Sans";
+  src: url("../fonts/OpenSans-Regular.ttf") format("TrueType");
+}
+
+// Open Sans Semi Bold
+@font-face {
+  font-family: "Open Sans Bold";
+  src: url("../fonts/OpenSans-Bold.ttf") format("TrueType");
+}
+div {
+  .home1Mother {
+    height: calc(100vh - 90px);
+
+    // .noticeDiv{
+    //   background: yellow;
+    //   padding: 10px;
+    //   .noticeH1{
+    //     font-size: 1.5rem;
+    //     text-align: center;
+    //     &:before{
+    //       content: 'Notice';
+    //       background: black;
+    //       color: white;
+    //       border-radius: 3px;
+    //       padding: 2px 5px;
+    //     }
+    //   }
+    //   @media(max-width: 830px) {
+    //     .noticeH1{
+    //       font-size: 1.2rem;
+    //     }
+    //   }
+    //   @media(max-width: 550px) {
+    //     .noticeH1{
+    //       font-size: 1.0rem;
+    //     }
+    //   }
+    // }
+
+    .home1Main {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: #ffffff;
+      background-image: url("../images/h3Conferance.jpg");
+      background-size: cover;
+      margin-top: 15px;
+      .home1HeadDiv {
+        padding: 0 40px;
+        margin-bottom: 30px;
+        .home1Head {
+          color: #4698ff;
+          font-size: 2rem;
+          font-weight: 500;
+          background: #333;
+          padding: 5px 10px;
+          border-radius: 3px;
+
+          &:before {
+            content: "Employer ";
+            color: #ffffff;
+          }
+
+          &:after {
+            content: " Job Seeker, we're here to help.";
+            color: #ffffff;
+          }
+
+          @media (max-width: 700px) {
+            font-size: 1.8rem;
+          }
+
+          @keyframes brighten {
+            from {
+              filter: brightness(100%);
+            }
+            to {
+              filter: brightness(140%);
+            }
+          }
+
+          animation: brighten 1.5s alternate infinite;
+        }
+      }
+
+      .home1CTADiv {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 60px;
+        text-align: center;
+        button {
+          appearance: none;
+          border: none;
+          background: #ed4f24;
+          border-radius: 5px;
+          box-shadow: 3px 3px #6cb144;
+          color: #ffffff;
+          font-size: 1.2rem;
+          font-weight: 900;
+          padding: 0 15px;
+          transition: all 0.2s ease-in-out;
+          cursor: pointer;
+        }
+      }
+      .arrowDiv {
+        display: flex;
+        justify-content: center;
+        .downArrow {
+          position: absolute;
+          display: inline-block;
+          align-self: center;
+          width: 25px;
+          top: 90%;
+          height: 35px;
+          fill: #ffffff;
+          animation: upDown 1s alternate infinite;
+
+          @keyframes upDown {
+            from {
+              transform: translateY(0);
+            }
+            to {
+              transform: translateY(15px);
+            }
+          }
+        }
+      }
+    }
+
+    @media (max-width: 600px) {
+      height: calc(100vh - 93px);
+      .home1Main {
+        margin-top: 0;
+        .home1HeadDiv {
+          .home1Head {
+            font-size: 1.6rem;
+          }
+        }
+        .downArrow {
+          top: 90%;
+        }
+      }
+    }
+
+    @media (max-width: 400px) {
+      .home1Main {
+        .home1HeadDiv {
+          .home1Head {
+            font-size: 1.35rem;
+          }
+        }
+        .downArrow {
+          top: 90%;
+        }
+      }
+    }
+  }
+
+  // Home 2
+  $green: #6cb144;
+  $orange: #ed4f24;
+
+  strong {
+    font-weight: 800;
+    color: black;
+  }
+
+  .home2Mother {
+    height: auto;
+    margin-top: 100px;
+    .home2Main {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      // Discover Head
+      .discoverHeadDiv {
+        width: 100%;
+        max-width: 1000px;
+        align-self: center;
+        text-align: center;
+        margin-bottom: 35px;
+        .discoverHead {
+          color: $green;
+          font-size: 3rem;
+          &:after {
+            content: " H3 Advantage";
+            color: #333;
+          }
+        }
+      }
+
+      // Seeker / Employer
+      @mixin slideAttr {
+        outline: none;
+        width: 120px;
+        border: 2px solid lightgrey;
+        font-size: 1rem;
+        transition: all 0.2s ease-in-out;
+      }
+      @mixin slideFocus {
+        box-shadow: inset 2px 2px 2px rgba(51, 51, 51, 0.4);
+        outline: none;
+        border: 2px #6cb144 solid;
+        color: #4b792e;
+        font-size: 0.95rem;
+      }
+
+      .seekerEmployeeDiv {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 35px;
+
+        .seekerEmployerSlider {
+          border-radius: 5px;
+          width: auto;
+          display: flex;
+          justify-content: space-around;
+
+          .seekerSlide {
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+            @include slideAttr();
+
+            &:hover {
+              cursor: pointer;
+            }
+
+            &:active {
+              @include slideFocus();
+            }
+          }
+          .seekerSlide.active {
+            @include slideFocus();
+          }
+          .employerSlide {
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+            @include slideAttr();
+
+            &:hover {
+              cursor: pointer;
+            }
+
+            &:active {
+              @include slideFocus();
+            }
+          }
+          .employerSlide.active {
+            @include slideFocus();
+          }
+        }
+      }
+
+      // Checklist
+      .checkListDiv {
+        display: flex;
+        justify-content: center;
+        max-width: 1100px;
+        align-self: center;
+        padding-left: 50px;
+        padding-right: 50px;
+        width: calc(100% - 100px);
+        margin-bottom: 35px;
+
+        .checkListParent {
+          .checkList {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: auto;
+            width: auto;
+
+            :nth-child(1) {
+              grid-column: 1;
+            }
+            :nth-child(2) {
+              grid-column: 2;
+            }
+            :nth-child(3) {
+              grid-column: 3;
+            }
+
+            .checkListItem {
+              width: auto;
+              display: flex;
+              flex-direction: row;
+              justify-content: space-evenly;
+              align-items: flex-start;
+              margin-bottom: 20px;
+              padding: 0px 15px;
+
+              .checkListIcon {
+                align-self: center;
+              }
+              .checkListPara {
+                margin: 0;
+                width: auto;
+                font-size: 1.25rem;
+                align-self: center;
+                max-width: 320px;
+                margin-left: 10px;
+              }
+            }
+          }
+        }
+      }
+
+      .coreValuesParent {
+        display: flex;
+        flex-direction: column;
+        width: 92%;
+        max-width: 1100px;
+        align-self: center;
+        //   margin-bottom: 150px;
+
+        .valuesHeadDiv {
+          width: 100%;
+          max-width: 1100px;
+          align-self: center;
+          margin-bottom: 15px;
+
+          .valuesHead {
+            text-align: start;
+            color: $green;
+            font-size: 2.4rem;
+          }
+        }
+
+        .valuesContent {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-evenly;
+
+          .valuesListDiv {
+            .valuesList {
+              display: grid;
+              grid-template-columns: repeat(2, 1fr);
+              grid-template-rows: repeat(3, auto);
+              justify-content: flex-start;
+
+              .valueItem {
+                border: #333 solid 2px;
+                margin: 10px;
+                padding: 10px 15px;
+                border-radius: 5px;
+                box-shadow: 2px 2px $orange, 4px 4px $green;
+              }
+            }
+          }
+
+          .valuesParaDiv {
+            width: 80%;
+            padding-right: 8%;
+            .valuesPara {
+              font-size: 1.4rem;
+            }
+          }
+        }
+      }
+
+      @media (max-width: 950px) {
+        // Discover Head
+        .discoverHeadDiv {
+          align-self: center;
+          .discoverHead {
+          }
+        }
+
+        .seekerEmployeeDiv {
+          .seekerEmployerSlider {
+            .seekerSlide {
+            }
+            .employerSlide {
+            }
+          }
+        }
+
+        .checkListDiv {
+          .checkListParent {
+            display: flex;
+            justify-content: center;
+            width: 80%;
+
+            .checkList {
+              display: flex;
+              flex-direction: column;
+              justify-content: flex-start;
+
+              .checkListItemParent {
+                align-self: flex-start;
+                display: inline-block;
+
+                .checkListItem {
+                  display: flex;
+                  flex-direction: row;
+                  justify-content: flex-start;
+                  align-items: flex-start;
+
+                  .checkListPara {
+                    max-width: inherit;
+                    font-size: 1.6rem;
+                    padding-left: 20px;
+                  }
+                }
+              }
+            }
+          }
+        }
+        .coreValuesParent {
+          width: calc(100% - 100px);
+          padding-left: 50px;
+          padding-right: 50px;
+          .valuesContent {
+            .valuesParaDiv {
+              .valuesPara {
+                font-size: 1.25rem;
+              }
+            }
+            .valuesListDiv {
+              .valuesList {
+                .valueItem {
+                  padding: 6px 8px;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      @media (max-width: 780px) {
+        .discoverHeadDiv {
+          .discoverHead {
+            font-size: 2.4rem;
+          }
+        }
+
+        .checkListDiv {
+          .checkListParent {
+            width: auto;
+            .checkList {
+              width: auto;
+              .checkListItemParent {
+                .checkListItem {
+                  .iconDiv {
+                    height: 45px;
+                    // min-width: 40px;
+                    .checkListIcon {
+                    }
+                  }
+
+                  .checkListPara {
+                    font-size: 1.2rem;
+                    padding-left: 20px;
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        .coreValuesParent {
+          .valuesHeadDiv {
+            .valuesHead {
+              font-size: 2.5rem;
+            }
+          }
+          .valuesContent {
+            display: grid;
+            grid-template-columns: 100%;
+            grid-template-rows: auto auto;
+            .valuesParaDiv {
+              grid-row: 2;
+              width: auto;
+              .valuesPara {
+                font-size: 1.1rem;
+              }
+            }
+            .valuesListDiv {
+              grid-row: 1;
+              margin-bottom: 25px;
+              .valuesList {
+                .valueItem {
+                  margin: 6px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    @media (min-width: 1650px) {
+      .home2Main {
+        .discoverHeadDiv {
+          .discoverHead {
+            font-size: 3.5rem;
+          }
+        }
+
+        .checkListDiv {
+          .checkListParent {
+            .checkList {
+              .checkListItem {
+                .checkListPara {
+                  font-size: 1.7rem;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    @media (max-width: 600px) {
+      .home2Main {
+        .discoverHeadDiv {
+          .discoverHead {
+            font-size: 2.1rem;
+          }
+        }
+        .checkListDiv {
+          padding-right: 20px;
+          padding-left: 20px;
+          width: calc(100% - 40px);
+        }
+
+        .coreValuesParent {
+          width: 82%;
+          padding: 0px 30px;
+          .valuesHeadDiv {
+            .valuesHead {
+              text-align: center;
+              font-size: 2.1rem;
+            }
+          }
+          .valuesContent {
+            .valuesParaDiv {
+              padding-right: 0;
+              padding-left: 2.5%;
+              .valuesPara {
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // Home 3
+  $green: #6cb144;
+  $orange: #ed4f24;
+
+  strong {
+    font-weight: 800;
+    // color: black;
+  }
+
+  .home3Mother {
+    margin-top: 100px;
+    // margin-bottom: 150px;
+    .home3Main {
+      display: flex;
+      padding-left: 50px;
+      padding-right: 50px;
+      width: calc(100% - 100px);
+      justify-content: center;
+      flex-direction: column;
+      .overviewHeadDiv {
+        max-width: 1100px;
+        align-self: center;
+        width: 100%;
+        .overviewHead {
+          font-size: 2.5rem;
+          color: $green;
+          margin: 0;
+          margin-bottom: 35px;
+        }
+      }
+
+      .overviewSectParent {
+        max-width: 1100px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-self: center;
+        justify-content: space-evenly;
+
+        .overviewSect {
+          .overviewParaDiv {
+            width: auto;
+            margin-bottom: 60px;
+            padding-right: 40px;
+            margin: none;
+
+            .overviewPara {
+              font-size: 1.25rem;
+              margin: none;
+            }
+          }
+          .briefSect {
+            .briefDiv {
+              box-shadow: -3px 0px 0px 0px $orange, -6px 0px 0px 0px $green;
+              margin-bottom: 30px;
+              padding-left: 10px;
+              .briefHead {
+                margin: 0;
+                font-size: 1.4rem;
+              }
+              .briefPara {
+                margin: 0;
+                font-size: 1.25rem;
+              }
+            }
+          }
+        }
+        .overviewImgSect {
+          max-width: 300px;
+          width: 100%;
+          .overviewImg {
+            height: auto;
+            width: 100%;
+            border-radius: 5px;
+            box-shadow: 4px 4px $orange, 8px 8px $green;
+          }
+        }
+
+        @media (min-width: 701px) {
+          .overviewSect {
+            .overviewImgSect2 {
+              display: none;
+              .overviewImg2 {
+              }
+            }
+          }
+        }
+
+        @media (max-width: 700px) {
+          flex-direction: column;
+          .overviewSect {
+            .overviewHead {
+              margin-bottom: 25px;
+              text-align: center;
+            }
+            display: grid;
+            grid-template-columns: 100%;
+            grid-template-rows: auto auto;
+            .overviewParaDiv {
+              display: none;
+              .overviewPara {
+              }
+            }
+            .briefSect {
+              .briefDiv {
+                // box-shadow: none;
+                padding-right: 10%;
+                .briefHead {
+                  font-size: 1.3rem;
+                }
+                .briefPara {
+                  font-size: 1.1rem;
+                }
+              }
+            }
+          }
+
+          .overviewSect2 {
+            grid-row: 1;
+          }
+          .overviewImgSect2 {
+            width: 100%;
+            position: relative;
+            display: flex;
+            align-items: center;
+            max-width: inherit;
+            box-shadow: 4px 4px $orange, 8px 8px $green;
+            border-radius: 5px;
+            margin-bottom: 40px;
+
+            .overviewParaDiv2 {
+              position: absolute;
+              z-index: 2;
+              color: white;
+              padding-right: 10%;
+              padding-left: 4%;
+
+              .overviewPara2 {
+                display: inline-block;
+                font-size: 1.5rem;
+                margin: 0;
+                font-weight: 500;
+              }
+            }
+
+            .overviewImg2 {
+              filter: brightness(55%);
+              box-shadow: none;
+              height: auto;
+              width: 100%;
+              border-radius: 5px;
+            }
+          }
+
+          .overviewImgSect {
+            display: none;
+            .overviewImg {
+              display: none;
+            }
+          }
+        }
+
+        @media (max-width: 550px) {
+          .overviewSect {
+            .overviewHead {
+              font-size: 2.4rem;
+            }
+            .overviewImgSect2 {
+              .overviewParaDiv2 {
+                .overviewPara2 {
+                  font-size: 1.25rem;
+                }
+              }
+            }
+
+            .briefSect {
+              .briefDiv {
+                .briefHead {
+                  font-size: 1.15rem;
+                }
+                .briefPara {
+                  font-size: 1rem;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      @media (min-width: 826px) {
+        .overViewSectParent {
+          .overviewSect {
+            .briefSect {
+              display: inline-block;
+            }
+          }
+        }
+        .briefSect2 {
+          display: none;
+        }
+      }
+      @media (max-width: 825px) {
+        .overviewSectParent {
+          .overviewSect {
+            .briefSect {
+              display: none;
+              .briefDiv {
+                width: 100%;
+              }
+            }
+          }
+        }
+        .overviewImgSect {
+          max-height: 320px;
+        }
+
+        .briefSect2 {
+          .briefDiv2 {
+            box-shadow: -3px 0px 0px 0px $orange, -6px 0px 0px 0px $green;
+            margin-bottom: 30px;
+            padding-left: 10px;
+            .briefHead2 {
+              margin: 0;
+              font-size: 1.4rem;
+            }
+            .briefPara2 {
+              margin: 0;
+              font-size: 1.25rem;
+            }
+          }
+        }
+      }
+    }
+
+    @media (max-width: 600px) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      .home3Main {
+        width: calc(100% - 70px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0 35px;
+
+        .overviewHeadDiv {
+          .overviewHead {
+            font-size: 2.2rem;
+          }
+        }
+        .overviewSectParent {
+          .overviewSect {
+            .overviewImgSect2 {
+              .overviewParaDiv2 {
+                .overviewPara2 {
+                  font-size: 1rem;
+                }
+              }
+            }
+          }
+        }
+        .briefSect2 {
+          .briefDiv2 {
+            .briefHead2 {
+              font-size: 1.25rem;
+            }
+            .briefPara2 {
+              font-size: 1.1rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // Home 4
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  p {
+    margin: 0;
+    width: inherit;
+  }
+
+  .home4Mother {
+    margin-top: 100px;
+    .home4Main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      // padding: 0 50px;
+      .home4HeadDiv {
+        padding: 0 50px;
+        margin-bottom: 25px;
+        .home4Head {
+          font-size: 2.5rem;
+          color: #6cb144;
+        }
+      }
+
+      .servicesGridDiv {
+        width: 90%;
+        margin-bottom: 40px;
+        max-width: 1450px;
+        .servicesGrid {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          justify-items: center;
+          .serviceDiv {
+            padding: 20px;
+            .serviceHead {
+              margin: 0;
+              margin-bottom: 10px;
+              font-size: 1.5rem;
+            }
+            .servicePara {
+              font-size: 1.25rem;
+
+              @media (max-width: 800px) {
+                font-size: 1.3rem;
+              }
+            }
+          }
+        }
+      }
+      .letsTalkDiv1 {
+        background-color: #6cb144;
+        width: 100%;
+        padding: 15px 0;
+        margin-bottom: 150px;
+        .letsTalkHeadDiv {
+          .letsTalkHead {
+            text-align: center;
+            color: #ffffff;
+          }
+        }
+      }
+
+      @media (max-width: 700px) {
+        .servicesGridDiv {
+          .servicesGrid {
+            grid-template-columns: 100%;
+            grid-template-rows: auto auto auto;
+          }
+        }
+      }
+    }
+
+    @media (max-width: 600px) {
+      .home4Main {
+        // padding: 0 15px;
+        .home4HeadDiv {
+          padding: 0 25px;
+          .home4Head {
+            font-size: 2.2rem;
+          }
+        }
+        .servicesGridDiv {
+          .servicesGrid {
+            .serviceDiv {
+              .serviceHead {
+                font-size: 1.4rem;
+              }
+              .servicePara {
+                font-size: 1.1rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // Home 5
+  $green: #6cb144;
+  $orange: #ed4f24;
+
+  .home5Mother {
+    height: 80%;
+    .home5Main {
+      .home5HeadDiv {
+        width: 100%;
+        margin-bottom: 35px;
+
+        .home5Head {
+          color: $green;
+          text-align: center;
+          font-size: 2.5rem;
+        }
+      }
+      .scrollingDiv {
+        display: flex;
+        flex-direction: row;
+        width: calc(100% - 60px);
+        padding: 30px;
+        padding-bottom: 0;
+        // padding-top: 0;
+        overflow: hidden;
+        .testimonialBoxParent {
+          margin-right: 200px;
+          position: relative;
+          .testimonialBox {
+            width: 400px;
+            background: #eeeff2;
+            margin-bottom: 30px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 4px 4px $orange, 8px 8px $green;
+            z-index: 1;
+
+            .testimonialPara {
+              font-size: 1.3rem;
+            }
+          }
+
+          svg {
+            position: absolute;
+            margin-right: 10px;
+            z-index: 2;
+
+            text {
+            }
+          }
+
+          .testimonialRoleDiv {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+
+            .testimonialRole {
+              text-align: center;
+              font-size: 1.45rem;
+              font-family: "Open Sans Semibold";
+            }
+          }
+
+          @keyframes scroll {
+            from {
+              transform: translate(0);
+            }
+            to {
+              transform: translate(-2000px);
+            }
+          }
+
+          animation: scroll 65s linear infinite;
+        }
+      }
+    }
+
+    @media (max-width: 600px) {
+      .home5Main {
+        margin-bottom: 40px;
+        .home5HeadDiv {
+          .home5Head {
+            font-size: 2.2rem;
+          }
+        }
+
+        .scrollingDiv {
+          .testimonialBoxParent {
+            .testimonialBox {
+              width: 350px;
+              .testimonialPara {
+                font-size: 1.1rem;
+              }
+            }
+            .testimonialRoleDiv {
+              .testimonialRole {
+                font-size: 1.3rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+
+
+// Lets Talk
+  $green: #6cb144;
+  $orange: #ED4F24;
+  
+  .letsTalkMother{
+      .letsTalkMain{
+          height: auto;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-top: 120px;
+          .letsTalkBar{
+              height: 200px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              width: 100%;
+              background: $green;
+              .letsTalkHead{
+                  text-align: center;
+                  font-size: 4rem;
+                  color: #ffffff;
+              }
+          }
+      }
+  
+      @media(max-width: 600px) {
+          .letsTalkMain{
+              .letsTalkBar{
+                  height: 150px;
+                  .letsTalkHead{
+                      font-size: 3rem;
+                  }
+              }
+          }
+      }
+  }   
+
+
+
+
+
+
+  // Home 6
+  $green: #6cb144;
+  $orange: #ed4f24;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    margin: 0;
+  }
+
+  .blogsHr {
+    border: 1px solid $green;
+    width: 80%;
+    margin: 0;
+  }
+
+  .blogMother {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+
+    .blogMain {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 90%;
+
+      .blogHead {
+        color: $green;
+        font-size: 2.5rem;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      .blogViewAllBtn {
+        appearance: none;
+        border: none;
+        background: #ed4f24;
+        border-radius: 5px;
+        box-shadow: 3px 3px #6cb144;
+        color: #ffffff;
+        font-size: 1.2rem;
+        font-weight: 900;
+        padding: 0 15px;
+        transition: all 0.2s ease-in-out;
+        cursor: pointer;
+        margin-bottom: 20px;
+      }
+
+      .postGrid {
+        display: grid;
+        width: 100%;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto;
+        max-width: 1200px;
+        justify-content: center;
+        justify-items: center;
+        align-items: start;
+        grid-gap: 30px;
+
+        .blogPost {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          align-self: flex-start;
+          text-align: center;
+          width: 100%;
+          border: #333 solid 1px;
+          height: auto;
+          border-radius: 5px;
+          padding-bottom: 10px;
+          box-shadow: 4px 4px $orange, 8px 8px $green;
+
+          .blogTitle {
+            background: $green;
+            color: #ffffff;
+            padding: 10px 0;
+            font-size: 1.3rem;
+          }
+          .blogText {
+            padding: 10px;
+            width: 90%;
+          }
+
+          .dateTimeDiv {
+            display: flex;
+            flex-direction: row;
+            padding: 10px;
+            justify-content: center;
+
+            .blogDate {
+              &:before {
+                color: green;
+                content: "\00a0  ||| \00a0";
+              }
+            }
+            .blogTime {
+            }
+          }
+        }
+        @media (min-width: 1450px) {
+          max-width: 1500px;
+          grid-gap: 50px;
+          .blogPost {
+            max-width: 1400px;
+
+            .blogTitle {
+              font-size: 1.8rem;
+            }
+
+            .dateTimeDiv {
+              .blogDate,
+              .blogTime {
+                font-size: 1.1rem;
+              }
+            }
+          }
+        }
+        @media (max-width: 1000px) {
+          grid-template-columns: 80%;
+          grid-rows: auto auto auto;
+          row-gap: 40px;
+        }
+
+        @media (max-width: 600px) {
+          grid-template-columns: 90%;
+        }
+      }
+    }
+
+    @media (max-width: 600px) {
+      margin-top: 20px;
+      .blogMain {
+        .blogHead {
+        }
+        .postGrid {
+          .blogPost {
+            .blogTitle {
+              font-size: 1.2rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
