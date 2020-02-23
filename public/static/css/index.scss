@@ -2,13 +2,23 @@
 @font-face {
   font-family: "Open Sans";
   src: url("../fonts/OpenSans-Regular.ttf") format("TrueType");
+  font-weight: bold;
+  font-display: auto;
+  font-style: normal;
 }
 
 // Open Sans Semi Bold
 @font-face {
   font-family: "Open Sans Bold";
   src: url("../fonts/OpenSans-Bold.ttf") format("TrueType");
+      font-weight: bold;
+    font-display: auto;
+    font-style: normal;
 }
+*{
+  font-family: "Open Sans"
+}
+
 div {
   .home1Mother {
     height: calc(100vh - 90px);
@@ -990,7 +1000,7 @@ div {
             .testimonialRole {
               text-align: center;
               font-size: 1.45rem;
-              font-family: "Open Sans Semibold";
+              font-family: "Open Sans";
             }
           }
 

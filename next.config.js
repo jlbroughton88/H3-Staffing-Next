@@ -23,9 +23,12 @@ module.exports = withSass(withImages(withFonts({
           "/blog/[uid]": { page: "/blog/[uid]" }
         };
       },
-      webpack: config => {
+      webpack(config, options) {
         return config;
       }
+      // webpack: config => {
+      //   return config;
+      // }
     // webpack (config, options) {
     //     config.module.rules.push({
     //         // test: /\.(png|svg|eot|otf|ttf|woff|woff2)$/,
