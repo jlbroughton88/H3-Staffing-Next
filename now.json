@@ -4,12 +4,20 @@
         "env" : {
             "CLIENT_ID": "@h3_clientid",
             "DOMAIN":  "@h3_domain",
-            "REDIRECT_URI": "https://h3-staffing.now.sh/"
+            "REDIRECT_URI": "https://h3-staffing.now.sh/", 
+            "H3_HOST": "@h3_host", 
+            "H3_USERNAME": "@h3_username", 
+            "H3_PASSWORD": "@h3_password", 
+            "H3_DATABASE": "@h3_database"
         }
     },
     "env": {
         "CLIENT_ID": "@h3_clientid",
         "DOMAIN":  "@h3_domain",
-        "REDIRECT_URI": "https://h3-staffing.now.sh/"
+        "REDIRECT_URI": "https://h3-staffing.now.sh/",
+        "H3_HOST": "@h3_host", 
+        "H3_USERNAME": "@h3_username", 
+        "H3_PASSWORD": "@h3_password", 
+        "H3_DATABASE": "@h3_database"
     }
 }

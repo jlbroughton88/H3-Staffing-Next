@@ -5,10 +5,13 @@ import CheckMark from "./comps/icons/checkMark.js";
 import Quotes from "./comps/icons/quotes.js";
 import Img1 from "../public/static/images/img1.jpg";
 import Navbar from "./comps/navbar.js";
+import fetch from "isomorphic-unfetch";
+import axios from "axios";
 import Footer from "./comps/footer.js";
+import { useAuth } from "use-auth0-hooks";
 import "../public/static/css/index.scss";
 
-const Index = () => {
+const Index = (posts) => {
   const testiArray = [
     {
       testi:
@@ -58,6 +61,8 @@ const Index = () => {
   ];
   const [currentSlide, setSlide] = useState("seeker");
   let currentArr = [];
+  let { isAuthenticated, user } = useAuth();
+  let [allPosts, setPosts] = useState([]);
 
   const seekerEmployerArray = {
     seeker: [
@@ -74,8 +79,17 @@ const Index = () => {
   };
 
   useEffect(() => {
+    axios
+      .get("https://h3-staffing.now.sh/api/blog/all")
+      .then(res => setPosts([...res.data]))
+      .catch(err => console.log(err))
+
     let seekerSlide = document.getElementById("seekerBtn");
     seekerSlide.classList.add("active");
+
+    if(isAuthenticated) {
+      console.log(user)
+    }
   }, []);
 
   const handleSeekerClick = () => {
@@ -109,15 +123,15 @@ const Index = () => {
       {/* HOME 1 */}
       <div className="home1Mother">
         {/* { user && (
-  <div className="noticeDiv">
-    <h1 className="noticeH1">
-      &nbsp; Safari users will be logged out on refresh due to Safari's
-      recent crackdown on cross-site cookie tracking. Auth0 is working on a
-      solution for this, but until then, being logged out only occurs on
-      Safari.
-    </h1>
-  </div>
-)} */}
+          <div className="noticeDiv">
+            <h1 className="noticeH1">
+              &nbsp; Safari users will be logged out on refresh due to Safari's
+              recent crackdown on cross-site cookie tracking. Auth0 is working on a
+              solution for this, but until then, being logged out only occurs on
+              Safari.
+            </h1>
+          </div>
+        )} */}
 
         <div className="home1Main">
           <div className="home1HeadDiv">
@@ -414,8 +428,12 @@ const Index = () => {
             </a>
           </Link>
           <div className="postGrid">
-            {/* {blogPosts.splice(0, 3).map(post =>
-                        <Link key={post.uid} to={`/blog/${post.uid}`}>
+            {console.log("below is in the html")}
+            {console.log(allPosts)}
+            {console.log(typeof(allPosts))}
+            {allPosts.length !== 0 ? (
+                        allPosts.splice(0, 3).map(post =>
+                        <Link key={post.uid} href={`/blog/${post.uid}`}>
                             <div key={post.uid} className="blogPost">
                                 <h3 className="blogTitle">{post.title}</h3>
                                 <div className="dateTimeDiv">
@@ -430,7 +448,13 @@ const Index = () => {
                                 }
                             </div>
                         </Link>
-                    )} */}
+                    )) : (
+                      <div>
+                        <h1>No posts yet</h1>
+                      </div>
+                    )
+            }
+  
           </div>
         </div>
       </div>
@@ -438,5 +462,14 @@ const Index = () => {
     </div>
   );
 };
+
+// Index.getInitialProps = async(ctx) => {
+//   const res = await fetch("https://h3-staffing.now.sh/api/blog/all")
+//   const json = await res.json();
+//   console.log("below is from getInitialProps")
+//   console.log(json)
+
+//   return { json }
+// }
 
 export default Index;

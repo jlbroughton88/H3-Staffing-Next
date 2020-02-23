@@ -13,31 +13,31 @@ div {
   .home1Mother {
     height: calc(100vh - 90px);
 
-    // .noticeDiv{
-    //   background: yellow;
-    //   padding: 10px;
-    //   .noticeH1{
-    //     font-size: 1.5rem;
-    //     text-align: center;
-    //     &:before{
-    //       content: 'Notice';
-    //       background: black;
-    //       color: white;
-    //       border-radius: 3px;
-    //       padding: 2px 5px;
-    //     }
-    //   }
-    //   @media(max-width: 830px) {
-    //     .noticeH1{
-    //       font-size: 1.2rem;
-    //     }
-    //   }
-    //   @media(max-width: 550px) {
-    //     .noticeH1{
-    //       font-size: 1.0rem;
-    //     }
-    //   }
-    // }
+    .noticeDiv{
+      background: yellow;
+      padding: 10px;
+      .noticeH1{
+        font-size: 1.5rem;
+        text-align: center;
+        &:before{
+          content: 'Notice';
+          background: black;
+          color: white;
+          border-radius: 3px;
+          padding: 2px 5px;
+        }
+      }
+      @media(max-width: 830px) {
+        .noticeH1{
+          font-size: 1.2rem;
+        }
+      }
+      @media(max-width: 550px) {
+        .noticeH1{
+          font-size: 1.0rem;
+        }
+      }
+    }
 
     .home1Main {
       height: 100%;
@@ -103,7 +103,7 @@ div {
           color: #ffffff;
           font-size: 1.2rem;
           font-weight: 900;
-          padding: 0 15px;
+          padding: 5px 15px;
           transition: all 0.2s ease-in-out;
           cursor: pointer;
         }
@@ -202,6 +202,7 @@ div {
         width: 120px;
         border: 2px solid lightgrey;
         font-size: 1rem;
+        padding: 5px 10px;
         transition: all 0.2s ease-in-out;
       }
       @mixin slideFocus {
@@ -1131,7 +1132,7 @@ div {
         color: #ffffff;
         font-size: 1.2rem;
         font-weight: 900;
-        padding: 0 15px;
+        padding: 5px 15px;
         transition: all 0.2s ease-in-out;
         cursor: pointer;
         margin-bottom: 20px;

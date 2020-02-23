@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -2363,6 +2363,10 @@ const Navbar = () => {
   } = Object(use_auth0_hooks__WEBPACK_IMPORTED_MODULE_3__["useAuth"])();
   let authorized;
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(() => {
+    if (isAuthenticated) {
+      console.log(user);
+    }
+
     if (user) {
       if (user.email === "jlbroughton88@gmail.com" || user.email === "ablue@h3staffing.com" || user.email === "deberry@deberrycompany.com") {
         authorized = true;
@@ -2376,66 +2380,66 @@ const Navbar = () => {
     className: "navMother",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 27
+      lineNumber: 31
     },
     __self: undefined
   }, __jsx("div", {
     className: "navMain",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 28
+      lineNumber: 32
     },
     __self: undefined
   }, __jsx("section", {
     className: "leftNav",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 29
+      lineNumber: 33
     },
     __self: undefined
   }, __jsx("div", {
     className: "logoDiv",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 30
+      lineNumber: 34
     },
     __self: undefined
   }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
     href: "/",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 31
+      lineNumber: 35
     },
     __self: undefined
   }, __jsx("a", {
     className: "logo",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 32
+      lineNumber: 36
     },
     __self: undefined
   }, "H3 Staffing")))), __jsx("section", {
     className: "rightNav",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 36
+      lineNumber: 40
     },
     __self: undefined
   }, __jsx("div", {
     className: "loginLogoutSect",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 37
+      lineNumber: 41
     },
     __self: undefined
   }, !isLoading && !user && __jsx("div", {
     className: "loggedOutSect",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 39
+      lineNumber: 43
     },
     __self: undefined
-  }, __jsx("div", {
+  }, __jsx("button", {
     className: "navLogIn",
     onClick: () => login({
       appState: {
@@ -2447,24 +2451,24 @@ const Navbar = () => {
     }),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 40
+      lineNumber: 44
     },
     __self: undefined
   }, "Log In")), !isLoading && user && __jsx("div", {
     className: "loggedInSect",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 51
+      lineNumber: 55
     },
     __self: undefined
   }, __jsx("div", {
     className: "navLinkStack",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 52
+      lineNumber: 56
     },
     __self: undefined
-  }, __jsx("div", {
+  }, __jsx("button", {
     className: "navLogOut",
     id: "navLogOut",
     onClick: () => logout({
@@ -2472,35 +2476,35 @@ const Navbar = () => {
     }),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 53
+      lineNumber: 57
     },
     __self: undefined
   }, " ", "Log Out"), (user.email === "jlbroughton88@gmail.com" || user.email === "ablue@h3staffing.com" || user.email === "deberry@deberrycompany.com") && __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
     href: "/blogpost",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 68
+      lineNumber: 72
     },
     __self: undefined
   }, __jsx("a", {
     className: "blogPostBtn",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 69
-    },
-    __self: undefined
-  }, "Post Blog"))), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    className: "navPicLink",
-    to: "/profile",
-    __source: {
-      fileName: _jsxFileName,
       lineNumber: 73
     },
     __self: undefined
-  }, __jsx("a", {
+  }, "Post Blog"))), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    href: "/profile",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 74
+      lineNumber: 77
+    },
+    __self: undefined
+  }, __jsx("a", {
+    className: "navPicLink",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 78
     },
     __self: undefined
   }, __jsx("img", {
@@ -2509,7 +2513,7 @@ const Navbar = () => {
     alt: user.given_name ? user.given_name : user.nickname + "'s picture",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 75
+      lineNumber: 79
     },
     __self: undefined
   }))))))));
@@ -2538,9 +2542,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _public_static_images_img1_jpg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../public/static/images/img1.jpg */ "./public/static/images/img1.jpg");
 /* harmony import */ var _public_static_images_img1_jpg__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_public_static_images_img1_jpg__WEBPACK_IMPORTED_MODULE_5__);
 /* harmony import */ var _comps_navbar_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./comps/navbar.js */ "./pages/comps/navbar.js");
-/* harmony import */ var _comps_footer_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./comps/footer.js */ "./pages/comps/footer.js");
-/* harmony import */ var _public_static_css_index_scss__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../public/static/css/index.scss */ "./public/static/css/index.scss");
-/* harmony import */ var _public_static_css_index_scss__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_public_static_css_index_scss__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! isomorphic-unfetch */ "isomorphic-unfetch");
+/* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! axios */ "axios");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var _comps_footer_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./comps/footer.js */ "./pages/comps/footer.js");
+/* harmony import */ var use_auth0_hooks__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! use-auth0-hooks */ "use-auth0-hooks");
+/* harmony import */ var use_auth0_hooks__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(use_auth0_hooks__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var _public_static_css_index_scss__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../public/static/css/index.scss */ "./public/static/css/index.scss");
+/* harmony import */ var _public_static_css_index_scss__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(_public_static_css_index_scss__WEBPACK_IMPORTED_MODULE_11__);
 var _jsxFileName = "/Users/JacobBroughton/coding/work/H3-Staffing-Next/pages/index.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -2553,7 +2563,10 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 
-const Index = () => {
+
+
+
+const Index = posts => {
   const testiArray = [{
     testi: "nsectetur adipiscing elit, se do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     role: "Software Engineer"
@@ -2587,13 +2600,26 @@ const Index = () => {
     1: setSlide
   } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])("seeker");
   let currentArr = [];
+  let {
+    isAuthenticated,
+    user
+  } = Object(use_auth0_hooks__WEBPACK_IMPORTED_MODULE_10__["useAuth"])();
+  let {
+    0: allPosts,
+    1: setPosts
+  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])([]);
   const seekerEmployerArray = {
     seeker: ["Completely free for job seekers.", "Dedicated to getting you a great role.", "Close relationships to important decision makers."],
     employer: ["Employer sample phrase 1", "Employer sample phrase 2", "Employer sample phrase 3"]
   };
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(() => {
+    axios__WEBPACK_IMPORTED_MODULE_8___default.a.get("https://h3-staffing.now.sh/api/blog/all").then(res => setPosts([...res.data])).catch(err => console.log(err));
     let seekerSlide = document.getElementById("seekerBtn");
     seekerSlide.classList.add("active");
+
+    if (isAuthenticated) {
+      console.log(user);
+    }
   }, []);
 
   const handleSeekerClick = () => {
@@ -2621,124 +2647,124 @@ const Index = () => {
   return __jsx("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 106
+      lineNumber: 120
     },
     __self: undefined
   }, __jsx(_comps_navbar_js__WEBPACK_IMPORTED_MODULE_6__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 107
+      lineNumber: 121
     },
     __self: undefined
   }), __jsx("div", {
     className: "home1Mother",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 110
+      lineNumber: 124
     },
     __self: undefined
   }, __jsx("div", {
     className: "home1Main",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 122
+      lineNumber: 136
     },
     __self: undefined
   }, __jsx("div", {
     className: "home1HeadDiv",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 123
+      lineNumber: 137
     },
     __self: undefined
   }, __jsx("h2", {
     className: "home1Head",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 124
+      lineNumber: 138
     },
     __self: undefined
   }, "or")), __jsx("div", {
     className: "home1CTADiv",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 126
+      lineNumber: 140
     },
     __self: undefined
   }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
     href: "/jobs/#!/search?page=1",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 127
+      lineNumber: 141
     },
     __self: undefined
   }, __jsx("a", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 128
+      lineNumber: 142
     },
     __self: undefined
   }, __jsx("button", {
     className: "home1CTA",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 129
+      lineNumber: 143
     },
     __self: undefined
   }, "Find A Job")))), __jsx("div", {
     className: "arrowDiv",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 133
+      lineNumber: 147
     },
     __self: undefined
   }, __jsx(_comps_icons_downArrow_js__WEBPACK_IMPORTED_MODULE_2__["default"], {
     className: "downArrow",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 134
+      lineNumber: 148
     },
     __self: undefined
   })))), __jsx("div", {
     className: "home2Mother",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 140
+      lineNumber: 154
     },
     __self: undefined
   }, __jsx("div", {
     className: "home2Main",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 141
+      lineNumber: 155
     },
     __self: undefined
   }, __jsx("div", {
     className: "discoverHeadDiv",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 142
+      lineNumber: 156
     },
     __self: undefined
   }, __jsx("h1", {
     className: "discoverHead",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 143
+      lineNumber: 157
     },
     __self: undefined
   }, "Discover The")), __jsx("div", {
     className: "seekerEmployeeDiv",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 146
+      lineNumber: 160
     },
     __self: undefined
   }, __jsx("div", {
     className: "seekerEmployerSlider",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 147
+      lineNumber: 161
     },
     __self: undefined
   }, __jsx("button", {
@@ -2747,7 +2773,7 @@ const Index = () => {
     className: "slideBtn seekerSlide",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 148
+      lineNumber: 162
     },
     __self: undefined
   }, "Job Seeker"), __jsx("button", {
@@ -2756,28 +2782,28 @@ const Index = () => {
     className: "slideBtn employerSlide",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 155
+      lineNumber: 169
     },
     __self: undefined
   }, "Employer"))), __jsx("div", {
     className: "checkListDiv",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 165
+      lineNumber: 179
     },
     __self: undefined
   }, __jsx("div", {
     className: "checkListParent",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 166
+      lineNumber: 180
     },
     __self: undefined
   }, __jsx("div", {
     className: "checkList",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 167
+      lineNumber: 181
     },
     __self: undefined
   }, currentArr.map(item => __jsx("div", {
@@ -2785,244 +2811,244 @@ const Index = () => {
     key: item,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 169
+      lineNumber: 183
     },
     __self: undefined
   }, __jsx("div", {
     className: "checkListItem",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 170
+      lineNumber: 184
     },
     __self: undefined
   }, __jsx("div", {
     className: "iconDiv",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 171
+      lineNumber: 185
     },
     __self: undefined
   }, __jsx(_comps_icons_checkMark_js__WEBPACK_IMPORTED_MODULE_3__["default"], {
     className: "checkListIcon",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 172
+      lineNumber: 186
     },
     __self: undefined
   })), __jsx("p", {
     className: "checkListPara",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 174
+      lineNumber: 188
     },
     __self: undefined
   }, item))))))), __jsx("div", {
     className: "coreValuesParent",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 182
+      lineNumber: 196
     },
     __self: undefined
   }, __jsx("div", {
     className: "valuesHeadDiv",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 183
+      lineNumber: 197
     },
     __self: undefined
   }, __jsx("h1", {
     className: "valuesHead",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 184
+      lineNumber: 198
     },
     __self: undefined
   }, "Our Core Values")), __jsx("div", {
     className: "valuesContent",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 187
+      lineNumber: 201
     },
     __self: undefined
   }, __jsx("div", {
     className: "valuesParaDiv",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 188
+      lineNumber: 202
     },
     __self: undefined
   }, __jsx("div", {
     className: "valuesPara",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 189
+      lineNumber: 203
     },
     __self: undefined
   }, "Our clients and candidates are our only concern. They are why we exist. Everything we do is to help our clients find superior talent and our candidates realize their career ambitions. \u2029\u2029", __jsx("br", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 196
+      lineNumber: 210
     },
     __self: undefined
   }), __jsx("br", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 197
+      lineNumber: 211
     },
     __self: undefined
   }), "Our job at H3 is very simple: to build lasting relationships with everyone we meet, to listen deeply, and to", " ", __jsx("strong", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 200
+      lineNumber: 214
     },
     __self: undefined
   }, "honestly care"), ".")), __jsx("div", {
     className: "valuesListDiv",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 204
+      lineNumber: 218
     },
     __self: undefined
   }, __jsx("div", {
     className: "valuesList",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 205
+      lineNumber: 219
     },
     __self: undefined
   }, __jsx("div", {
     className: "valueItem",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 206
+      lineNumber: 220
     },
     __self: undefined
   }, "Diligence"), __jsx("div", {
     className: "valueItem",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 207
+      lineNumber: 221
     },
     __self: undefined
   }, "Integrity"), __jsx("div", {
     className: "valueItem",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 208
+      lineNumber: 222
     },
     __self: undefined
   }, "Genuine"), __jsx("div", {
     className: "valueItem",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 209
+      lineNumber: 223
     },
     __self: undefined
   }, "Responsiveness"), __jsx("div", {
     className: "valueItem",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 210
+      lineNumber: 224
     },
     __self: undefined
   }, "Synergistic"), __jsx("div", {
     className: "valueItem",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 211
+      lineNumber: 225
     },
     __self: undefined
   }, "Professionalism"))))))), __jsx("div", {
     className: "home3Mother",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 220
+      lineNumber: 234
     },
     __self: undefined
   }, __jsx("div", {
     className: "home3Main",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 221
+      lineNumber: 235
     },
     __self: undefined
   }, __jsx("div", {
     className: "overviewHeadDiv",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 222
+      lineNumber: 236
     },
     __self: undefined
   }, __jsx("h2", {
     className: "overviewHead",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 223
+      lineNumber: 237
     },
     __self: undefined
   }, "A Brief Overview of H3 Staffing")), __jsx("div", {
     className: "overviewSectParent",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 226
+      lineNumber: 240
     },
     __self: undefined
   }, __jsx("div", {
     className: "overviewSect",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 227
+      lineNumber: 241
     },
     __self: undefined
   }, __jsx("div", {
     className: "overviewImgSect2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 228
+      lineNumber: 242
     },
     __self: undefined
   }, __jsx("div", {
     className: "overviewParaDiv2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 229
+      lineNumber: 243
     },
     __self: undefined
   }, __jsx("p", {
     className: "overviewPara2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 230
+      lineNumber: 244
     },
     __self: undefined
   }, "At H3 Staffing we work hard to understand your complex staffing needs and work efficiently to find the perfect marriage between employer and employee. ", __jsx("br", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 233
+      lineNumber: 247
     },
     __self: undefined
   }), __jsx("br", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 234
+      lineNumber: 248
     },
     __self: undefined
   }), " \u2029Having a combined total of ", __jsx("strong", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 235
+      lineNumber: 249
     },
     __self: undefined
   }, "10 years"), " ", "of Staffing experience, our mission is to build meaningful relationships. It\u2019s what we\u2019re about. ", __jsx("br", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 239
+      lineNumber: 253
     },
     __self: undefined
   }), __jsx("br", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 240
+      lineNumber: 254
     },
     __self: undefined
   }), "\u2029We\u2019ve got connections that count, experience that makes all the difference, deep working relationships that matter and the right recruiting team who\u2019s got your back.")), __jsx("img", {
@@ -3031,128 +3057,128 @@ const Index = () => {
     alt: "Women sitting with computers",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 247
+      lineNumber: 261
     },
     __self: undefined
   })), __jsx("div", {
     className: "overviewParaDiv",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 254
+      lineNumber: 268
     },
     __self: undefined
   }, __jsx("p", {
     className: "overviewPara",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 255
+      lineNumber: 269
     },
     __self: undefined
   }, "At H3 Staffing we work hard to understand your complex staffing needs and work efficiently to find the perfect marriage between employer and employee. ", __jsx("br", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 258
+      lineNumber: 272
     },
     __self: undefined
   }), __jsx("br", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 259
+      lineNumber: 273
     },
     __self: undefined
   }), " \u2029Having a combined total of ", __jsx("strong", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 260
+      lineNumber: 274
     },
     __self: undefined
   }, "10 years"), " ", "of Staffing experience, our mission is to build meaningful relationships. It\u2019s what we\u2019re about. ", __jsx("br", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 264
+      lineNumber: 278
     },
     __self: undefined
   }), __jsx("br", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 265
+      lineNumber: 279
     },
     __self: undefined
   }), "\u2029We\u2019ve got connections that count, experience that makes all the difference, deep working relationships that matter and the right recruiting team who\u2019s got your back.")), __jsx("div", {
     className: "briefSect",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 272
+      lineNumber: 286
     },
     __self: undefined
   }, __jsx("div", {
     className: "briefDiv",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 273
+      lineNumber: 287
     },
     __self: undefined
   }, __jsx("h3", {
     className: "briefHead",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 274
+      lineNumber: 288
     },
     __self: undefined
   }, "We Provide Consistent, Professional, Quality Service"), __jsx("p", {
     className: "briefPara",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 277
+      lineNumber: 291
     },
     __self: undefined
   }, "We do whatever it takes to build client and consultant loyalty.")), __jsx("div", {
     className: "briefDiv",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 283
+      lineNumber: 297
     },
     __self: undefined
   }, __jsx("h3", {
     className: "briefHead",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 284
+      lineNumber: 298
     },
     __self: undefined
   }, "We Take Care Of Our People"), __jsx("p", {
     className: "briefPara",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 285
+      lineNumber: 299
     },
     __self: undefined
   }, "We understand that our success is because of our people.")), __jsx("div", {
     className: "briefDiv",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 290
+      lineNumber: 304
     },
     __self: undefined
   }, __jsx("h3", {
     className: "briefHead",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 291
+      lineNumber: 305
     },
     __self: undefined
   }, "We Work Together"), __jsx("p", {
     className: "briefPara",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 292
+      lineNumber: 306
     },
     __self: undefined
   }, "By working as a synchronized, organized team; we are able to provide a better, more\u2029professional service than anyone else.")))), __jsx("div", {
     className: "overviewImgSect",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 301
+      lineNumber: 315
     },
     __self: undefined
   }, __jsx("img", {
@@ -3161,238 +3187,238 @@ const Index = () => {
     alt: "Women sitting with computers",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 302
+      lineNumber: 316
     },
     __self: undefined
   }))), __jsx("div", {
     className: "briefSect2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 309
+      lineNumber: 323
     },
     __self: undefined
   }, __jsx("div", {
     className: "briefDiv2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 310
+      lineNumber: 324
     },
     __self: undefined
   }, __jsx("h3", {
     className: "briefHead2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 311
+      lineNumber: 325
     },
     __self: undefined
   }, "We Provide Consistent, Professional, Quality Service"), __jsx("p", {
     className: "briefPara2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 314
+      lineNumber: 328
     },
     __self: undefined
   }, "We do whatever it takes to build client and consultant loyalty.")), __jsx("div", {
     className: "briefDiv2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 319
+      lineNumber: 333
     },
     __self: undefined
   }, __jsx("h3", {
     className: "briefHead2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 320
+      lineNumber: 334
     },
     __self: undefined
   }, "We Take Care Of Our People"), __jsx("p", {
     className: "briefPara2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 321
+      lineNumber: 335
     },
     __self: undefined
   }, "We understand that our success is because of our people.")), __jsx("div", {
     className: "briefDiv2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 326
+      lineNumber: 340
     },
     __self: undefined
   }, __jsx("h3", {
     className: "briefHead2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 327
+      lineNumber: 341
     },
     __self: undefined
   }, "We Work Together"), __jsx("p", {
     className: "briefPara2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 328
+      lineNumber: 342
     },
     __self: undefined
   }, "By working as a synchronized, organized team; we are able to provide a better, more\u2029 professional service than anyone else."))))), __jsx("div", {
     className: "home4Mother",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 339
+      lineNumber: 353
     },
     __self: undefined
   }, __jsx("div", {
     className: "home4Main",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 340
+      lineNumber: 354
     },
     __self: undefined
   }, __jsx("div", {
     className: "home4HeadDiv",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 341
+      lineNumber: 355
     },
     __self: undefined
   }, __jsx("h2", {
     className: "home4Head",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 342
+      lineNumber: 356
     },
     __self: undefined
   }, "How can we help?")), __jsx("div", {
     className: "servicesGridDiv",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 344
+      lineNumber: 358
     },
     __self: undefined
   }, __jsx("div", {
     className: "servicesGrid",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 345
+      lineNumber: 359
     },
     __self: undefined
   }, __jsx("div", {
     className: "serviceDiv",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 346
+      lineNumber: 360
     },
     __self: undefined
   }, __jsx("h3", {
     className: "serviceHead",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 347
+      lineNumber: 361
     },
     __self: undefined
   }, "Permanent Placements"), __jsx("p", {
     className: "servicePara",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 348
+      lineNumber: 362
     },
     __self: undefined
   }, "Looking for that long term answer \u2029to be an integral part of your \u2029business?")), __jsx("div", {
     className: "serviceDiv",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 355
+      lineNumber: 369
     },
     __self: undefined
   }, __jsx("h3", {
     className: "serviceHead",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 356
+      lineNumber: 370
     },
     __self: undefined
   }, "Contract Services"), __jsx("p", {
     className: "servicePara",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 357
+      lineNumber: 371
     },
     __self: undefined
   }, "Have a short term need?\u2029 Want to ensure that you have \u2029the right cultural fit to go along \u2029with the skills required?")), __jsx("div", {
     className: "serviceDiv",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 365
+      lineNumber: 379
     },
     __self: undefined
   }, __jsx("h3", {
     className: "serviceHead",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 366
+      lineNumber: 380
     },
     __self: undefined
   }, "Consultants"), __jsx("p", {
     className: "servicePara",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 367
+      lineNumber: 381
     },
     __self: undefined
   }, "Whether you prefer the flexibility\u2029 of contract work, or the stability \u2029of full-time placement, we're here \u2029to help you find it.")))), __jsx("div", {
     className: "letsTalkDiv1",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 378
+      lineNumber: 392
     },
     __self: undefined
   }, __jsx("div", {
     className: "letsTalkHeadDiv",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 379
+      lineNumber: 393
     },
     __self: undefined
   }, __jsx("h2", {
     className: "letsTalkHead",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 380
+      lineNumber: 394
     },
     __self: undefined
   }, "Lets make it happen."))))), __jsx("div", {
     className: "home5Mother",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 387
+      lineNumber: 401
     },
     __self: undefined
   }, __jsx("div", {
     className: "home5Main",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 388
+      lineNumber: 402
     },
     __self: undefined
   }, __jsx("div", {
     className: "home5HeadDiv",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 389
+      lineNumber: 403
     },
     __self: undefined
   }, __jsx("h1", {
     className: "home5Head",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 390
+      lineNumber: 404
     },
     __self: undefined
   }, "Testimonials")), __jsx("div", {
     className: "scrollingDiv",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 392
+      lineNumber: 406
     },
     __self: undefined
   }, testiArray.map(item => __jsx("div", {
@@ -3400,135 +3426,219 @@ const Index = () => {
     className: "testimonialBoxParent",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 394
+      lineNumber: 408
     },
     __self: undefined
   }, __jsx(_comps_icons_quotes_js__WEBPACK_IMPORTED_MODULE_4__["default"], {
     className: "quotes",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 395
+      lineNumber: 409
     },
     __self: undefined
   }), __jsx("div", {
     className: "testimonialBox",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 396
+      lineNumber: 410
     },
     __self: undefined
   }, __jsx("p", {
     className: "testimonialPara",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 397
+      lineNumber: 411
     },
     __self: undefined
   }, " ", item.testi, " ")), __jsx("div", {
     className: "testimonialRoleDiv",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 399
+      lineNumber: 413
     },
     __self: undefined
   }, __jsx("p", {
     className: "testimonialRole",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 400
+      lineNumber: 414
     },
     __self: undefined
   }, item.role))))))), __jsx("div", {
     className: "letsTalkMother",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 411
+      lineNumber: 425
     },
     __self: undefined
   }, __jsx("div", {
     className: "letsTalkMain",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 412
+      lineNumber: 426
     },
     __self: undefined
   }, __jsx("div", {
     className: "letsTalkBar",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 413
+      lineNumber: 427
     },
     __self: undefined
   }, __jsx("a", {
     href: "mailto:h3staffing@gmail.com?Subject=Website%20Inquiry",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 414
+      lineNumber: 428
     },
     __self: undefined
   }, __jsx("h1", {
     className: "letsTalkHead",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 414
+      lineNumber: 428
     },
     __self: undefined
   }, "Lets Talk"))))), __jsx("div", {
     className: "blogMother",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 424
+      lineNumber: 438
     },
     __self: undefined
   }, __jsx("div", {
     className: "blogMain",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 425
+      lineNumber: 439
     },
     __self: undefined
   }, __jsx("h1", {
     className: "blogHead",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 426
+      lineNumber: 440
     },
     __self: undefined
   }, "H3 Blog"), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
     href: "/blog/all",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 427
+      lineNumber: 441
     },
     __self: undefined
   }, __jsx("a", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 428
+      lineNumber: 442
     },
     __self: undefined
   }, __jsx("button", {
     className: "blogViewAllBtn",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 429
+      lineNumber: 443
     },
     __self: undefined
   }, "View All"))), __jsx("div", {
     className: "postGrid",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 432
+      lineNumber: 446
     },
     __self: undefined
-  }))), __jsx(_comps_footer_js__WEBPACK_IMPORTED_MODULE_7__["default"], {
+  }, console.log("below is in the html"), console.log(allPosts), console.log(typeof allPosts), allPosts.length !== 0 ? allPosts.splice(0, 3).map(post => __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    key: post.uid,
+    href: `/blog/${post.uid}`,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 452
+    },
+    __self: undefined
+  }, __jsx("div", {
+    key: post.uid,
+    className: "blogPost",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 453
     },
     __self: undefined
+  }, __jsx("h3", {
+    className: "blogTitle",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 454
+    },
+    __self: undefined
+  }, post.title), __jsx("div", {
+    className: "dateTimeDiv",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 455
+    },
+    __self: undefined
+  }, __jsx("p", {
+    className: "blogTime",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 456
+    },
+    __self: undefined
+  }, post.time_created), __jsx("p", {
+    className: "blogDate",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 457
+    },
+    __self: undefined
+  }, post.date_created)), __jsx("hr", {
+    className: "blogsHr",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 459
+    },
+    __self: undefined
+  }), post.blog_text.length > 150 ? __jsx("p", {
+    className: "blogText",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 461
+    },
+    __self: undefined
+  }, post.blog_text.slice(0, 150), "...") : __jsx("p", {
+    className: "blogText",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 463
+    },
+    __self: undefined
+  }, post.blog_text)))) : __jsx("div", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 468
+    },
+    __self: undefined
+  }, __jsx("h1", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 469
+    },
+    __self: undefined
+  }, "No posts yet"))))), __jsx(_comps_footer_js__WEBPACK_IMPORTED_MODULE_9__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 477
+    },
+    __self: undefined
   }));
-};
+}; // Index.getInitialProps = async(ctx) => {
+//   const res = await fetch("https://h3-staffing.now.sh/api/blog/all")
+//   const json = await res.json();
+//   console.log("below is from getInitialProps")
+//   console.log(json)
+//   return { json }
+// }
+
 
 /* harmony default export */ __webpack_exports__["default"] = (Index);
 
@@ -3578,7 +3688,7 @@ module.exports = "/_next/static/images/img1-bf92c43028e0b228ce65b1b68945b507.jpg
 
 /***/ }),
 
-/***/ 4:
+/***/ 3:
 /*!******************************!*\
   !*** multi ./pages/index.js ***!
   \******************************/
@@ -3587,6 +3697,17 @@ module.exports = "/_next/static/images/img1-bf92c43028e0b228ce65b1b68945b507.jpg
 
 module.exports = __webpack_require__(/*! /Users/JacobBroughton/coding/work/H3-Staffing-Next/pages/index.js */"./pages/index.js");
 
+
+/***/ }),
+
+/***/ "axios":
+/*!************************!*\
+  !*** external "axios" ***!
+  \************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("axios");
 
 /***/ }),
 
@@ -3642,6 +3763,17 @@ module.exports = require("core-js/library/fn/symbol/iterator");
 /***/ (function(module, exports) {
 
 module.exports = require("core-js/library/fn/weak-map");
+
+/***/ }),
+
+/***/ "isomorphic-unfetch":
+/*!*************************************!*\
+  !*** external "isomorphic-unfetch" ***!
+  \*************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("isomorphic-unfetch");
 
 /***/ }),
 

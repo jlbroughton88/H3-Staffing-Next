@@ -8,7 +8,11 @@ const Navbar = () => {
   const { pathname, query } = useRouter();
   const { isAuthenticated, isLoading, login, logout, user } = useAuth();
   let authorized;
+
   useEffect(() => {
+    if (isAuthenticated) {
+      console.log(user);
+    }
     if (user) {
       if (
         user.email === "jlbroughton88@gmail.com" ||
@@ -37,20 +41,20 @@ const Navbar = () => {
           <div className="loginLogoutSect">
             {!isLoading && !user && (
               <div className="loggedOutSect">
-                <div
+                <button
                   className="navLogIn"
                   onClick={() =>
                     login({ appState: { returnTo: { pathname, query } } })
                   }
                 >
                   Log In
-                </div>
+                </button>
               </div>
             )}
             {!isLoading && user && (
               <div className="loggedInSect">
                 <div className="navLinkStack">
-                  <div
+                  <button
                     className="navLogOut"
                     id="navLogOut"
                     onClick={() =>
@@ -61,7 +65,7 @@ const Navbar = () => {
                   >
                     {" "}
                     Log Out
-                  </div>
+                  </button>
                   {(user.email === "jlbroughton88@gmail.com" ||
                     user.email === "ablue@h3staffing.com" ||
                     user.email === "deberry@deberrycompany.com") && (
@@ -70,8 +74,8 @@ const Navbar = () => {
                     </Link>
                   )}
                 </div>
-                <Link className="navPicLink" to="/profile">
-                  <a>
+                <Link href="/profile">
+                  <a className="navPicLink">
                     <img
                       className="navPicture"
                       src={user.picture}

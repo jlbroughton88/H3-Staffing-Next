@@ -1,0 +1,1 @@
+{"ast":null,"code":"import React from \"react\";\nvar __jsx = React.createElement;\nimport { useRouter } from \"next/router\";\n\nconst Single = () => {\n  const router = useRouter();\n  const {\n    uid\n  } = router.query;\n  useEffect(() => {});\n  return __jsx(\"div\", null, \"UID: \", uid, \" \");\n};\n\nexport default Single;","map":null,"metadata":{},"sourceType":"module"}

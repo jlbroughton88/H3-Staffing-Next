@@ -1,5 +1,4 @@
 import Document, { Html, Head, Main, NextScript } from "next/document";
-import "../public/static/css/globalCss.scss";
 
 class MyDocument extends Document {
     static async getInitialProps(ctx) {
@@ -9,7 +8,7 @@ class MyDocument extends Document {
 
     render() {
         return (
-            <Html className="html" lang="en">
+            <Html ang="en">
                 <Head/>
 
                 <body>

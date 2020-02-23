@@ -1,3 +1,76 @@
+.allMother {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 100px 0; }
+  .allMother .allHead {
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+    margin-bottom: 35px;
+    align-self: center;
+    background: #333;
+    color: #ffffff;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 4px 4px #ED4F24, 8px 8px #6cb144; }
+  .allMother .postGrid {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    max-width: 1200px;
+    justify-content: center;
+    justify-items: center;
+    align-items: start;
+    grid-gap: 30px; }
+    .allMother .postGrid .blogPost {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      align-self: flex-start;
+      text-align: center;
+      width: 100%;
+      border: #333 solid 1px;
+      height: auto;
+      border-radius: 5px;
+      padding-bottom: 10px;
+      box-shadow: 4px 4px #ED4F24, 8px 8px #6cb144; }
+      .allMother .postGrid .blogPost .blogTitle {
+        background: #6cb144;
+        color: #ffffff;
+        padding: 10px 0;
+        font-size: 1.3rem; }
+      .allMother .postGrid .blogPost .blogText {
+        padding: 10px;
+        width: 90%; }
+      .allMother .postGrid .blogPost .dateTimeDiv {
+        display: flex;
+        flex-direction: row;
+        padding: 10px;
+        justify-content: center; }
+        .allMother .postGrid .blogPost .dateTimeDiv .blogDate:before {
+          color: green;
+          content: "\A0    ||| \A0"; }
+    @media (min-width: 1450px) {
+      .allMother .postGrid {
+        max-width: 1500px;
+        grid-gap: 50px; }
+        .allMother .postGrid .blogPost {
+          max-width: 1400px; }
+          .allMother .postGrid .blogPost .blogTitle {
+            font-size: 1.8rem; }
+          .allMother .postGrid .blogPost .dateTimeDiv .blogDate, .allMother .postGrid .blogPost .dateTimeDiv .blogTime {
+            font-size: 1.1rem; } }
+    @media (max-width: 1000px) {
+      .allMother .postGrid {
+        grid-template-columns: 80%;
+        grid-rows: auto auto auto;
+        row-gap: 40px; } }
+    @media (max-width: 600px) {
+      .allMother .postGrid {
+        grid-template-columns: 90%; } }
+
 a {
   text-decoration: none;
   color: inherit; }
@@ -235,6 +308,24 @@ hr {
 
 div .home1Mother {
   height: calc(100vh - 90px); }
+  div .home1Mother .noticeDiv {
+    background: yellow;
+    padding: 10px; }
+    div .home1Mother .noticeDiv .noticeH1 {
+      font-size: 1.5rem;
+      text-align: center; }
+      div .home1Mother .noticeDiv .noticeH1:before {
+        content: 'Notice';
+        background: black;
+        color: white;
+        border-radius: 3px;
+        padding: 2px 5px; }
+    @media (max-width: 830px) {
+      div .home1Mother .noticeDiv .noticeH1 {
+        font-size: 1.2rem; } }
+    @media (max-width: 550px) {
+      div .home1Mother .noticeDiv .noticeH1 {
+        font-size: 1.0rem; } }
   div .home1Mother .home1Main {
     height: 100%;
     display: flex;
@@ -287,7 +378,7 @@ div .home1Mother {
         color: #ffffff;
         font-size: 1.2rem;
         font-weight: 900;
-        padding: 0 15px;
+        padding: 5px 15px;
         transition: all 0.2s ease-in-out;
         cursor: pointer; }
     div .home1Mother .home1Main .arrowDiv {
@@ -362,6 +453,7 @@ div .home2Mother {
           width: 120px;
           border: 2px solid lightgrey;
           font-size: 1rem;
+          padding: 5px 10px;
           transition: all 0.2s ease-in-out; }
           div .home2Mother .home2Main .seekerEmployeeDiv .seekerEmployerSlider .seekerSlide:hover {
             cursor: pointer; }
@@ -384,6 +476,7 @@ div .home2Mother {
           width: 120px;
           border: 2px solid lightgrey;
           font-size: 1rem;
+          padding: 5px 10px;
           transition: all 0.2s ease-in-out; }
           div .home2Mother .home2Main .seekerEmployeeDiv .seekerEmployerSlider .employerSlide:hover {
             cursor: pointer; }
@@ -901,7 +994,7 @@ div .blogMother {
       color: #ffffff;
       font-size: 1.2rem;
       font-weight: 900;
-      padding: 0 15px;
+      padding: 5px 15px;
       transition: all 0.2s ease-in-out;
       cursor: pointer;
       margin-bottom: 20px; }

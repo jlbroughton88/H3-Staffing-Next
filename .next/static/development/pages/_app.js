@@ -12820,7 +12820,7 @@ module.exports = function(module) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* WEBPACK VAR INJECTION */(function(process) {/* harmony import */ var _babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/extends */ "./node_modules/@babel/runtime-corejs2/helpers/esm/extends.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/extends */ "./node_modules/@babel/runtime-corejs2/helpers/esm/extends.js");
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/classCallCheck */ "./node_modules/@babel/runtime-corejs2/helpers/esm/classCallCheck.js");
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/createClass */ "./node_modules/@babel/runtime-corejs2/helpers/esm/createClass.js");
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/possibleConstructorReturn */ "./node_modules/@babel/runtime-corejs2/helpers/esm/possibleConstructorReturn.js");
@@ -12867,9 +12867,9 @@ function (_App) {
           Component = _this$props.Component,
           pageProps = _this$props.pageProps;
       return __jsx(use_auth0_hooks__WEBPACK_IMPORTED_MODULE_10__["Auth0Provider"], {
-        domain: process.env.DOMAIN,
-        clientId: process.env.CLIENT_ID,
-        redirectUri: process.env.REDIRECT_URI,
+        domain: "jlb1999.auth0.com",
+        clientId: "HjJI0mBctAcm1L1x2wiL9uGlbP0LaPrC",
+        redirectUri: "https://h3-staffing.now.sh/",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 12
@@ -12922,7 +12922,6 @@ function (_App) {
 }(next_app__WEBPACK_IMPORTED_MODULE_7___default.a);
 
 /* harmony default export */ __webpack_exports__["default"] = (MyApp);
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../node_modules/process/browser.js */ "./node_modules/process/browser.js")))
 
 /***/ }),
 
