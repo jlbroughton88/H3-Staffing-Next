@@ -13278,6 +13278,52 @@ module.exports = function(module) {
 
 /***/ }),
 
+/***/ "./pages/comps/contexts/envProvider.js":
+/*!*********************************************!*\
+  !*** ./pages/comps/contexts/envProvider.js ***!
+  \*********************************************/
+/*! exports provided: EnvContext, useEnv, default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EnvContext", function() { return EnvContext; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "useEnv", function() { return useEnv; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _jsxFileName = "/Users/JacobBroughton/coding/work/H3-Staffing-Next/pages/comps/contexts/envProvider.js";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+ // Make a new context
+
+var EnvContext = Object(react__WEBPACK_IMPORTED_MODULE_0__["createContext"])();
+var useEnv = function useEnv() {
+  return Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(EnvContext);
+};
+
+var EnvProvider = function EnvProvider(props) {
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(""),
+      statusUrl = _useState[0],
+      setStatusUrl = _useState[1];
+
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
+    if (true) {
+      setStatusUrl("http://localhost:3000");
+    } else {}
+  }, []);
+  return __jsx(EnvContext.Provider, {
+    value: statusUrl,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 20
+    },
+    __self: this
+  }, props.children);
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (EnvProvider);
+
+/***/ }),
+
 /***/ "./pages/comps/footer.js":
 /*!*******************************!*\
   !*** ./pages/comps/footer.js ***!
@@ -13296,7 +13342,6 @@ __webpack_require__.r(__webpack_exports__);
 var _jsxFileName = "/Users/JacobBroughton/coding/work/H3-Staffing-Next/pages/comps/footer.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
- // import { useAuth0 } from "../../contexts/auth-context";
 
 
 
@@ -13306,141 +13351,147 @@ var Footer = function Footer() {
     className: "footerMother",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 10
+      lineNumber: 9
     },
     __self: this
   }, __jsx("div", {
     className: "footerMain",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 11
+      lineNumber: 10
     },
     __self: this
   }, __jsx("div", {
     className: "footerBar",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 12
+      lineNumber: 11
     },
     __self: this
   }, __jsx("div", {
     className: "footerLinks",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 13
+      lineNumber: 12
     },
     __self: this
   }, __jsx("div", {
     className: "companyArea",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 14
+      lineNumber: 13
     },
     __self: this
   }, __jsx("h3", {
     className: "companyHead",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 15
+      lineNumber: 14
     },
     __self: this
   }, "Company"), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
     href: "/blog/all",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 17
+      lineNumber: 16
     },
     __self: this
   }, __jsx("a", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 18
+      lineNumber: 17
     },
     __self: this
   }, __jsx("p", {
     className: "companyPara",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 18
+      lineNumber: 17
     },
     __self: this
   }, "Blog")))), __jsx("div", {
     className: "careersArea",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 22
+      lineNumber: 21
     },
     __self: this
   }, __jsx("h3", {
     className: "careersHead",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 23
+      lineNumber: 22
     },
     __self: this
   }, " Careers"), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
     href: "/jobs",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 24
+      lineNumber: 23
     },
     __self: this
   }, __jsx("a", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 24
+      lineNumber: 23
     },
     __self: this
   }, __jsx("p", {
     className: "careersPara",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 24
+      lineNumber: 23
     },
     __self: this
   }, "Search Jobs")))), __jsx("div", {
     className: "connectArea",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 29
+      lineNumber: 28
     },
     __self: this
   }, __jsx("h3", {
     className: "connectHead",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 30
+      lineNumber: 29
     },
     __self: this
   }, "Connect With Us"), __jsx("p", {
     className: "connectPara",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 31
+      lineNumber: 30
     },
     __self: this
   }, "704-999-9999"), __jsx("a", {
     href: "mailto:h3staffing@gmail.com?Subject=Website%20Inquiry",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 32
+      lineNumber: 31
     },
     __self: this
   }, __jsx("p", {
     className: "connectPara",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 33
+      lineNumber: 32
     },
     __self: this
   }, "h3staffing@gmail.com")), __jsx("div", {
     className: "socialsArea",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 35
+      lineNumber: 34
     },
     __self: this
   }, __jsx("p", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 35
+    },
+    __self: this
+  }, "O"), __jsx("p", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 36
@@ -13452,30 +13503,24 @@ var Footer = function Footer() {
       lineNumber: 37
     },
     __self: this
-  }, "O"), __jsx("p", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 38
-    },
-    __self: this
   }, "O")))), __jsx("hr", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 43
+      lineNumber: 42
     },
     __self: this
   }), __jsx("div", {
     className: "legalDiv",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 44
+      lineNumber: 43
     },
     __self: this
   }, __jsx("p", {
     className: "legalPara",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 45
+      lineNumber: 44
     },
     __self: this
   }, "All Rights Reserved \xA9 2020 | H3 Staffing")))));
@@ -13818,12 +13863,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! next/router */ "./node_modules/next/dist/client/router.js");
-/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var use_auth0_hooks__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! use-auth0-hooks */ "./node_modules/use-auth0-hooks/dist/index.js");
-/* harmony import */ var use_auth0_hooks__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(use_auth0_hooks__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _public_static_css_navbar_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../public/static/css/navbar.scss */ "./public/static/css/navbar.scss");
-/* harmony import */ var _public_static_css_navbar_scss__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_public_static_css_navbar_scss__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! next/router */ "./node_modules/next/dist/client/router.js");
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var use_auth0_hooks__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! use-auth0-hooks */ "./node_modules/use-auth0-hooks/dist/index.js");
+/* harmony import */ var use_auth0_hooks__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(use_auth0_hooks__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _public_static_css_navbar_scss__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../public/static/css/navbar.scss */ "./public/static/css/navbar.scss");
+/* harmony import */ var _public_static_css_navbar_scss__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_public_static_css_navbar_scss__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _contexts_envProvider__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./contexts/envProvider */ "./pages/comps/contexts/envProvider.js");
 var _jsxFileName = "/Users/JacobBroughton/coding/work/H3-Staffing-Next/pages/comps/navbar.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -13832,22 +13880,56 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 
+
+
 var Navbar = function Navbar() {
-  var _useRouter = Object(next_router__WEBPACK_IMPORTED_MODULE_2__["useRouter"])(),
+  // const [randomNum, setRandomNum] = useState(0);
+  var statusUrl = Object(_contexts_envProvider__WEBPACK_IMPORTED_MODULE_6__["useEnv"])();
+
+  var _useRouter = Object(next_router__WEBPACK_IMPORTED_MODULE_3__["useRouter"])(),
       pathname = _useRouter.pathname,
       query = _useRouter.query;
 
-  var _useAuth = Object(use_auth0_hooks__WEBPACK_IMPORTED_MODULE_3__["useAuth"])(),
+  var _useAuth = Object(use_auth0_hooks__WEBPACK_IMPORTED_MODULE_4__["useAuth"])(),
       isAuthenticated = _useAuth.isAuthenticated,
       isLoading = _useAuth.isLoading,
       login = _useAuth.login,
       logout = _useAuth.logout,
       user = _useAuth.user;
 
-  var authorized;
+  var newUser = function newUser(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    var randomNum = Math.floor(Math.random() * (max - min)) + min; // if (user && user.given_name) {
+    //   axios
+    //     .post("https://h3-staffing.now.sh/api/user/newuser", {
+    //       uid: randomNum,
+    //       email: user.email,
+    //       given_name: user.given_name,
+    //       family_name: user.family_name,
+    //       nickname: user.nickname
+    //     })
+    //     .then(response => console.log(response))
+    //     .catch(err => console.log(err));
+    // } else if (user) {
+    //   axios
+    //     .post("https://h3-staffing.now.sh/api/user/newuser", {
+    //       uid: randomNum,
+    //       email: user.email,
+    //       given_name: "null",
+    //       family_name: "null",
+    //       nickname: user.nickname
+    //     })
+    //     .then(response => console.log(response))
+    //     .catch(err => console.log(err));
+    // }
+  };
+
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
-    if (isAuthenticated) {
-      console.log(user);
+    console.log(statusUrl);
+
+    if (user) {
+      newUser(10000000, 100000000);
     }
 
     if (user) {
@@ -13858,68 +13940,68 @@ var Navbar = function Navbar() {
         navLogOut.style.borderBottom = "2px solid #333";
       }
     }
-  }, [user]);
+  }, []);
   return __jsx("nav", {
     className: "navMother",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 31
+      lineNumber: 67
     },
     __self: this
   }, __jsx("div", {
     className: "navMain",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 32
+      lineNumber: 68
     },
     __self: this
   }, __jsx("section", {
     className: "leftNav",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 33
+      lineNumber: 69
     },
     __self: this
   }, __jsx("div", {
     className: "logoDiv",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 34
+      lineNumber: 70
     },
     __self: this
   }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
     href: "/",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 35
+      lineNumber: 71
     },
     __self: this
   }, __jsx("a", {
     className: "logo",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 36
+      lineNumber: 72
     },
     __self: this
   }, "H3 Staffing")))), __jsx("section", {
     className: "rightNav",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 40
+      lineNumber: 76
     },
     __self: this
   }, __jsx("div", {
     className: "loginLogoutSect",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 41
+      lineNumber: 77
     },
     __self: this
   }, !isLoading && !user && __jsx("div", {
     className: "loggedOutSect",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 43
+      lineNumber: 79
     },
     __self: this
   }, __jsx("button", {
@@ -13936,21 +14018,21 @@ var Navbar = function Navbar() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 44
+      lineNumber: 80
     },
     __self: this
   }, "Log In")), !isLoading && user && __jsx("div", {
     className: "loggedInSect",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 55
+      lineNumber: 91
     },
     __self: this
   }, __jsx("div", {
     className: "navLinkStack",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 56
+      lineNumber: 92
     },
     __self: this
   }, __jsx("button", {
@@ -13963,35 +14045,35 @@ var Navbar = function Navbar() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 57
+      lineNumber: 93
     },
     __self: this
   }, " ", "Log Out"), (user.email === "jlbroughton88@gmail.com" || user.email === "ablue@h3staffing.com" || user.email === "deberry@deberrycompany.com") && __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    href: "/blogpost",
+    href: "/blog/admin/post",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 72
+      lineNumber: 108
     },
     __self: this
   }, __jsx("a", {
     className: "blogPostBtn",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 73
+      lineNumber: 109
     },
     __self: this
   }, "Post Blog"))), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
     href: "/profile",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 77
+      lineNumber: 113
     },
     __self: this
   }, __jsx("a", {
     className: "navPicLink",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 78
+      lineNumber: 114
     },
     __self: this
   }, __jsx("img", {
@@ -14000,7 +14082,7 @@ var Navbar = function Navbar() {
     alt: user.given_name ? user.given_name : user.nickname + "'s picture",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 79
+      lineNumber: 115
     },
     __self: this
   }))))))));
@@ -14037,11 +14119,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _comps_footer_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./comps/footer.js */ "./pages/comps/footer.js");
 /* harmony import */ var use_auth0_hooks__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! use-auth0-hooks */ "./node_modules/use-auth0-hooks/dist/index.js");
 /* harmony import */ var use_auth0_hooks__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(use_auth0_hooks__WEBPACK_IMPORTED_MODULE_11__);
-/* harmony import */ var _public_static_css_index_scss__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../public/static/css/index.scss */ "./public/static/css/index.scss");
-/* harmony import */ var _public_static_css_index_scss__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(_public_static_css_index_scss__WEBPACK_IMPORTED_MODULE_12__);
+/* harmony import */ var _comps_contexts_envProvider__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./comps/contexts/envProvider */ "./pages/comps/contexts/envProvider.js");
+/* harmony import */ var _public_static_css_index_scss__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../public/static/css/index.scss */ "./public/static/css/index.scss");
+/* harmony import */ var _public_static_css_index_scss__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(_public_static_css_index_scss__WEBPACK_IMPORTED_MODULE_13__);
 
 var _jsxFileName = "/Users/JacobBroughton/coding/work/H3-Staffing-Next/pages/index.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
+
 
 
 
@@ -14085,9 +14169,13 @@ var Index = function Index(posts) {
     role: "Software Engineer"
   }];
 
-  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])("seeker"),
-      currentSlide = _useState[0],
-      setSlide = _useState[1];
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])(0),
+      randomNum = _useState[0],
+      setRandomNum = _useState[1];
+
+  var _useState2 = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])("seeker"),
+      currentSlide = _useState2[0],
+      setSlide = _useState2[1];
 
   var currentArr = [];
 
@@ -14095,20 +14183,25 @@ var Index = function Index(posts) {
       isAuthenticated = _useAuth.isAuthenticated,
       user = _useAuth.user;
 
-  var _useState2 = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])([]),
-      allPosts = _useState2[0],
-      setPosts = _useState2[1];
+  var _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])([]),
+      allPosts = _useState3[0],
+      setPosts = _useState3[1];
 
+  var statusUrl = Object(_comps_contexts_envProvider__WEBPACK_IMPORTED_MODULE_12__["useEnv"])();
   var seekerEmployerArray = {
     seeker: ["Completely free for job seekers.", "Dedicated to getting you a great role.", "Close relationships to important decision makers."],
     employer: ["Employer sample phrase 1", "Employer sample phrase 2", "Employer sample phrase 3"]
   };
+
+  var getRandomInt = function getRandomInt(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    setRandomNum(Math.floor(Math.random() * (max - min)) + min);
+  };
+
   Object(react__WEBPACK_IMPORTED_MODULE_1__["useEffect"])(function () {
-    axios__WEBPACK_IMPORTED_MODULE_9___default.a.get("https://h3-staffing.now.sh/api/blog/all").then(function (res) {
-      return setPosts(Object(_babel_runtime_corejs2_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__["default"])(res.data));
-    })["catch"](function (err) {
-      return console.log(err);
-    });
+    getRandomInt(500000, 5000000);
+    getBlogPosts();
     var seekerSlide = document.getElementById("seekerBtn");
     seekerSlide.classList.add("active");
 
@@ -14116,6 +14209,14 @@ var Index = function Index(posts) {
       console.log(user);
     }
   }, []);
+
+  var getBlogPosts = function getBlogPosts() {
+    axios__WEBPACK_IMPORTED_MODULE_9___default.a.get("".concat(statusUrl, "/api/blog/all")).then(function (res) {
+      return setPosts(Object(_babel_runtime_corejs2_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__["default"])(res.data));
+    })["catch"](function (err) {
+      return console.log(err);
+    }); // setPosts([...posts.json])
+  };
 
   var handleSeekerClick = function handleSeekerClick() {
     var seekerSlide = document.getElementById("seekerBtn");
@@ -14142,124 +14243,124 @@ var Index = function Index(posts) {
   return __jsx("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 120
+      lineNumber: 135
     },
     __self: this
   }, __jsx(_comps_navbar_js__WEBPACK_IMPORTED_MODULE_7__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 121
+      lineNumber: 136
     },
     __self: this
   }), __jsx("div", {
     className: "home1Mother",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 124
+      lineNumber: 139
     },
     __self: this
   }, __jsx("div", {
     className: "home1Main",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 136
+      lineNumber: 151
     },
     __self: this
   }, __jsx("div", {
     className: "home1HeadDiv",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 137
+      lineNumber: 152
     },
     __self: this
   }, __jsx("h2", {
     className: "home1Head",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 138
+      lineNumber: 153
     },
     __self: this
   }, "or")), __jsx("div", {
     className: "home1CTADiv",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 140
+      lineNumber: 155
     },
     __self: this
   }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
     href: "/jobs/#!/search?page=1",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 141
+      lineNumber: 156
     },
     __self: this
   }, __jsx("a", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 142
+      lineNumber: 157
     },
     __self: this
   }, __jsx("button", {
     className: "home1CTA",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 143
+      lineNumber: 158
     },
     __self: this
   }, "Find A Job")))), __jsx("div", {
     className: "arrowDiv",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 147
+      lineNumber: 162
     },
     __self: this
   }, __jsx(_comps_icons_downArrow_js__WEBPACK_IMPORTED_MODULE_3__["default"], {
     className: "downArrow",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 148
+      lineNumber: 163
     },
     __self: this
   })))), __jsx("div", {
     className: "home2Mother",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 154
+      lineNumber: 169
     },
     __self: this
   }, __jsx("div", {
     className: "home2Main",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 155
+      lineNumber: 170
     },
     __self: this
   }, __jsx("div", {
     className: "discoverHeadDiv",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 156
+      lineNumber: 171
     },
     __self: this
   }, __jsx("h1", {
     className: "discoverHead",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 157
+      lineNumber: 172
     },
     __self: this
   }, "Discover The")), __jsx("div", {
     className: "seekerEmployeeDiv",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 160
+      lineNumber: 175
     },
     __self: this
   }, __jsx("div", {
     className: "seekerEmployerSlider",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 161
+      lineNumber: 176
     },
     __self: this
   }, __jsx("button", {
@@ -14268,7 +14369,7 @@ var Index = function Index(posts) {
     className: "slideBtn seekerSlide",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 162
+      lineNumber: 177
     },
     __self: this
   }, "Job Seeker"), __jsx("button", {
@@ -14277,28 +14378,28 @@ var Index = function Index(posts) {
     className: "slideBtn employerSlide",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 169
+      lineNumber: 184
     },
     __self: this
   }, "Employer"))), __jsx("div", {
     className: "checkListDiv",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 179
+      lineNumber: 194
     },
     __self: this
   }, __jsx("div", {
     className: "checkListParent",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 180
+      lineNumber: 195
     },
     __self: this
   }, __jsx("div", {
     className: "checkList",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 181
+      lineNumber: 196
     },
     __self: this
   }, currentArr.map(function (item) {
@@ -14307,35 +14408,35 @@ var Index = function Index(posts) {
       key: item,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 183
+        lineNumber: 198
       },
       __self: this
     }, __jsx("div", {
       className: "checkListItem",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 184
+        lineNumber: 199
       },
       __self: this
     }, __jsx("div", {
       className: "iconDiv",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 185
+        lineNumber: 200
       },
       __self: this
     }, __jsx(_comps_icons_checkMark_js__WEBPACK_IMPORTED_MODULE_4__["default"], {
       className: "checkListIcon",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 186
+        lineNumber: 201
       },
       __self: this
     })), __jsx("p", {
       className: "checkListPara",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 188
+        lineNumber: 203
       },
       __self: this
     }, item)));
@@ -14343,209 +14444,209 @@ var Index = function Index(posts) {
     className: "coreValuesParent",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 196
+      lineNumber: 211
     },
     __self: this
   }, __jsx("div", {
     className: "valuesHeadDiv",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 197
+      lineNumber: 212
     },
     __self: this
   }, __jsx("h1", {
     className: "valuesHead",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 198
+      lineNumber: 213
     },
     __self: this
   }, "Our Core Values")), __jsx("div", {
     className: "valuesContent",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 201
+      lineNumber: 216
     },
     __self: this
   }, __jsx("div", {
     className: "valuesParaDiv",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 202
+      lineNumber: 217
     },
     __self: this
   }, __jsx("div", {
     className: "valuesPara",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 203
+      lineNumber: 218
     },
     __self: this
   }, "Our clients and candidates are our only concern. They are why we exist. Everything we do is to help our clients find superior talent and our candidates realize their career ambitions. \u2029\u2029", __jsx("br", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 210
+      lineNumber: 225
     },
     __self: this
   }), __jsx("br", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 211
+      lineNumber: 226
     },
     __self: this
   }), "Our job at H3 is very simple: to build lasting relationships with everyone we meet, to listen deeply, and to", " ", __jsx("strong", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 214
+      lineNumber: 229
     },
     __self: this
   }, "honestly care"), ".")), __jsx("div", {
     className: "valuesListDiv",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 218
+      lineNumber: 233
     },
     __self: this
   }, __jsx("div", {
     className: "valuesList",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 219
+      lineNumber: 234
     },
     __self: this
   }, __jsx("div", {
     className: "valueItem",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 220
+      lineNumber: 235
     },
     __self: this
   }, "Diligence"), __jsx("div", {
     className: "valueItem",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 221
+      lineNumber: 236
     },
     __self: this
   }, "Integrity"), __jsx("div", {
     className: "valueItem",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 222
+      lineNumber: 237
     },
     __self: this
   }, "Genuine"), __jsx("div", {
     className: "valueItem",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 223
+      lineNumber: 238
     },
     __self: this
   }, "Responsiveness"), __jsx("div", {
     className: "valueItem",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 224
+      lineNumber: 239
     },
     __self: this
   }, "Synergistic"), __jsx("div", {
     className: "valueItem",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 225
+      lineNumber: 240
     },
     __self: this
   }, "Professionalism"))))))), __jsx("div", {
     className: "home3Mother",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 234
+      lineNumber: 249
     },
     __self: this
   }, __jsx("div", {
     className: "home3Main",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 235
+      lineNumber: 250
     },
     __self: this
   }, __jsx("div", {
     className: "overviewHeadDiv",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 236
+      lineNumber: 251
     },
     __self: this
   }, __jsx("h2", {
     className: "overviewHead",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 237
+      lineNumber: 252
     },
     __self: this
   }, "A Brief Overview of H3 Staffing")), __jsx("div", {
     className: "overviewSectParent",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 240
+      lineNumber: 255
     },
     __self: this
   }, __jsx("div", {
     className: "overviewSect",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 241
+      lineNumber: 256
     },
     __self: this
   }, __jsx("div", {
     className: "overviewImgSect2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 242
+      lineNumber: 257
     },
     __self: this
   }, __jsx("div", {
     className: "overviewParaDiv2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 243
+      lineNumber: 258
     },
     __self: this
   }, __jsx("p", {
     className: "overviewPara2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 244
+      lineNumber: 259
     },
     __self: this
   }, "At H3 Staffing we work hard to understand your complex staffing needs and work efficiently to find the perfect marriage between employer and employee. ", __jsx("br", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 247
+      lineNumber: 262
     },
     __self: this
   }), __jsx("br", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 248
+      lineNumber: 263
     },
     __self: this
   }), " \u2029Having a combined total of ", __jsx("strong", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 249
+      lineNumber: 264
     },
     __self: this
   }, "10 years"), " ", "of Staffing experience, our mission is to build meaningful relationships. It\u2019s what we\u2019re about. ", __jsx("br", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 253
+      lineNumber: 268
     },
     __self: this
   }), __jsx("br", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 254
+      lineNumber: 269
     },
     __self: this
   }), "\u2029We\u2019ve got connections that count, experience that makes all the difference, deep working relationships that matter and the right recruiting team who\u2019s got your back.")), __jsx("img", {
@@ -14554,128 +14655,146 @@ var Index = function Index(posts) {
     alt: "Women sitting with computers",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 261
+      lineNumber: 276
     },
     __self: this
   })), __jsx("div", {
     className: "overviewParaDiv",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 268
+      lineNumber: 283
     },
     __self: this
   }, __jsx("p", {
     className: "overviewPara",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 269
+      lineNumber: 284
     },
     __self: this
   }, "At H3 Staffing we work hard to understand your complex staffing needs and work efficiently to find the perfect marriage between employer and employee. ", __jsx("br", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 272
+      lineNumber: 287
     },
     __self: this
   }), __jsx("br", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 273
+      lineNumber: 288
     },
     __self: this
   }), " \u2029Having a combined total of ", __jsx("strong", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 274
+      lineNumber: 289
     },
     __self: this
   }, "10 years"), " ", "of Staffing experience, our mission is to build meaningful relationships. It\u2019s what we\u2019re about. ", __jsx("br", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 278
+      lineNumber: 293
     },
     __self: this
   }), __jsx("br", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 279
+      lineNumber: 294
     },
     __self: this
   }), "\u2029We\u2019ve got connections that count, experience that makes all the difference, deep working relationships that matter and the right recruiting team who\u2019s got your back.")), __jsx("div", {
     className: "briefSect",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 286
+      lineNumber: 301
     },
     __self: this
   }, __jsx("div", {
     className: "briefDiv",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 287
+      lineNumber: 302
     },
     __self: this
   }, __jsx("h3", {
     className: "briefHead",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 288
+      lineNumber: 303
     },
     __self: this
-  }, "We Provide Consistent, Professional, Quality Service"), __jsx("p", {
+  }, __jsx("strong", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 303
+    },
+    __self: this
+  }, "We Provide Consistent, Professional, Quality Service")), __jsx("p", {
     className: "briefPara",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 291
+      lineNumber: 308
     },
     __self: this
   }, "We do whatever it takes to build client and consultant loyalty.")), __jsx("div", {
     className: "briefDiv",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 297
+      lineNumber: 314
     },
     __self: this
   }, __jsx("h3", {
     className: "briefHead",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 298
+      lineNumber: 315
     },
     __self: this
-  }, "We Take Care Of Our People"), __jsx("p", {
+  }, __jsx("strong", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 315
+    },
+    __self: this
+  }, "We Take Care Of Our People")), __jsx("p", {
     className: "briefPara",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 299
+      lineNumber: 316
     },
     __self: this
   }, "We understand that our success is because of our people.")), __jsx("div", {
     className: "briefDiv",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 304
+      lineNumber: 321
     },
     __self: this
   }, __jsx("h3", {
     className: "briefHead",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 305
+      lineNumber: 322
     },
     __self: this
-  }, "We Work Together"), __jsx("p", {
+  }, __jsx("strong", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 322
+    },
+    __self: this
+  }, "We Work Together")), __jsx("p", {
     className: "briefPara",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 306
+      lineNumber: 323
     },
     __self: this
   }, "By working as a synchronized, organized team; we are able to provide a better, more\u2029professional service than anyone else.")))), __jsx("div", {
     className: "overviewImgSect",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 315
+      lineNumber: 332
     },
     __self: this
   }, __jsx("img", {
@@ -14684,238 +14803,256 @@ var Index = function Index(posts) {
     alt: "Women sitting with computers",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 316
+      lineNumber: 333
     },
     __self: this
   }))), __jsx("div", {
     className: "briefSect2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 323
+      lineNumber: 340
     },
     __self: this
   }, __jsx("div", {
     className: "briefDiv2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 324
+      lineNumber: 341
     },
     __self: this
   }, __jsx("h3", {
     className: "briefHead2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 325
+      lineNumber: 342
     },
     __self: this
   }, "We Provide Consistent, Professional, Quality Service"), __jsx("p", {
     className: "briefPara2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 328
+      lineNumber: 345
     },
     __self: this
   }, "We do whatever it takes to build client and consultant loyalty.")), __jsx("div", {
     className: "briefDiv2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 333
+      lineNumber: 350
     },
     __self: this
   }, __jsx("h3", {
     className: "briefHead2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 334
+      lineNumber: 351
     },
     __self: this
   }, "We Take Care Of Our People"), __jsx("p", {
     className: "briefPara2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 335
+      lineNumber: 352
     },
     __self: this
   }, "We understand that our success is because of our people.")), __jsx("div", {
     className: "briefDiv2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 340
+      lineNumber: 357
     },
     __self: this
   }, __jsx("h3", {
     className: "briefHead2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 341
+      lineNumber: 358
     },
     __self: this
   }, "We Work Together"), __jsx("p", {
     className: "briefPara2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 342
+      lineNumber: 359
     },
     __self: this
   }, "By working as a synchronized, organized team; we are able to provide a better, more\u2029 professional service than anyone else."))))), __jsx("div", {
     className: "home4Mother",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 353
+      lineNumber: 370
     },
     __self: this
   }, __jsx("div", {
     className: "home4Main",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 354
+      lineNumber: 371
     },
     __self: this
   }, __jsx("div", {
     className: "home4HeadDiv",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 355
+      lineNumber: 372
     },
     __self: this
   }, __jsx("h2", {
     className: "home4Head",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 356
+      lineNumber: 373
     },
     __self: this
   }, "How can we help?")), __jsx("div", {
     className: "servicesGridDiv",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 358
+      lineNumber: 375
     },
     __self: this
   }, __jsx("div", {
     className: "servicesGrid",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 359
+      lineNumber: 376
     },
     __self: this
   }, __jsx("div", {
     className: "serviceDiv",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 360
+      lineNumber: 377
     },
     __self: this
   }, __jsx("h3", {
     className: "serviceHead",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 361
+      lineNumber: 378
     },
     __self: this
-  }, "Permanent Placements"), __jsx("p", {
+  }, __jsx("strong", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 378
+    },
+    __self: this
+  }, "Permanent Placements")), __jsx("p", {
     className: "servicePara",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 362
+      lineNumber: 379
     },
     __self: this
   }, "Looking for that long term answer \u2029to be an integral part of your \u2029business?")), __jsx("div", {
     className: "serviceDiv",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 369
+      lineNumber: 386
     },
     __self: this
   }, __jsx("h3", {
     className: "serviceHead",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 370
+      lineNumber: 387
     },
     __self: this
-  }, "Contract Services"), __jsx("p", {
+  }, __jsx("strong", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 387
+    },
+    __self: this
+  }, "Contract Services")), __jsx("p", {
     className: "servicePara",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 371
+      lineNumber: 388
     },
     __self: this
   }, "Have a short term need?\u2029 Want to ensure that you have \u2029the right cultural fit to go along \u2029with the skills required?")), __jsx("div", {
     className: "serviceDiv",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 379
+      lineNumber: 396
     },
     __self: this
   }, __jsx("h3", {
     className: "serviceHead",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 380
+      lineNumber: 397
     },
     __self: this
-  }, "Consultants"), __jsx("p", {
+  }, __jsx("strong", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 397
+    },
+    __self: this
+  }, "Consultants")), __jsx("p", {
     className: "servicePara",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 381
+      lineNumber: 398
     },
     __self: this
   }, "Whether you prefer the flexibility\u2029 of contract work, or the stability \u2029of full-time placement, we're here \u2029to help you find it.")))), __jsx("div", {
     className: "letsTalkDiv1",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 392
+      lineNumber: 409
     },
     __self: this
   }, __jsx("div", {
     className: "letsTalkHeadDiv",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 393
+      lineNumber: 410
     },
     __self: this
   }, __jsx("h2", {
     className: "letsTalkHead",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 394
+      lineNumber: 411
     },
     __self: this
   }, "Lets make it happen."))))), __jsx("div", {
     className: "home5Mother",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 401
+      lineNumber: 418
     },
     __self: this
   }, __jsx("div", {
     className: "home5Main",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 402
+      lineNumber: 419
     },
     __self: this
   }, __jsx("div", {
     className: "home5HeadDiv",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 403
+      lineNumber: 420
     },
     __self: this
   }, __jsx("h1", {
     className: "home5Head",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 404
+      lineNumber: 421
     },
     __self: this
   }, "Testimonials")), __jsx("div", {
     className: "scrollingDiv",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 406
+      lineNumber: 423
     },
     __self: this
   }, testiArray.map(function (item) {
@@ -14924,42 +15061,42 @@ var Index = function Index(posts) {
       className: "testimonialBoxParent",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 408
+        lineNumber: 425
       },
       __self: this
     }, __jsx(_comps_icons_quotes_js__WEBPACK_IMPORTED_MODULE_5__["default"], {
       className: "quotes",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 409
+        lineNumber: 426
       },
       __self: this
     }), __jsx("div", {
       className: "testimonialBox",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 410
+        lineNumber: 427
       },
       __self: this
     }, __jsx("p", {
       className: "testimonialPara",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 411
+        lineNumber: 428
       },
       __self: this
     }, " ", item.testi, " ")), __jsx("div", {
       className: "testimonialRoleDiv",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 413
+        lineNumber: 430
       },
       __self: this
     }, __jsx("p", {
       className: "testimonialRole",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 414
+        lineNumber: 431
       },
       __self: this
     }, item.role)));
@@ -14967,92 +15104,98 @@ var Index = function Index(posts) {
     className: "letsTalkMother",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 425
+      lineNumber: 440
     },
     __self: this
   }, __jsx("div", {
     className: "letsTalkMain",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 426
+      lineNumber: 441
     },
     __self: this
   }, __jsx("div", {
     className: "letsTalkBar",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 427
+      lineNumber: 442
     },
     __self: this
   }, __jsx("a", {
     href: "mailto:h3staffing@gmail.com?Subject=Website%20Inquiry",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 428
+      lineNumber: 443
     },
     __self: this
   }, __jsx("h1", {
     className: "letsTalkHead",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 428
+      lineNumber: 444
     },
     __self: this
   }, "Lets Talk"))))), __jsx("div", {
     className: "blogMother",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 438
+      lineNumber: 452
     },
     __self: this
   }, __jsx("div", {
     className: "blogMain",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 439
+      lineNumber: 453
     },
     __self: this
   }, __jsx("h1", {
     className: "blogHead",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 440
+      lineNumber: 454
     },
     __self: this
   }, "H3 Blog"), __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
     href: "/blog/all",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 441
+      lineNumber: 455
     },
     __self: this
   }, __jsx("a", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 442
+      lineNumber: 456
     },
     __self: this
   }, __jsx("button", {
     className: "blogViewAllBtn",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 443
+      lineNumber: 457
     },
     __self: this
   }, "View All"))), __jsx("div", {
     className: "postGrid",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 446
+      lineNumber: 460
     },
     __self: this
-  }, console.log("below is in the html"), console.log(allPosts), console.log(typeof allPosts), allPosts.length !== 0 ? allPosts.splice(0, 3).map(function (post) {
+  }, allPosts.splice(0, 3).map(function (post) {
     return __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
       key: post.uid,
       href: "/blog/".concat(post.uid),
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 452
+        lineNumber: 462
+      },
+      __self: this
+    }, __jsx("a", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 463
       },
       __self: this
     }, __jsx("div", {
@@ -15060,83 +15203,69 @@ var Index = function Index(posts) {
       className: "blogPost",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 453
+        lineNumber: 464
       },
       __self: this
     }, __jsx("h3", {
       className: "blogTitle",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 454
+        lineNumber: 465
       },
       __self: this
     }, post.title), __jsx("div", {
       className: "dateTimeDiv",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 455
+        lineNumber: 466
       },
       __self: this
     }, __jsx("p", {
       className: "blogTime",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 456
+        lineNumber: 467
       },
       __self: this
     }, post.time_created), __jsx("p", {
       className: "blogDate",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 457
+        lineNumber: 468
       },
       __self: this
     }, post.date_created)), __jsx("hr", {
       className: "blogsHr",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 459
+        lineNumber: 470
       },
       __self: this
     }), post.blog_text.length > 150 ? __jsx("p", {
       className: "blogText",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 461
+        lineNumber: 472
       },
       __self: this
     }, post.blog_text.slice(0, 150), "...") : __jsx("p", {
       className: "blogText",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 463
+        lineNumber: 476
       },
       __self: this
-    }, post.blog_text)));
-  }) : __jsx("div", {
+    }, post.blog_text))));
+  })))), __jsx(_comps_footer_js__WEBPACK_IMPORTED_MODULE_10__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 468
-    },
-    __self: this
-  }, __jsx("h1", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 469
-    },
-    __self: this
-  }, "No posts yet"))))), __jsx(_comps_footer_js__WEBPACK_IMPORTED_MODULE_10__["default"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 477
+      lineNumber: 485
     },
     __self: this
   }));
 }; // Index.getInitialProps = async(ctx) => {
-//   const res = await fetch("https://h3-staffing.now.sh/api/blog/all")
+//   const res = await fetch(`${statusUrl}/api/blog/all`)
 //   const json = await res.json();
-//   console.log("below is from getInitialProps")
-//   console.log(json)
 //   return { json }
 // }
 
@@ -15156,7 +15285,7 @@ module.exports = "/_next/static/images/img1-bf92c43028e0b228ce65b1b68945b507.jpg
 
 /***/ }),
 
-/***/ 2:
+/***/ 5:
 /*!************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2FJacobBroughton%2Fcoding%2Fwork%2FH3-Staffing-Next%2Fpages%2Findex.js ***!
   \************************************************************************************************************************************************/
@@ -15179,5 +15308,5 @@ module.exports = dll_ef0ff7c60362f24a921f;
 
 /***/ })
 
-},[[2,"static/runtime/webpack.js","styles"]]]);
+},[[5,"static/runtime/webpack.js","styles"]]]);
 //# sourceMappingURL=index.js.map

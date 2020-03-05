@@ -1,12 +1,13 @@
-import React from "react";
-import App from "next/app";
+import React, { useState,  } from "react";
+// import App from "next/app";
 import Layout from "./comps/layout.js";
-import { Helmet } from "react-helmet"
+import { Helmet } from "react-helmet";
 import { Auth0Provider } from "use-auth0-hooks";
+import EnvProvider from "./comps/contexts/envProvider.js";
 
-class MyApp extends App {
-  render() {
-    const { Component, pageProps } = this.props;
+const App = props => {
+
+  const { Component, pageProps } = props;
 
     return (
       <Auth0Provider
@@ -14,10 +15,11 @@ class MyApp extends App {
         clientId={process.env.CLIENT_ID}
         redirectUri={process.env.REDIRECT_URI}
       >
-        {/* REPLACE THIS DIV WITH USER CONTEXT PROVIDER */}
-        <Layout>
-          <Component {...pageProps} />
-        </Layout>
+        <EnvProvider>
+          <Layout>
+            <Component {...pageProps} />
+          </Layout>
+        </EnvProvider>
 
         <Helmet>
           <meta charSet="utf-8" />
@@ -26,7 +28,6 @@ class MyApp extends App {
         </Helmet>
       </Auth0Provider>
     );
-  }
 }
 
-export default MyApp;
+export default App;

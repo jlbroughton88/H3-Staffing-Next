@@ -9,9 +9,10 @@ import fetch from "isomorphic-unfetch";
 import axios from "axios";
 import Footer from "./comps/footer.js";
 import { useAuth } from "use-auth0-hooks";
+import { useEnv } from "./comps/contexts/envProvider";
 import "../public/static/css/index.scss";
 
-const Index = (posts) => {
+const Index = posts => {
   const testiArray = [
     {
       testi:
@@ -59,10 +60,12 @@ const Index = (posts) => {
       role: "Software Engineer"
     }
   ];
+  const [randomNum, setRandomNum] = useState(0);
   const [currentSlide, setSlide] = useState("seeker");
   let currentArr = [];
   let { isAuthenticated, user } = useAuth();
   let [allPosts, setPosts] = useState([]);
+  const statusUrl = useEnv();
 
   const seekerEmployerArray = {
     seeker: [
@@ -78,19 +81,31 @@ const Index = (posts) => {
     ]
   };
 
+  const getRandomInt = (min, max) => {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    setRandomNum(Math.floor(Math.random() * (max - min)) + min);
+  };
+
   useEffect(() => {
-    axios
-      .get("https://h3-staffing.now.sh/api/blog/all")
-      .then(res => setPosts([...res.data]))
-      .catch(err => console.log(err))
+    getRandomInt(500000, 5000000);
+    getBlogPosts();
 
     let seekerSlide = document.getElementById("seekerBtn");
     seekerSlide.classList.add("active");
 
-    if(isAuthenticated) {
-      console.log(user)
+    if (isAuthenticated) {
+      console.log(user);
     }
   }, []);
+
+  const getBlogPosts = () => {
+    axios
+      .get(`${statusUrl}/api/blog/all`)
+      .then(res => setPosts([...res.data]))
+      .catch(err => console.log(err));
+    // setPosts([...posts.json])
+  };
 
   const handleSeekerClick = () => {
     let seekerSlide = document.getElementById("seekerBtn");
@@ -279,8 +294,10 @@ const Index = (posts) => {
               </div>
               <div className="briefSect">
                 <div className="briefDiv">
-                  <h3 className="briefHead">
+                  <h3 className="briefHead"><strong>
                     We Provide Consistent, Professional, Quality Service
+                  </strong>
+                    
                   </h3>
                   <p className="briefPara">
                     We do whatever it takes to build client and consultant
@@ -289,14 +306,14 @@ const Index = (posts) => {
                 </div>
 
                 <div className="briefDiv">
-                  <h3 className="briefHead">We Take Care Of Our People</h3>
+                  <h3 className="briefHead"><strong>We Take Care Of Our People</strong></h3>
                   <p className="briefPara">
                     We understand that our success is because of our people.
                   </p>
                 </div>
 
                 <div className="briefDiv">
-                  <h3 className="briefHead">We Work Together</h3>
+                  <h3 className="briefHead"><strong>We Work Together</strong></h3>
                   <p className="briefPara">
                     By working as a synchronized, organized team; we are able to
                     provide a better, more professional service than anyone
@@ -350,21 +367,21 @@ const Index = (posts) => {
           <div className="servicesGridDiv">
             <div className="servicesGrid">
               <div className="serviceDiv">
-                <h3 className="serviceHead">Permanent Placements</h3>
+                <h3 className="serviceHead"><strong>Permanent Placements</strong></h3>
                 <p className="servicePara">
                   Looking for that long term answer  to be an integral part of
                   your  business?
                 </p>
               </div>
               <div className="serviceDiv">
-                <h3 className="serviceHead">Contract Services</h3>
+                <h3 className="serviceHead"><strong>Contract Services</strong></h3>
                 <p className="servicePara">
                   Have a short term need?  Want to ensure that you have  the
                   right cultural fit to go along  with the skills required?
                 </p>
               </div>
               <div className="serviceDiv">
-                <h3 className="serviceHead">Consultants</h3>
+                <h3 className="serviceHead"><strong>Consultants</strong></h3>
                 <p className="servicePara">
                   Whether you prefer the flexibility  of contract work, or the
                   stability  of full-time placement, we're here  to help you
@@ -403,19 +420,16 @@ const Index = (posts) => {
         </div>
       </div>
 
-
-
-       {/* Lets Talk */}
+      {/* Lets Talk */}
       <div className="letsTalkMother">
         <div className="letsTalkMain">
           <div className="letsTalkBar">
-            <a href="mailto:h3staffing@gmail.com?Subject=Website%20Inquiry"><h1 className="letsTalkHead">Lets Talk</h1></a>
+            <a href="mailto:h3staffing@gmail.com?Subject=Website%20Inquiry">
+              <h1 className="letsTalkHead">Lets Talk</h1>
+            </a>
           </div>
         </div>
       </div>
-
-
-
 
       {/* Home 6 */}
       {/* Add JS Code for this  */}
@@ -428,33 +442,27 @@ const Index = (posts) => {
             </a>
           </Link>
           <div className="postGrid">
-            {console.log("below is in the html")}
-            {console.log(allPosts)}
-            {console.log(typeof(allPosts))}
-            {allPosts.length !== 0 ? (
-                        allPosts.splice(0, 3).map(post =>
-                        <Link key={post.uid} href={`/blog/${post.uid}`}>
-                            <div key={post.uid} className="blogPost">
-                                <h3 className="blogTitle">{post.title}</h3>
-                                <div className="dateTimeDiv">
-                                    <p className="blogTime">{post.time_created}</p>
-                                    <p className="blogDate">{post.date_created}</p>
-                                </div>
-                                <hr className="blogsHr" />
-                                {post.blog_text.length > 150 ?
-                                    <p className="blogText">{post.blog_text.slice(0, 150)}...</p>
-                                    :
-                                    <p className="blogText">{post.blog_text}</p>
-                                }
-                            </div>
-                        </Link>
-                    )) : (
-                      <div>
-                        <h1>No posts yet</h1>
-                      </div>
-                    )
-            }
-  
+            {allPosts.splice(0, 3).map(post => (
+              <Link key={post.uid} href={`/blog/${post.uid}`}>
+                <a>
+                  <div key={post.uid} className="blogPost">
+                    <h3 className="blogTitle">{post.title}</h3>
+                    <div className="dateTimeDiv">
+                      <p className="blogTime">{post.time_created}</p>
+                      <p className="blogDate">{post.date_created}</p>
+                    </div>
+                    <hr className="blogsHr" />
+                    {post.blog_text.length > 150 ? (
+                      <p className="blogText">
+                        {post.blog_text.slice(0, 150)}...
+                      </p>
+                    ) : (
+                      <p className="blogText">{post.blog_text}</p>
+                    )}
+                  </div>
+                </a>
+              </Link>
+            ))}
           </div>
         </div>
       </div>
@@ -464,10 +472,8 @@ const Index = (posts) => {
 };
 
 // Index.getInitialProps = async(ctx) => {
-//   const res = await fetch("https://h3-staffing.now.sh/api/blog/all")
+//   const res = await fetch(`${statusUrl}/api/blog/all`)
 //   const json = await res.json();
-//   console.log("below is from getInitialProps")
-//   console.log(json)
 
 //   return { json }
 // }

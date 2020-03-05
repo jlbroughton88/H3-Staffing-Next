@@ -1,18 +1,54 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
+import axios from "axios";
 import { useRouter } from "next/router";
 import { useAuth } from "use-auth0-hooks";
 import "../../public/static/css/navbar.scss";
+import { useEnv } from "./contexts/envProvider";
 
 const Navbar = () => {
+  // const [randomNum, setRandomNum] = useState(0);
+  const statusUrl = useEnv();
   const { pathname, query } = useRouter();
   const { isAuthenticated, isLoading, login, logout, user } = useAuth();
-  let authorized;
+
+
+  const newUser = (min, max) => {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    let randomNum = Math.floor(Math.random() * (max - min)) + min;
+
+    // if (user && user.given_name) {
+    //   axios
+    //     .post("https://h3-staffing.now.sh/api/user/newuser", {
+    //       uid: randomNum,
+    //       email: user.email,
+    //       given_name: user.given_name,
+    //       family_name: user.family_name,
+    //       nickname: user.nickname
+    //     })
+    //     .then(response => console.log(response))
+    //     .catch(err => console.log(err));
+    // } else if (user) {
+    //   axios
+    //     .post("https://h3-staffing.now.sh/api/user/newuser", {
+    //       uid: randomNum,
+    //       email: user.email,
+    //       given_name: "null",
+    //       family_name: "null",
+    //       nickname: user.nickname
+    //     })
+    //     .then(response => console.log(response))
+    //     .catch(err => console.log(err));
+    // }
+  };
 
   useEffect(() => {
-    if (isAuthenticated) {
-      console.log(user);
-    }
+    console.log(statusUrl)
+    if(user) {
+      newUser(10000000, 100000000);
+    } 
+
     if (user) {
       if (
         user.email === "jlbroughton88@gmail.com" ||
@@ -25,7 +61,7 @@ const Navbar = () => {
         navLogOut.style.borderBottom = "2px solid #333";
       }
     }
-  }, [user]);
+  }, []);
 
   return (
     <nav className="navMother">
@@ -69,7 +105,7 @@ const Navbar = () => {
                   {(user.email === "jlbroughton88@gmail.com" ||
                     user.email === "ablue@h3staffing.com" ||
                     user.email === "deberry@deberrycompany.com") && (
-                    <Link href="/blogpost">
+                    <Link href="/blog/admin/post">
                       <a className="blogPostBtn">Post Blog</a>
                     </Link>
                   )}

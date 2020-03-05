@@ -2,52 +2,58 @@
 @font-face {
   font-family: "Open Sans";
   src: url("../fonts/OpenSans-Regular.ttf") format("TrueType");
-  font-weight: bold;
+  // font-weight: bold;
   font-display: auto;
   font-style: normal;
 }
 
 // Open Sans Semi Bold
 @font-face {
-  font-family: "Open Sans Bold";
-  src: url("../fonts/OpenSans-Bold.ttf") format("TrueType");
-      font-weight: bold;
-    font-display: auto;
-    font-style: normal;
+  font-family: "Open Sans Semibold";
+  src: url("../fonts/OpenSans-Semibold.ttf") format("TrueType");
+  font-weight: bold;
+  font-display: auto;
+  font-style: normal;
 }
-*{
-  font-family: "Open Sans"
+* {
+  font-family: "Open Sans";
 }
 
+  strong {
+    font-family: "Open Sans Semibold";
+    // font-weight: 900;
+    color: black;
+  }
+  
 div {
   .home1Mother {
-    height: calc(100vh - 90px);
+    height: calc(100vh - 73px);
 
-    .noticeDiv{
-      background: yellow;
-      padding: 10px;
-      .noticeH1{
-        font-size: 1.5rem;
-        text-align: center;
-        &:before{
-          content: 'Notice';
-          background: black;
-          color: white;
-          border-radius: 3px;
-          padding: 2px 5px;
-        }
-      }
-      @media(max-width: 830px) {
-        .noticeH1{
-          font-size: 1.2rem;
-        }
-      }
-      @media(max-width: 550px) {
-        .noticeH1{
-          font-size: 1.0rem;
-        }
-      }
-    }
+    // .noticeDiv{
+    //   background: yellow;
+    //   padding: 10px;
+    //   .noticeH1{
+    //     font-size: 1.5rem;
+    //     text-align: center;
+    //     &:before{
+    //       content: 'Notice';
+    //       background: black;
+    //       color: white;
+    //       border-radius: 3px;
+    //       padding: 2px 5px;
+    //     }
+    //   }
+    //   @media(max-width: 830px) {
+    //     .noticeH1{
+    //       font-size: 1.2rem;
+    //     }
+    //   }
+    //   @media(max-width: 550px) {
+    //     .noticeH1{
+    //       font-size: 1.0rem;
+    //     }
+    //   }
+    // }
 
     .home1Main {
       height: 100%;
@@ -58,13 +64,13 @@ div {
       background: #ffffff;
       background-image: url("../images/h3Conferance.jpg");
       background-size: cover;
-      margin-top: 15px;
+      // margin-top: 15px;
       .home1HeadDiv {
         padding: 0 40px;
         margin-bottom: 30px;
         .home1Head {
           color: #4698ff;
-          font-size: 2rem;
+          font-size: 2.4rem;
           font-weight: 500;
           background: #333;
           padding: 5px 10px;
@@ -111,9 +117,9 @@ div {
           border-radius: 5px;
           box-shadow: 3px 3px #6cb144;
           color: #ffffff;
-          font-size: 1.2rem;
+          font-size: 1.15rem;
           font-weight: 900;
-          padding: 5px 15px;
+          padding: 0 15px;
           transition: all 0.2s ease-in-out;
           cursor: pointer;
         }
@@ -144,7 +150,7 @@ div {
     }
 
     @media (max-width: 600px) {
-      height: calc(100vh - 93px);
+      // height: calc(100vh - 93px);
       .home1Main {
         margin-top: 0;
         .home1HeadDiv {
@@ -162,7 +168,7 @@ div {
       .home1Main {
         .home1HeadDiv {
           .home1Head {
-            font-size: 1.35rem;
+            font-size: 1.3rem;
           }
         }
         .downArrow {
@@ -176,10 +182,10 @@ div {
   $green: #6cb144;
   $orange: #ed4f24;
 
-  strong {
-    font-weight: 800;
-    color: black;
-  }
+  // strong {
+  //   font-weight: 800;
+  //   color: black;
+  // }
 
   .home2Mother {
     height: auto;
@@ -195,7 +201,7 @@ div {
         max-width: 1000px;
         align-self: center;
         text-align: center;
-        margin-bottom: 35px;
+        margin-bottom: 20px;
         .discoverHead {
           color: $green;
           font-size: 3rem;
@@ -211,8 +217,7 @@ div {
         outline: none;
         width: 120px;
         border: 2px solid lightgrey;
-        font-size: 1rem;
-        padding: 5px 10px;
+        font-size: 1.15rem;
         transition: all 0.2s ease-in-out;
       }
       @mixin slideFocus {
@@ -220,13 +225,13 @@ div {
         outline: none;
         border: 2px #6cb144 solid;
         color: #4b792e;
-        font-size: 0.95rem;
+        font-size: 1.15rem;
       }
 
       .seekerEmployeeDiv {
         display: flex;
         justify-content: center;
-        margin-bottom: 35px;
+        margin-bottom: 20px;
 
         .seekerEmployerSlider {
           border-radius: 5px;
@@ -278,7 +283,7 @@ div {
         padding-left: 50px;
         padding-right: 50px;
         width: calc(100% - 100px);
-        margin-bottom: 35px;
+        margin-bottom: 20px;
 
         .checkListParent {
           .checkList {
@@ -312,8 +317,8 @@ div {
               .checkListPara {
                 margin: 0;
                 width: auto;
-                font-size: 1.25rem;
-                align-self: center;
+                font-size: 1.15rem;
+                align-self: flex-start;
                 max-width: 320px;
                 margin-left: 10px;
               }
@@ -358,9 +363,10 @@ div {
               .valueItem {
                 border: #333 solid 2px;
                 margin: 10px;
-                padding: 10px 15px;
+                padding: 5px 10px;
                 border-radius: 5px;
                 box-shadow: 2px 2px $orange, 4px 4px $green;
+                font-size: 1.15rem;
               }
             }
           }
@@ -369,7 +375,7 @@ div {
             width: 80%;
             padding-right: 8%;
             .valuesPara {
-              font-size: 1.4rem;
+              font-size: 1.15rem;
             }
           }
         }
@@ -430,7 +436,7 @@ div {
           .valuesContent {
             .valuesParaDiv {
               .valuesPara {
-                font-size: 1.25rem;
+                font-size: 1.15rem;
               }
             }
             .valuesListDiv {
@@ -466,7 +472,7 @@ div {
                   }
 
                   .checkListPara {
-                    font-size: 1.2rem;
+                    font-size: 1.15rem;
                     padding-left: 20px;
                   }
                 }
@@ -478,7 +484,7 @@ div {
         .coreValuesParent {
           .valuesHeadDiv {
             .valuesHead {
-              font-size: 2.5rem;
+              font-size: 2.4rem;
             }
           }
           .valuesContent {
@@ -489,7 +495,7 @@ div {
               grid-row: 2;
               width: auto;
               .valuesPara {
-                font-size: 1.1rem;
+                font-size: 1.15rem;
               }
             }
             .valuesListDiv {
@@ -554,8 +560,6 @@ div {
             .valuesParaDiv {
               padding-right: 0;
               padding-left: 2.5%;
-              .valuesPara {
-              }
             }
           }
         }
@@ -563,14 +567,13 @@ div {
     }
   }
 
+  // =================================================================
+
   // Home 3
   $green: #6cb144;
   $orange: #ed4f24;
 
-  strong {
-    font-weight: 800;
-    // color: black;
-  }
+
 
   .home3Mother {
     margin-top: 100px;
@@ -587,10 +590,10 @@ div {
         align-self: center;
         width: 100%;
         .overviewHead {
-          font-size: 2.5rem;
+          font-size: 2.4rem;
           color: $green;
           margin: 0;
-          margin-bottom: 35px;
+          margin-bottom: 20px;
         }
       }
 
@@ -607,10 +610,10 @@ div {
             width: auto;
             margin-bottom: 60px;
             padding-right: 40px;
-            margin: none;
+            // margin: none;
 
             .overviewPara {
-              font-size: 1.25rem;
+              font-size: 1.15rem;
               margin: none;
             }
           }
@@ -621,11 +624,11 @@ div {
               padding-left: 10px;
               .briefHead {
                 margin: 0;
-                font-size: 1.4rem;
+                font-size: 1.3rem;
               }
               .briefPara {
                 margin: 0;
-                font-size: 1.25rem;
+                font-size: 1.15rem;
               }
             }
           }
@@ -674,7 +677,7 @@ div {
                   font-size: 1.3rem;
                 }
                 .briefPara {
-                  font-size: 1.1rem;
+                  font-size: 1.15rem;
                 }
               }
             }
@@ -727,13 +730,10 @@ div {
 
         @media (max-width: 550px) {
           .overviewSect {
-            .overviewHead {
-              font-size: 2.4rem;
-            }
             .overviewImgSect2 {
               .overviewParaDiv2 {
                 .overviewPara2 {
-                  font-size: 1.25rem;
+                  font-size: 1.15rem;
                 }
               }
             }
@@ -744,7 +744,7 @@ div {
                   font-size: 1.15rem;
                 }
                 .briefPara {
-                  font-size: 1rem;
+                  font-size: 1.15rem;
                 }
               }
             }
@@ -786,11 +786,11 @@ div {
             padding-left: 10px;
             .briefHead2 {
               margin: 0;
-              font-size: 1.4rem;
+              font-size: 1.3rem;
             }
             .briefPara2 {
               margin: 0;
-              font-size: 1.25rem;
+              font-size: 1.15rem;
             }
           }
         }
@@ -812,7 +812,7 @@ div {
 
         .overviewHeadDiv {
           .overviewHead {
-            font-size: 2.2rem;
+            font-size: 2.1rem;
           }
         }
         .overviewSectParent {
@@ -820,7 +820,7 @@ div {
             .overviewImgSect2 {
               .overviewParaDiv2 {
                 .overviewPara2 {
-                  font-size: 1rem;
+                  font-size: 1.15rem;
                 }
               }
             }
@@ -829,10 +829,10 @@ div {
         .briefSect2 {
           .briefDiv2 {
             .briefHead2 {
-              font-size: 1.25rem;
+              font-size: 1.3rem;
             }
             .briefPara2 {
-              font-size: 1.1rem;
+              font-size: 1.15rem;
             }
           }
         }
@@ -863,7 +863,7 @@ div {
         padding: 0 50px;
         margin-bottom: 25px;
         .home4Head {
-          font-size: 2.5rem;
+          font-size: 2.4rem;
           color: #6cb144;
         }
       }
@@ -880,14 +880,14 @@ div {
             padding: 20px;
             .serviceHead {
               margin: 0;
-              margin-bottom: 10px;
-              font-size: 1.5rem;
+              // margin-bottom: 0px;
+              font-size: 1.3rem;
             }
             .servicePara {
-              font-size: 1.25rem;
+              font-size: 1.15rem;
 
               @media (max-width: 800px) {
-                font-size: 1.3rem;
+                font-size: 1.15rem;
               }
             }
           }
@@ -922,19 +922,7 @@ div {
         .home4HeadDiv {
           padding: 0 25px;
           .home4Head {
-            font-size: 2.2rem;
-          }
-        }
-        .servicesGridDiv {
-          .servicesGrid {
-            .serviceDiv {
-              .serviceHead {
-                font-size: 1.4rem;
-              }
-              .servicePara {
-                font-size: 1.1rem;
-              }
-            }
+            font-size: 2.1rem;
           }
         }
       }
@@ -950,12 +938,12 @@ div {
     .home5Main {
       .home5HeadDiv {
         width: 100%;
-        margin-bottom: 35px;
+        margin-bottom: 20px;
 
         .home5Head {
           color: $green;
           text-align: center;
-          font-size: 2.5rem;
+          font-size: 2.4rem;
         }
       }
       .scrollingDiv {
@@ -979,7 +967,7 @@ div {
             z-index: 1;
 
             .testimonialPara {
-              font-size: 1.3rem;
+              font-size: 1.15rem;
             }
           }
 
@@ -999,8 +987,9 @@ div {
 
             .testimonialRole {
               text-align: center;
-              font-size: 1.45rem;
-              font-family: "Open Sans";
+              font-size: 1.3rem;
+
+              font-family: "Open Sans Semibold";
             }
           }
 
@@ -1023,7 +1012,7 @@ div {
         margin-bottom: 40px;
         .home5HeadDiv {
           .home5Head {
-            font-size: 2.2rem;
+            font-size: 2.1rem;
           }
         }
 
@@ -1032,7 +1021,7 @@ div {
             .testimonialBox {
               width: 350px;
               .testimonialPara {
-                font-size: 1.1rem;
+                font-size: 1.15rem;
               }
             }
             .testimonialRoleDiv {
@@ -1046,50 +1035,43 @@ div {
     }
   }
 
-
-
-// Lets Talk
+  // Lets Talk
   $green: #6cb144;
-  $orange: #ED4F24;
-  
-  .letsTalkMother{
-      .letsTalkMain{
-          height: auto;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          margin-top: 120px;
-          .letsTalkBar{
-              height: 200px;
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              width: 100%;
-              background: $green;
-              .letsTalkHead{
-                  text-align: center;
-                  font-size: 4rem;
-                  color: #ffffff;
-              }
-          }
+  $orange: #ed4f24;
+
+  .letsTalkMother {
+    .letsTalkMain {
+      height: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 120px;
+      .letsTalkBar {
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        background: $green;
+        .letsTalkHead {
+          text-align: center;
+          font-size: 4rem;
+          color: #ffffff;
+        }
       }
-  
-      @media(max-width: 600px) {
-          .letsTalkMain{
-              .letsTalkBar{
-                  height: 150px;
-                  .letsTalkHead{
-                      font-size: 3rem;
-                  }
-              }
+    }
+
+    @media (max-width: 600px) {
+      .letsTalkMain {
+        .letsTalkBar {
+          height: 150px;
+          .letsTalkHead {
+            font-size: 3rem;
           }
+        }
       }
-  }   
-
-
-
-
-
+    }
+  }
 
   // Home 6
   $green: #6cb144;
@@ -1118,6 +1100,7 @@ div {
     justify-content: center;
     align-items: center;
     margin-top: 100px;
+    margin-bottom: 100px;
 
     .blogMain {
       height: 100%;
@@ -1129,7 +1112,7 @@ div {
 
       .blogHead {
         color: $green;
-        font-size: 2.5rem;
+        font-size: 2.4rem;
         text-align: center;
         margin-bottom: 20px;
       }
@@ -1140,9 +1123,9 @@ div {
         border-radius: 5px;
         box-shadow: 3px 3px #6cb144;
         color: #ffffff;
-        font-size: 1.2rem;
+        font-size: 1.15rem;
         font-weight: 900;
-        padding: 5px 15px;
+        padding: 0 15px;
         transition: all 0.2s ease-in-out;
         cursor: pointer;
         margin-bottom: 20px;
@@ -1212,7 +1195,7 @@ div {
             .dateTimeDiv {
               .blogDate,
               .blogTime {
-                font-size: 1.1rem;
+                font-size: 1.15rem;
               }
             }
           }
@@ -1233,11 +1216,12 @@ div {
       margin-top: 20px;
       .blogMain {
         .blogHead {
+          font-size: 2.1rem;
         }
         .postGrid {
           .blogPost {
             .blogTitle {
-              font-size: 1.2rem;
+              font-size: 1.15rem;
             }
           }
         }

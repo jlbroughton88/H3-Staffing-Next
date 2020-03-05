@@ -11,13 +11,13 @@
     align-self: center;
     background: #333;
     color: #ffffff;
-    padding: 10px;
+    padding: 10px 30px 30px;
     border-radius: 5px;
     box-shadow: 4px 4px #ED4F24, 8px 8px #6cb144; }
   .allMother .postGrid {
     display: grid;
     width: 100%;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-template-rows: auto;
     max-width: 1200px;
     justify-content: center;
@@ -62,204 +62,34 @@
             font-size: 1.8rem; }
           .allMother .postGrid .blogPost .dateTimeDiv .blogDate, .allMother .postGrid .blogPost .dateTimeDiv .blogTime {
             font-size: 1.1rem; } }
-    @media (max-width: 1000px) {
-      .allMother .postGrid {
-        grid-template-columns: 80%;
-        grid-rows: auto auto auto;
-        row-gap: 40px; } }
-    @media (max-width: 600px) {
-      .allMother .postGrid {
-        grid-template-columns: 90%; } }
-
-.jobsMother {
-  height: calc(100vh - 93px); }
-  .jobsMother .jobsMain {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-image: url(/_next/static/images/h3Conferance2-2fdb8920f046d7e08bfdc014dbdd655c.jpg);
-    background-size: cover; }
-    .jobsMother .jobsMain .loadJobBoardBtn {
-      -webkit-appearance: none;
-      border: none;
-      background: #ED4F24;
-      border-radius: 5px;
-      box-shadow: 3px 3px #4698ff;
-      color: #ffffff;
-      font-size: 1.2rem;
-      font-weight: 900;
-      padding: 0 15px;
-      transition: all .2s ease-in-out;
-      z-index: 1; }
-    .jobsMother .jobsMain #jb--job-board {
-      position: absolute;
-      z-index: 2;
-      background: #ffffff;
-      width: 80%;
-      max-width: 660px; }
-      @media (max-width: 450px) {
-        .jobsMother .jobsMain #jb--job-board {
-          width: 95%; } }
-
-/* OVERRIDES !important must be included on all styles */
-/* container for all pages */
-/* main text color default is set here - IMPORTANT */
-/* can change background, or add borders and padding */
-.jb--jobs {
-  color: #000 !important;
-  /* background: #fff !important; */
-  padding: 1rem !important; }
-
-/* page titles */
-.jb--wrapper h2 {
-  color: #333 !important; }
-
-/* links */
-/* search and apply buttons, pagination */
-/* can change background, or add borders, change border-radius and padding */
-.jb--button {
-  background-color: #D3D3D3 !important;
-  border: 1px solid #000 !important;
-  color: #000 !important;
-  border-radius: 6px;
-  margin-top: 10px;
-  cursor: pointer !important; }
-
-.jb--button:hover {
-  background-color: #f5f5f5 !important;
-  border: 1px solid #000 !important;
-  color: #808080 !important; }
-
-/* button with arrow when they are at the beginning or end */
-.jb--button.disabled {
-  background-color: #eaeaea !important;
-  border: 1px solid #cecece !important;
-  color: #cecece !important; }
-
-/* button active depending which page of the search results */
-.jb--button-active {
-  background-color: #a9a9a9 !important;
-  border: 1px solid #000 !important;
-  color: #fff !important; }
-
-.jb--wrapper input {
-  border-radius: 6px !important; }
-
-/* height of buttons and form fields */
-.jb--wrapper input, button, .jb--button {
-  height: 36px !important; }
-
-.nameSubmit {
-  cursor: pointer; }
-
-/* Change the color of the placeholder text in inputs */
-::-webkit-input-placeholder {
-  color: #808080; }
-
-:-ms-input-placeholder {
-  color: #808080; }
-
-::-moz-placeholder {
-  color: #808080; }
-
-:-moz-placeholder {
-  color: #808080; }
-
-/* Changes the loading indicator */
-.jb--loading {
-  color: #D3D3D3;
-  width: 100px; }
-
-/* container that holds search description */
-/* can change background, or add borders and padding */
-.jb--job-listing {
-  background: #fff !important;
-  padding: 1rem !important; }
-
-.jb--job-listing:hover {
-  background: #f7f7f7 !important; }
-
-/* container that holds search description for featured jobs */
-/* can change background, or add borders and padding */
-.jb--job-listing-featured {
-  background: #fff !important;
-  padding: 1rem !important; }
-
-.jb--job-listing-featured:hover {
-  background: #f7f7f7 !important; }
-
-/* featured job label on search results */
-.jb--wrapper .jb--featured-label {
-  background: #555555; }
-
-/* job title on search results */
-/* should pick up <a> color, can change if necessary */
-/* location on search results */
-.jb--location {
-  color: #808080 !important; }
-
-/* date posted on search results */
-.jb--date-posted {
-  color: #000 !important; }
-
-/* job descriptions on search results */
-.jb--description {
-  color: #808080 !important; }
-
-/* job count on bottom of search results */
-.jb--job-count {
-  color: #000 !important; }
-
-/* container for the sidebar on job detail page */
-/* can add background, border, padding */
-/* titles in sidebar */
-.jb--sidebar-title {
-  color: #808080 !important; }
-
-/* content in sidebar */
-.jb--sidebar-content {
-  color: #000 !important; }
-
-/* container for job description on job detail page */
-/* can add background, border, padding */
-/* applying for at top of apply page */
-.jb--applying-for {
-  color: #333 !important; }
-
-/* labels on form field on apply page */
-.jb--label {
-  color: #808080 !important; }
-
-/* accepted file types below resume picker */
-.jb--file-type {
-  color: #666 !important; }
 
 a {
   text-decoration: none;
   color: inherit; }
 
 .navMother {
-  margin-bottom: 15px; }
+  margin-bottom: 3px; }
   .navMother .navMain {
     display: flex;
     flex-direction: row;
-    height: auto;
+    height: 70px;
     color: #ffffff; }
     .navMother .navMain .leftNav {
+      height: 100%;
       width: 50%;
-      position: relative; }
+      position: relative;
+      display: flex;
+      align-items: center; }
       .navMother .navMain .leftNav .logoDiv {
         color: #333;
-        height: calc( 100% - 30px);
         display: flex;
-        align-items: flex-start;
-        justify-content: flex-start;
-        padding: 30px 0 0 30px; }
+        align-items: center;
+        justify-content: center;
+        padding-left: 30px; }
         .navMother .navMain .leftNav .logoDiv .logo {
           font-size: 1.5rem; }
     .navMother .navMain .rightNav {
+      height: 100%;
       width: 50%;
       position: relative;
       display: flex;
@@ -267,23 +97,20 @@ a {
       justify-content: flex-end; }
       .navMother .navMain .rightNav .loginLogoutSect {
         padding-right: 30px;
-        padding-top: 30px;
         text-align: center; }
-        .navMother .navMain .rightNav .loginLogoutSect .loggedOutSect {
-          padding-bottom: 15px; }
-          .navMother .navMain .rightNav .loginLogoutSect .loggedOutSect .navLogIn {
-            height: 25px;
-            color: #333;
-            padding: 1px 10px;
-            border-radius: 5px;
-            font-size: 1rem;
-            font-weight: 500;
-            background: #ffffff;
-            border: 1px solid #333;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            cursor: pointer; }
+        .navMother .navMain .rightNav .loginLogoutSect .loggedOutSect .navLogIn {
+          height: 25px;
+          color: #333;
+          padding: 1px 10px;
+          border-radius: 5px;
+          font-size: 1.15rem;
+          font-weight: 500;
+          background: #ffffff;
+          border: none;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          cursor: pointer; }
         .navMother .navMain .rightNav .loginLogoutSect .loggedInSect {
           text-align: center;
           display: flex;
@@ -309,7 +136,7 @@ a {
             height: 25px;
             color: #333;
             padding: 1px 5px;
-            font-size: 0.85rem;
+            font-size: 1rem;
             font-weight: 500;
             background: #ffffff;
             border-top: 1px solid #333;
@@ -324,49 +151,24 @@ a {
               width: 50px;
               border-radius: 5px;
               align-self: center; }
-  @media (min-width: 601px) {
-    .navMother .navLogOut {
-      border-bottom: none !important; } }
   @media (max-width: 600px) {
     .navMother {
-      position: absolute;
-      width: 100%;
-      margin-bottom: 15px; }
+      width: 100%; }
       .navMother .navMain .leftNav .logoDiv {
-        padding: 15px 0 0 15px; }
+        padding-left: 15px; }
         .navMother .navMain .leftNav .logoDiv .logo {
-          background: #333;
-          color: #fff;
-          padding: 5px 10px;
           border-radius: 3px; }
       .navMother .navMain .rightNav .loginLogoutSect {
-        padding: 0; }
+        padding: 0;
+        padding-right: 15px; }
         .navMother .navMain .rightNav .loginLogoutSect .loggedOutSect {
-          padding: 0;
-          padding: 15px 15px 0 0; }
-        .navMother .navMain .rightNav .loginLogoutSect .loggedInSect {
-          padding: 9px 15px 0 0; }
-          .navMother .navMain .rightNav .loginLogoutSect .loggedInSect .navPicLink {
-            height: 45px; }
-            .navMother .navMain .rightNav .loginLogoutSect .loggedInSect .navPicLink .navPicture {
-              width: 45px; }
-          .navMother .navMain .rightNav .loginLogoutSect .loggedInSect .navLogOut {
-            height: 20px;
-            font-size: 0.85rem;
-            padding: 5px 10px 2px 10px;
-            border-top-left-radius: 3px;
-            border-top-right-radius: 3px;
-            border: 2px solid #333;
-            border-bottom: none; }
-          .navMother .navMain .rightNav .loginLogoutSect .loggedInSect .blogPostBtn {
-            height: 20px;
-            font-size: 0.85rem;
-            padding: 2px 10px 5px 10px;
-            border-bottom-left-radius: 3px;
-            border-bottom-right-radius: 3px;
-            padding: 5px 10px;
-            border: 2px solid #333;
-            border-top: none; } }
+          padding: 0; }
+        .navMother .navMain .rightNav .loginLogoutSect .loggedInSect .navPicLink {
+          height: 45px; }
+          .navMother .navMain .rightNav .loginLogoutSect .loggedInSect .navPicLink .navPicture {
+            width: 45px; }
+        .navMother .navMain .rightNav .loginLogoutSect .loggedInSect .navLogOut {
+          border-bottom: none; } }
 
 a {
   text-decoration: none;
@@ -466,13 +268,12 @@ hr {
 @font-face {
   font-family: "Open Sans";
   src: url(/_next/static/chunks/fonts/OpenSans-Regular-629a55a7e793da068dc580d184cc0e31.ttf) format("TrueType");
-  font-weight: bold;
   font-display: auto;
   font-style: normal; }
 
 @font-face {
-  font-family: "Open Sans Bold";
-  src: url(/_next/static/chunks/fonts/OpenSans-Bold-50145685042b4df07a1fd19957275b81.ttf) format("TrueType");
+  font-family: "Open Sans Semibold";
+  src: url(/_next/static/chunks/fonts/OpenSans-Semibold-33f225b8f5f7d6b34a0926f58f96c1e9.ttf) format("TrueType");
   font-weight: bold;
   font-display: auto;
   font-style: normal; }
@@ -480,26 +281,12 @@ hr {
 * {
   font-family: "Open Sans"; }
 
+strong {
+  font-family: "Open Sans Semibold";
+  color: black; }
+
 div .home1Mother {
-  height: calc(100vh - 90px); }
-  div .home1Mother .noticeDiv {
-    background: yellow;
-    padding: 10px; }
-    div .home1Mother .noticeDiv .noticeH1 {
-      font-size: 1.5rem;
-      text-align: center; }
-      div .home1Mother .noticeDiv .noticeH1:before {
-        content: 'Notice';
-        background: black;
-        color: white;
-        border-radius: 3px;
-        padding: 2px 5px; }
-    @media (max-width: 830px) {
-      div .home1Mother .noticeDiv .noticeH1 {
-        font-size: 1.2rem; } }
-    @media (max-width: 550px) {
-      div .home1Mother .noticeDiv .noticeH1 {
-        font-size: 1.0rem; } }
+  height: calc(100vh - 73px); }
   div .home1Mother .home1Main {
     height: 100%;
     display: flex;
@@ -508,14 +295,13 @@ div .home1Mother {
     align-items: center;
     background: #ffffff;
     background-image: url(/_next/static/images/h3Conferance-7b88f077135678b34892739ce5301182.jpg);
-    background-size: cover;
-    margin-top: 15px; }
+    background-size: cover; }
     div .home1Mother .home1Main .home1HeadDiv {
       padding: 0 40px;
       margin-bottom: 30px; }
       div .home1Mother .home1Main .home1HeadDiv .home1Head {
         color: #4698ff;
-        font-size: 2rem;
+        font-size: 2.4rem;
         font-weight: 500;
         background: #333;
         padding: 5px 10px;
@@ -550,9 +336,9 @@ div .home1Mother {
         border-radius: 5px;
         box-shadow: 3px 3px #6cb144;
         color: #ffffff;
-        font-size: 1.2rem;
+        font-size: 1.15rem;
         font-weight: 900;
-        padding: 5px 15px;
+        padding: 0 15px;
         transition: all 0.2s ease-in-out;
         cursor: pointer; }
     div .home1Mother .home1Main .arrowDiv {
@@ -574,23 +360,17 @@ div .home1Mother {
   to {
     transform: translateY(15px); } }
   @media (max-width: 600px) {
-    div .home1Mother {
-      height: calc(100vh - 93px); }
-      div .home1Mother .home1Main {
-        margin-top: 0; }
-        div .home1Mother .home1Main .home1HeadDiv .home1Head {
-          font-size: 1.6rem; }
-        div .home1Mother .home1Main .downArrow {
-          top: 90%; } }
+    div .home1Mother .home1Main {
+      margin-top: 0; }
+      div .home1Mother .home1Main .home1HeadDiv .home1Head {
+        font-size: 1.6rem; }
+      div .home1Mother .home1Main .downArrow {
+        top: 90%; } }
   @media (max-width: 400px) {
     div .home1Mother .home1Main .home1HeadDiv .home1Head {
-      font-size: 1.35rem; }
+      font-size: 1.3rem; }
     div .home1Mother .home1Main .downArrow {
       top: 90%; } }
-
-div strong {
-  font-weight: 800;
-  color: black; }
 
 div .home2Mother {
   height: auto;
@@ -604,7 +384,7 @@ div .home2Mother {
       max-width: 1000px;
       align-self: center;
       text-align: center;
-      margin-bottom: 35px; }
+      margin-bottom: 20px; }
       div .home2Mother .home2Main .discoverHeadDiv .discoverHead {
         color: #6cb144;
         font-size: 3rem; }
@@ -614,7 +394,7 @@ div .home2Mother {
     div .home2Mother .home2Main .seekerEmployeeDiv {
       display: flex;
       justify-content: center;
-      margin-bottom: 35px; }
+      margin-bottom: 20px; }
       div .home2Mother .home2Main .seekerEmployeeDiv .seekerEmployerSlider {
         border-radius: 5px;
         width: auto;
@@ -626,8 +406,7 @@ div .home2Mother {
           outline: none;
           width: 120px;
           border: 2px solid lightgrey;
-          font-size: 1rem;
-          padding: 5px 10px;
+          font-size: 1.15rem;
           transition: all 0.2s ease-in-out; }
           div .home2Mother .home2Main .seekerEmployeeDiv .seekerEmployerSlider .seekerSlide:hover {
             cursor: pointer; }
@@ -636,21 +415,20 @@ div .home2Mother {
             outline: none;
             border: 2px #6cb144 solid;
             color: #4b792e;
-            font-size: 0.95rem; }
+            font-size: 1.15rem; }
         div .home2Mother .home2Main .seekerEmployeeDiv .seekerEmployerSlider .seekerSlide.active {
           box-shadow: inset 2px 2px 2px rgba(51, 51, 51, 0.4);
           outline: none;
           border: 2px #6cb144 solid;
           color: #4b792e;
-          font-size: 0.95rem; }
+          font-size: 1.15rem; }
         div .home2Mother .home2Main .seekerEmployeeDiv .seekerEmployerSlider .employerSlide {
           border-top-right-radius: 5px;
           border-bottom-right-radius: 5px;
           outline: none;
           width: 120px;
           border: 2px solid lightgrey;
-          font-size: 1rem;
-          padding: 5px 10px;
+          font-size: 1.15rem;
           transition: all 0.2s ease-in-out; }
           div .home2Mother .home2Main .seekerEmployeeDiv .seekerEmployerSlider .employerSlide:hover {
             cursor: pointer; }
@@ -659,13 +437,13 @@ div .home2Mother {
             outline: none;
             border: 2px #6cb144 solid;
             color: #4b792e;
-            font-size: 0.95rem; }
+            font-size: 1.15rem; }
         div .home2Mother .home2Main .seekerEmployeeDiv .seekerEmployerSlider .employerSlide.active {
           box-shadow: inset 2px 2px 2px rgba(51, 51, 51, 0.4);
           outline: none;
           border: 2px #6cb144 solid;
           color: #4b792e;
-          font-size: 0.95rem; }
+          font-size: 1.15rem; }
     div .home2Mother .home2Main .checkListDiv {
       display: flex;
       justify-content: center;
@@ -674,7 +452,7 @@ div .home2Mother {
       padding-left: 50px;
       padding-right: 50px;
       width: calc(100% - 100px);
-      margin-bottom: 35px; }
+      margin-bottom: 20px; }
       div .home2Mother .home2Main .checkListDiv .checkListParent .checkList {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -699,8 +477,8 @@ div .home2Mother {
           div .home2Mother .home2Main .checkListDiv .checkListParent .checkList .checkListItem .checkListPara {
             margin: 0;
             width: auto;
-            font-size: 1.25rem;
-            align-self: center;
+            font-size: 1.15rem;
+            align-self: flex-start;
             max-width: 320px;
             margin-left: 10px; }
     div .home2Mother .home2Main .coreValuesParent {
@@ -730,14 +508,15 @@ div .home2Mother {
           div .home2Mother .home2Main .coreValuesParent .valuesContent .valuesListDiv .valuesList .valueItem {
             border: #333 solid 2px;
             margin: 10px;
-            padding: 10px 15px;
+            padding: 5px 10px;
             border-radius: 5px;
-            box-shadow: 2px 2px #ed4f24, 4px 4px #6cb144; }
+            box-shadow: 2px 2px #ed4f24, 4px 4px #6cb144;
+            font-size: 1.15rem; }
         div .home2Mother .home2Main .coreValuesParent .valuesContent .valuesParaDiv {
           width: 80%;
           padding-right: 8%; }
           div .home2Mother .home2Main .coreValuesParent .valuesContent .valuesParaDiv .valuesPara {
-            font-size: 1.4rem; }
+            font-size: 1.15rem; }
     @media (max-width: 950px) {
       div .home2Mother .home2Main .discoverHeadDiv {
         align-self: center; }
@@ -766,7 +545,7 @@ div .home2Mother {
         padding-left: 50px;
         padding-right: 50px; }
         div .home2Mother .home2Main .coreValuesParent .valuesContent .valuesParaDiv .valuesPara {
-          font-size: 1.25rem; }
+          font-size: 1.15rem; }
         div .home2Mother .home2Main .coreValuesParent .valuesContent .valuesListDiv .valuesList .valueItem {
           padding: 6px 8px; } }
     @media (max-width: 780px) {
@@ -779,10 +558,10 @@ div .home2Mother {
           div .home2Mother .home2Main .checkListDiv .checkListParent .checkList .checkListItemParent .checkListItem .iconDiv {
             height: 45px; }
           div .home2Mother .home2Main .checkListDiv .checkListParent .checkList .checkListItemParent .checkListItem .checkListPara {
-            font-size: 1.2rem;
+            font-size: 1.15rem;
             padding-left: 20px; }
       div .home2Mother .home2Main .coreValuesParent .valuesHeadDiv .valuesHead {
-        font-size: 2.5rem; }
+        font-size: 2.4rem; }
       div .home2Mother .home2Main .coreValuesParent .valuesContent {
         display: grid;
         grid-template-columns: 100%;
@@ -791,7 +570,7 @@ div .home2Mother {
           grid-row: 2;
           width: auto; }
           div .home2Mother .home2Main .coreValuesParent .valuesContent .valuesParaDiv .valuesPara {
-            font-size: 1.1rem; }
+            font-size: 1.15rem; }
         div .home2Mother .home2Main .coreValuesParent .valuesContent .valuesListDiv {
           grid-row: 1;
           margin-bottom: 25px; }
@@ -819,9 +598,6 @@ div .home2Mother {
         padding-right: 0;
         padding-left: 2.5%; } }
 
-div strong {
-  font-weight: 800; }
-
 div .home3Mother {
   margin-top: 100px; }
   div .home3Mother .home3Main {
@@ -836,10 +612,10 @@ div .home3Mother {
       align-self: center;
       width: 100%; }
       div .home3Mother .home3Main .overviewHeadDiv .overviewHead {
-        font-size: 2.5rem;
+        font-size: 2.4rem;
         color: #6cb144;
         margin: 0;
-        margin-bottom: 35px; }
+        margin-bottom: 20px; }
     div .home3Mother .home3Main .overviewSectParent {
       max-width: 1100px;
       width: 100%;
@@ -850,10 +626,9 @@ div .home3Mother {
       div .home3Mother .home3Main .overviewSectParent .overviewSect .overviewParaDiv {
         width: auto;
         margin-bottom: 60px;
-        padding-right: 40px;
-        margin: none; }
+        padding-right: 40px; }
         div .home3Mother .home3Main .overviewSectParent .overviewSect .overviewParaDiv .overviewPara {
-          font-size: 1.25rem;
+          font-size: 1.15rem;
           margin: none; }
       div .home3Mother .home3Main .overviewSectParent .overviewSect .briefSect .briefDiv {
         box-shadow: -3px 0px 0px 0px #ed4f24, -6px 0px 0px 0px #6cb144;
@@ -861,10 +636,10 @@ div .home3Mother {
         padding-left: 10px; }
         div .home3Mother .home3Main .overviewSectParent .overviewSect .briefSect .briefDiv .briefHead {
           margin: 0;
-          font-size: 1.4rem; }
+          font-size: 1.3rem; }
         div .home3Mother .home3Main .overviewSectParent .overviewSect .briefSect .briefDiv .briefPara {
           margin: 0;
-          font-size: 1.25rem; }
+          font-size: 1.15rem; }
       div .home3Mother .home3Main .overviewSectParent .overviewImgSect {
         max-width: 300px;
         width: 100%; }
@@ -893,7 +668,7 @@ div .home3Mother {
               div .home3Mother .home3Main .overviewSectParent .overviewSect .briefSect .briefDiv .briefHead {
                 font-size: 1.3rem; }
               div .home3Mother .home3Main .overviewSectParent .overviewSect .briefSect .briefDiv .briefPara {
-                font-size: 1.1rem; }
+                font-size: 1.15rem; }
           div .home3Mother .home3Main .overviewSectParent .overviewSect2 {
             grid-row: 1; }
           div .home3Mother .home3Main .overviewSectParent .overviewImgSect2 {
@@ -927,14 +702,12 @@ div .home3Mother {
             div .home3Mother .home3Main .overviewSectParent .overviewImgSect .overviewImg {
               display: none; } }
       @media (max-width: 550px) {
-        div .home3Mother .home3Main .overviewSectParent .overviewSect .overviewHead {
-          font-size: 2.4rem; }
         div .home3Mother .home3Main .overviewSectParent .overviewSect .overviewImgSect2 .overviewParaDiv2 .overviewPara2 {
-          font-size: 1.25rem; }
+          font-size: 1.15rem; }
         div .home3Mother .home3Main .overviewSectParent .overviewSect .briefSect .briefDiv .briefHead {
           font-size: 1.15rem; }
         div .home3Mother .home3Main .overviewSectParent .overviewSect .briefSect .briefDiv .briefPara {
-          font-size: 1rem; } }
+          font-size: 1.15rem; } }
     @media (min-width: 826px) {
       div .home3Mother .home3Main .overViewSectParent .overviewSect .briefSect {
         display: inline-block; }
@@ -953,10 +726,10 @@ div .home3Mother {
         padding-left: 10px; }
         div .home3Mother .home3Main .briefSect2 .briefDiv2 .briefHead2 {
           margin: 0;
-          font-size: 1.4rem; }
+          font-size: 1.3rem; }
         div .home3Mother .home3Main .briefSect2 .briefDiv2 .briefPara2 {
           margin: 0;
-          font-size: 1.25rem; } }
+          font-size: 1.15rem; } }
   @media (max-width: 600px) {
     div .home3Mother {
       display: flex;
@@ -971,13 +744,13 @@ div .home3Mother {
         align-items: center;
         padding: 0 35px; }
         div .home3Mother .home3Main .overviewHeadDiv .overviewHead {
-          font-size: 2.2rem; }
+          font-size: 2.1rem; }
         div .home3Mother .home3Main .overviewSectParent .overviewSect .overviewImgSect2 .overviewParaDiv2 .overviewPara2 {
-          font-size: 1rem; }
+          font-size: 1.15rem; }
         div .home3Mother .home3Main .briefSect2 .briefDiv2 .briefHead2 {
-          font-size: 1.25rem; }
+          font-size: 1.3rem; }
         div .home3Mother .home3Main .briefSect2 .briefDiv2 .briefPara2 {
-          font-size: 1.1rem; } }
+          font-size: 1.15rem; } }
 
 div h1,
 div h2,
@@ -999,7 +772,7 @@ div .home4Mother {
       padding: 0 50px;
       margin-bottom: 25px; }
       div .home4Mother .home4Main .home4HeadDiv .home4Head {
-        font-size: 2.5rem;
+        font-size: 2.4rem;
         color: #6cb144; }
     div .home4Mother .home4Main .servicesGridDiv {
       width: 90%;
@@ -1013,13 +786,12 @@ div .home4Mother {
           padding: 20px; }
           div .home4Mother .home4Main .servicesGridDiv .servicesGrid .serviceDiv .serviceHead {
             margin: 0;
-            margin-bottom: 10px;
-            font-size: 1.5rem; }
+            font-size: 1.3rem; }
           div .home4Mother .home4Main .servicesGridDiv .servicesGrid .serviceDiv .servicePara {
-            font-size: 1.25rem; }
+            font-size: 1.15rem; }
             @media (max-width: 800px) {
               div .home4Mother .home4Main .servicesGridDiv .servicesGrid .serviceDiv .servicePara {
-                font-size: 1.3rem; } }
+                font-size: 1.15rem; } }
     div .home4Mother .home4Main .letsTalkDiv1 {
       background-color: #6cb144;
       width: 100%;
@@ -1036,21 +808,17 @@ div .home4Mother {
     div .home4Mother .home4Main .home4HeadDiv {
       padding: 0 25px; }
       div .home4Mother .home4Main .home4HeadDiv .home4Head {
-        font-size: 2.2rem; }
-    div .home4Mother .home4Main .servicesGridDiv .servicesGrid .serviceDiv .serviceHead {
-      font-size: 1.4rem; }
-    div .home4Mother .home4Main .servicesGridDiv .servicesGrid .serviceDiv .servicePara {
-      font-size: 1.1rem; } }
+        font-size: 2.1rem; } }
 
 div .home5Mother {
   height: 80%; }
   div .home5Mother .home5Main .home5HeadDiv {
     width: 100%;
-    margin-bottom: 35px; }
+    margin-bottom: 20px; }
     div .home5Mother .home5Main .home5HeadDiv .home5Head {
       color: #6cb144;
       text-align: center;
-      font-size: 2.5rem; }
+      font-size: 2.4rem; }
   div .home5Mother .home5Main .scrollingDiv {
     display: flex;
     flex-direction: row;
@@ -1071,7 +839,7 @@ div .home5Mother {
         box-shadow: 4px 4px #ed4f24, 8px 8px #6cb144;
         z-index: 1; }
         div .home5Mother .home5Main .scrollingDiv .testimonialBoxParent .testimonialBox .testimonialPara {
-          font-size: 1.3rem; }
+          font-size: 1.15rem; }
       div .home5Mother .home5Main .scrollingDiv .testimonialBoxParent svg {
         position: absolute;
         margin-right: 10px;
@@ -1082,8 +850,8 @@ div .home5Mother {
         justify-content: center; }
         div .home5Mother .home5Main .scrollingDiv .testimonialBoxParent .testimonialRoleDiv .testimonialRole {
           text-align: center;
-          font-size: 1.45rem;
-          font-family: "Open Sans"; }
+          font-size: 1.3rem;
+          font-family: "Open Sans Semibold"; }
 
 @keyframes scroll {
   from {
@@ -1094,11 +862,11 @@ div .home5Mother {
     div .home5Mother .home5Main {
       margin-bottom: 40px; }
       div .home5Mother .home5Main .home5HeadDiv .home5Head {
-        font-size: 2.2rem; }
+        font-size: 2.1rem; }
       div .home5Mother .home5Main .scrollingDiv .testimonialBoxParent .testimonialBox {
         width: 350px; }
         div .home5Mother .home5Main .scrollingDiv .testimonialBoxParent .testimonialBox .testimonialPara {
-          font-size: 1.1rem; }
+          font-size: 1.15rem; }
       div .home5Mother .home5Main .scrollingDiv .testimonialBoxParent .testimonialRoleDiv .testimonialRole {
         font-size: 1.3rem; } }
 
@@ -1146,7 +914,8 @@ div .blogMother {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 100px; }
+  margin-top: 100px;
+  margin-bottom: 100px; }
   div .blogMother .blogMain {
     height: 100%;
     display: flex;
@@ -1156,7 +925,7 @@ div .blogMother {
     width: 90%; }
     div .blogMother .blogMain .blogHead {
       color: #6cb144;
-      font-size: 2.5rem;
+      font-size: 2.4rem;
       text-align: center;
       margin-bottom: 20px; }
     div .blogMother .blogMain .blogViewAllBtn {
@@ -1166,9 +935,9 @@ div .blogMother {
       border-radius: 5px;
       box-shadow: 3px 3px #6cb144;
       color: #ffffff;
-      font-size: 1.2rem;
+      font-size: 1.15rem;
       font-weight: 900;
-      padding: 5px 15px;
+      padding: 0 15px;
       transition: all 0.2s ease-in-out;
       cursor: pointer;
       margin-bottom: 20px; }
@@ -1220,7 +989,7 @@ div .blogMother {
               font-size: 1.8rem; }
             div .blogMother .blogMain .postGrid .blogPost .dateTimeDiv .blogDate,
             div .blogMother .blogMain .postGrid .blogPost .dateTimeDiv .blogTime {
-              font-size: 1.1rem; } }
+              font-size: 1.15rem; } }
       @media (max-width: 1000px) {
         div .blogMother .blogMain .postGrid {
           grid-template-columns: 80%;
@@ -1232,8 +1001,10 @@ div .blogMother {
   @media (max-width: 600px) {
     div .blogMother {
       margin-top: 20px; }
+      div .blogMother .blogMain .blogHead {
+        font-size: 2.1rem; }
       div .blogMother .blogMain .postGrid .blogPost .blogTitle {
-        font-size: 1.2rem; } }
+        font-size: 1.15rem; } }
 
 
 /*# sourceMappingURL=styles.chunk.css.map*/

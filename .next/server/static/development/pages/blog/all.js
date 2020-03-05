@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 5);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -1813,8 +1813,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _public_static_css_allposts_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../public/static/css/allposts.scss */ "./public/static/css/allposts.scss");
 /* harmony import */ var _public_static_css_allposts_scss__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_public_static_css_allposts_scss__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _comps_navbar__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../comps/navbar */ "./pages/comps/navbar.js");
+/* harmony import */ var _comps_footer__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../comps/footer */ "./pages/comps/footer.js");
+/* harmony import */ var _comps_contexts_envProvider__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../comps/contexts/envProvider */ "./pages/comps/contexts/envProvider.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! axios */ "axios");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_7__);
 var _jsxFileName = "/Users/JacobBroughton/coding/work/H3-Staffing-Next/pages/blog/all.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+
 
 
 
@@ -1826,48 +1833,50 @@ const All = posts => {
     0: allPosts,
     1: setPosts
   } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])([]);
+  const statusUrl = Object(_comps_contexts_envProvider__WEBPACK_IMPORTED_MODULE_6__["useEnv"])();
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(() => {
-    setPosts([posts.json][0]);
+    // setPosts([posts.json][0]);
+    axios__WEBPACK_IMPORTED_MODULE_7___default.a.get(`${statusUrl}/api/blog/all`).then(res => setPosts([...res.data])).catch(err => console.log(err));
   }, []);
   return __jsx("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 17
+      lineNumber: 23
     },
     __self: undefined
   }, __jsx(_comps_navbar__WEBPACK_IMPORTED_MODULE_4__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 18
+      lineNumber: 24
     },
     __self: undefined
   }), __jsx("div", {
     className: "allMother",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 19
+      lineNumber: 25
     },
     __self: undefined
   }, __jsx("h1", {
     className: "allHead",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 20
+      lineNumber: 26
     },
     __self: undefined
   }, "All Posts"), __jsx("div", {
     className: "postGrid",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 21
+      lineNumber: 27
     },
     __self: undefined
-  }, console.log("below is line 21"), console.log(typeof allPosts), allPosts.length !== 0 ? allPosts.reverse().map(post => __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
+  }, allPosts.length !== 0 ? allPosts.reverse().map(post => __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
     key: post.uid,
     href: `/blog/${post.uid}`,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 26
+      lineNumber: 30
     },
     __self: undefined
   }, __jsx("div", {
@@ -1875,84 +1884,335 @@ const All = posts => {
     className: "blogPost",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 27
+      lineNumber: 31
     },
     __self: undefined
   }, __jsx("h3", {
     className: "blogTitle",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 28
+      lineNumber: 32
     },
     __self: undefined
   }, post.title), __jsx("div", {
     className: "dateTimeDiv",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 29
+      lineNumber: 33
     },
     __self: undefined
   }, __jsx("p", {
     className: "blogTime",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 30
+      lineNumber: 34
     },
     __self: undefined
   }, post.time_created), __jsx("p", {
     className: "blogDate",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 31
+      lineNumber: 35
     },
     __self: undefined
   }, post.date_created)), __jsx("hr", {
     className: "blogsHr",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 33
+      lineNumber: 37
     },
     __self: undefined
   }), post.blog_text.length > 150 ? __jsx("p", {
     className: "blogText",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 35
+      lineNumber: 39
     },
     __self: undefined
   }, post.blog_text.slice(0, 150), "...") : __jsx("p", {
     className: "blogText",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 37
+      lineNumber: 43
     },
     __self: undefined
   }, post.blog_text)))) : __jsx("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 42
+      lineNumber: 49
     },
     __self: undefined
   }, __jsx("h3", {
     __source: {
       fileName: _jsxFileName,
+      lineNumber: 50
+    },
+    __self: undefined
+  }, "No posts yet")))), __jsx(_comps_footer__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 55
+    },
+    __self: undefined
+  }));
+}; // All.getInitialProps = async ctx => {
+//   const res = await fetch(`${statusUrl}/api/blog/all`);
+//   const json = await res.json();
+//   return { json };
+// };
+
+
+/* harmony default export */ __webpack_exports__["default"] = (All);
+
+/***/ }),
+
+/***/ "./pages/comps/contexts/envProvider.js":
+/*!*********************************************!*\
+  !*** ./pages/comps/contexts/envProvider.js ***!
+  \*********************************************/
+/*! exports provided: EnvContext, useEnv, default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EnvContext", function() { return EnvContext; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "useEnv", function() { return useEnv; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _jsxFileName = "/Users/JacobBroughton/coding/work/H3-Staffing-Next/pages/comps/contexts/envProvider.js";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+ // Make a new context
+
+const EnvContext = Object(react__WEBPACK_IMPORTED_MODULE_0__["createContext"])();
+const useEnv = () => Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(EnvContext);
+
+const EnvProvider = props => {
+  const {
+    0: statusUrl,
+    1: setStatusUrl
+  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])("");
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(() => {
+    if (true) {
+      setStatusUrl("http://localhost:3000");
+    } else {}
+  }, []);
+  return __jsx(EnvContext.Provider, {
+    value: statusUrl,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 20
+    },
+    __self: undefined
+  }, props.children);
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (EnvProvider);
+
+/***/ }),
+
+/***/ "./pages/comps/footer.js":
+/*!*******************************!*\
+  !*** ./pages/comps/footer.js ***!
+  \*******************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _public_static_css_footer_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../public/static/css/footer.scss */ "./public/static/css/footer.scss");
+/* harmony import */ var _public_static_css_footer_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_public_static_css_footer_scss__WEBPACK_IMPORTED_MODULE_2__);
+var _jsxFileName = "/Users/JacobBroughton/coding/work/H3-Staffing-Next/pages/comps/footer.js";
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+
+const Footer = () => {
+  // const { user, loginWithRedirect } = useAuth0();
+  return __jsx("div", {
+    className: "footerMother",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 9
+    },
+    __self: undefined
+  }, __jsx("div", {
+    className: "footerMain",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 10
+    },
+    __self: undefined
+  }, __jsx("div", {
+    className: "footerBar",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 11
+    },
+    __self: undefined
+  }, __jsx("div", {
+    className: "footerLinks",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 12
+    },
+    __self: undefined
+  }, __jsx("div", {
+    className: "companyArea",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 13
+    },
+    __self: undefined
+  }, __jsx("h3", {
+    className: "companyHead",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 14
+    },
+    __self: undefined
+  }, "Company"), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    href: "/blog/all",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 16
+    },
+    __self: undefined
+  }, __jsx("a", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 17
+    },
+    __self: undefined
+  }, __jsx("p", {
+    className: "companyPara",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 17
+    },
+    __self: undefined
+  }, "Blog")))), __jsx("div", {
+    className: "careersArea",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 21
+    },
+    __self: undefined
+  }, __jsx("h3", {
+    className: "careersHead",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 22
+    },
+    __self: undefined
+  }, " Careers"), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    href: "/jobs",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 23
+    },
+    __self: undefined
+  }, __jsx("a", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 23
+    },
+    __self: undefined
+  }, __jsx("p", {
+    className: "careersPara",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 23
+    },
+    __self: undefined
+  }, "Search Jobs")))), __jsx("div", {
+    className: "connectArea",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 28
+    },
+    __self: undefined
+  }, __jsx("h3", {
+    className: "connectHead",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 29
+    },
+    __self: undefined
+  }, "Connect With Us"), __jsx("p", {
+    className: "connectPara",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 30
+    },
+    __self: undefined
+  }, "704-999-9999"), __jsx("a", {
+    href: "mailto:h3staffing@gmail.com?Subject=Website%20Inquiry",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 31
+    },
+    __self: undefined
+  }, __jsx("p", {
+    className: "connectPara",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 32
+    },
+    __self: undefined
+  }, "h3staffing@gmail.com")), __jsx("div", {
+    className: "socialsArea",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 34
+    },
+    __self: undefined
+  }, __jsx("p", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 35
+    },
+    __self: undefined
+  }, "O"), __jsx("p", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 36
+    },
+    __self: undefined
+  }, "O"), __jsx("p", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 37
+    },
+    __self: undefined
+  }, "O")))), __jsx("hr", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 42
+    },
+    __self: undefined
+  }), __jsx("div", {
+    className: "legalDiv",
+    __source: {
+      fileName: _jsxFileName,
       lineNumber: 43
     },
     __self: undefined
-  }, "No posts yet")))));
+  }, __jsx("p", {
+    className: "legalPara",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 44
+    },
+    __self: undefined
+  }, "All Rights Reserved \xA9 2020 | H3 Staffing")))));
 };
 
-All.getInitialProps = async ctx => {
-  const res = await isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_1___default()("https://h3-staffing.now.sh/api/blog/all");
-  const json = await res.json(); // console.log("below is from getInitialProps")
-  // console.log(json)
-
-  return {
-    json
-  };
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (All);
+/* harmony default export */ __webpack_exports__["default"] = (Footer);
 
 /***/ }),
 
@@ -1969,12 +2229,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! next/router */ "next/router");
-/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var use_auth0_hooks__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! use-auth0-hooks */ "use-auth0-hooks");
-/* harmony import */ var use_auth0_hooks__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(use_auth0_hooks__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _public_static_css_navbar_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../public/static/css/navbar.scss */ "./public/static/css/navbar.scss");
-/* harmony import */ var _public_static_css_navbar_scss__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_public_static_css_navbar_scss__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! axios */ "axios");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! next/router */ "next/router");
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var use_auth0_hooks__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! use-auth0-hooks */ "use-auth0-hooks");
+/* harmony import */ var use_auth0_hooks__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(use_auth0_hooks__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _public_static_css_navbar_scss__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../public/static/css/navbar.scss */ "./public/static/css/navbar.scss");
+/* harmony import */ var _public_static_css_navbar_scss__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_public_static_css_navbar_scss__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _contexts_envProvider__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./contexts/envProvider */ "./pages/comps/contexts/envProvider.js");
 var _jsxFileName = "/Users/JacobBroughton/coding/work/H3-Staffing-Next/pages/comps/navbar.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -1983,22 +2246,56 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 
+
+
 const Navbar = () => {
+  // const [randomNum, setRandomNum] = useState(0);
+  const statusUrl = Object(_contexts_envProvider__WEBPACK_IMPORTED_MODULE_6__["useEnv"])();
   const {
     pathname,
     query
-  } = Object(next_router__WEBPACK_IMPORTED_MODULE_2__["useRouter"])();
+  } = Object(next_router__WEBPACK_IMPORTED_MODULE_3__["useRouter"])();
   const {
     isAuthenticated,
     isLoading,
     login,
     logout,
     user
-  } = Object(use_auth0_hooks__WEBPACK_IMPORTED_MODULE_3__["useAuth"])();
-  let authorized;
+  } = Object(use_auth0_hooks__WEBPACK_IMPORTED_MODULE_4__["useAuth"])();
+
+  const newUser = (min, max) => {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    let randomNum = Math.floor(Math.random() * (max - min)) + min; // if (user && user.given_name) {
+    //   axios
+    //     .post("https://h3-staffing.now.sh/api/user/newuser", {
+    //       uid: randomNum,
+    //       email: user.email,
+    //       given_name: user.given_name,
+    //       family_name: user.family_name,
+    //       nickname: user.nickname
+    //     })
+    //     .then(response => console.log(response))
+    //     .catch(err => console.log(err));
+    // } else if (user) {
+    //   axios
+    //     .post("https://h3-staffing.now.sh/api/user/newuser", {
+    //       uid: randomNum,
+    //       email: user.email,
+    //       given_name: "null",
+    //       family_name: "null",
+    //       nickname: user.nickname
+    //     })
+    //     .then(response => console.log(response))
+    //     .catch(err => console.log(err));
+    // }
+  };
+
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(() => {
-    if (isAuthenticated) {
-      console.log(user);
+    console.log(statusUrl);
+
+    if (user) {
+      newUser(10000000, 100000000);
     }
 
     if (user) {
@@ -2009,68 +2306,68 @@ const Navbar = () => {
         navLogOut.style.borderBottom = "2px solid #333";
       }
     }
-  }, [user]);
+  }, []);
   return __jsx("nav", {
     className: "navMother",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 31
+      lineNumber: 67
     },
     __self: undefined
   }, __jsx("div", {
     className: "navMain",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 32
+      lineNumber: 68
     },
     __self: undefined
   }, __jsx("section", {
     className: "leftNav",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 33
+      lineNumber: 69
     },
     __self: undefined
   }, __jsx("div", {
     className: "logoDiv",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 34
+      lineNumber: 70
     },
     __self: undefined
   }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
     href: "/",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 35
+      lineNumber: 71
     },
     __self: undefined
   }, __jsx("a", {
     className: "logo",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 36
+      lineNumber: 72
     },
     __self: undefined
   }, "H3 Staffing")))), __jsx("section", {
     className: "rightNav",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 40
+      lineNumber: 76
     },
     __self: undefined
   }, __jsx("div", {
     className: "loginLogoutSect",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 41
+      lineNumber: 77
     },
     __self: undefined
   }, !isLoading && !user && __jsx("div", {
     className: "loggedOutSect",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 43
+      lineNumber: 79
     },
     __self: undefined
   }, __jsx("button", {
@@ -2085,21 +2382,21 @@ const Navbar = () => {
     }),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 44
+      lineNumber: 80
     },
     __self: undefined
   }, "Log In")), !isLoading && user && __jsx("div", {
     className: "loggedInSect",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 55
+      lineNumber: 91
     },
     __self: undefined
   }, __jsx("div", {
     className: "navLinkStack",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 56
+      lineNumber: 92
     },
     __self: undefined
   }, __jsx("button", {
@@ -2110,35 +2407,35 @@ const Navbar = () => {
     }),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 57
+      lineNumber: 93
     },
     __self: undefined
   }, " ", "Log Out"), (user.email === "jlbroughton88@gmail.com" || user.email === "ablue@h3staffing.com" || user.email === "deberry@deberrycompany.com") && __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    href: "/blogpost",
+    href: "/blog/admin/post",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 72
+      lineNumber: 108
     },
     __self: undefined
   }, __jsx("a", {
     className: "blogPostBtn",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 73
+      lineNumber: 109
     },
     __self: undefined
   }, "Post Blog"))), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
     href: "/profile",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 77
+      lineNumber: 113
     },
     __self: undefined
   }, __jsx("a", {
     className: "navPicLink",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 78
+      lineNumber: 114
     },
     __self: undefined
   }, __jsx("img", {
@@ -2147,7 +2444,7 @@ const Navbar = () => {
     alt: user.given_name ? user.given_name : user.nickname + "'s picture",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 79
+      lineNumber: 115
     },
     __self: undefined
   }))))))));
@@ -2168,6 +2465,17 @@ const Navbar = () => {
 
 /***/ }),
 
+/***/ "./public/static/css/footer.scss":
+/*!***************************************!*\
+  !*** ./public/static/css/footer.scss ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+
+
+/***/ }),
+
 /***/ "./public/static/css/navbar.scss":
 /*!***************************************!*\
   !*** ./public/static/css/navbar.scss ***!
@@ -2179,7 +2487,7 @@ const Navbar = () => {
 
 /***/ }),
 
-/***/ 5:
+/***/ 3:
 /*!*********************************!*\
   !*** multi ./pages/blog/all.js ***!
   \*********************************/
@@ -2188,6 +2496,17 @@ const Navbar = () => {
 
 module.exports = __webpack_require__(/*! /Users/JacobBroughton/coding/work/H3-Staffing-Next/pages/blog/all.js */"./pages/blog/all.js");
 
+
+/***/ }),
+
+/***/ "axios":
+/*!************************!*\
+  !*** external "axios" ***!
+  \************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("axios");
 
 /***/ }),
 

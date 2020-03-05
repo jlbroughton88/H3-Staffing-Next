@@ -1,5 +1,4 @@
 import Link from "next/link";
-// import { useAuth0 } from "../../contexts/auth-context";
 import "../../public/static/css/footer.scss";
 
 const Footer = () => {
