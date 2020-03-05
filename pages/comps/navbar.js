@@ -108,9 +108,9 @@ const Navbar = () => {
                     <Link href="/blog/admin/post">
                       <a className="blogPostBtn">Post Blog</a>
                     </Link>
-                  )}
+                 )}
                 </div>
-                <Link href="/profile">
+                {/* <Link href="/profile">
                   <a className="navPicLink">
                     <img
                       className="navPicture"
@@ -122,7 +122,7 @@ const Navbar = () => {
                       }
                     ></img>
                   </a>
-                </Link>
+                </Link> */}
               </div>
             )}
           </div>

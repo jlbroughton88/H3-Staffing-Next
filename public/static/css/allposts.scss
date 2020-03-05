@@ -6,7 +6,7 @@ $orange: #ED4F24;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 100px 0;
+    padding: 100px 30px;
 
     .allHead{
         margin-bottom: 40px;
@@ -15,7 +15,7 @@ $orange: #ED4F24;
         align-self: center; 
         background: #333;
         color: #ffffff;
-        padding: 10px 30px 30px;
+        padding: 10px;
         border-radius: 5px;
         box-shadow: 4px 4px $orange, 8px 8px $green;
     }
@@ -23,7 +23,7 @@ $orange: #ED4F24;
     .postGrid{
         display: grid;
         width: 100%;
-        grid-template-columns: repeat(auto-fit, minmax( 250px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax( 300px, 1fr));
         grid-template-rows: auto;
         max-width: 1200px;
         justify-content: center;
@@ -79,7 +79,7 @@ $orange: #ED4F24;
                 max-width: 1400px;;
 
                     .blogTitle{
-                        font-size: 1.8rem;
+                        font-size: 1.65rem;
                     }
 
                     .dateTimeDiv{
@@ -95,9 +95,25 @@ $orange: #ED4F24;
         //     row-gap: 40px;
         // }
 
-        // @media(max-width: 600px) {
-        //     grid-template-columns: 90%;
-        // }
+        @media(max-width: 600px) {
+            .blogPost{
+                            .blogTitle{
+                font-size: 1.15rem;
+            }
+            .blogText{
+                font-size: 1rem;
+            }
+            .dateTimeDiv{
+                .blogDate{
+                    font-size: 1rem;
+                }
+                .blogTime{
+                    font-size: 1rem;
+                }
+            }
+            }
+
+        }
     }
 
 }

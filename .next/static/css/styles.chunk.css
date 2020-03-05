@@ -1,68 +1,3 @@
-.allMother {
-  min-height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 100px 0; }
-  .allMother .allHead {
-    margin-bottom: 40px;
-    font-size: 2.5rem;
-    margin-bottom: 35px;
-    align-self: center;
-    background: #333;
-    color: #ffffff;
-    padding: 10px 30px 30px;
-    border-radius: 5px;
-    box-shadow: 4px 4px #ED4F24, 8px 8px #6cb144; }
-  .allMother .postGrid {
-    display: grid;
-    width: 100%;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-template-rows: auto;
-    max-width: 1200px;
-    justify-content: center;
-    justify-items: center;
-    align-items: start;
-    grid-gap: 30px; }
-    .allMother .postGrid .blogPost {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      align-self: flex-start;
-      text-align: center;
-      width: 100%;
-      border: #333 solid 1px;
-      height: auto;
-      border-radius: 5px;
-      padding-bottom: 10px;
-      box-shadow: 4px 4px #ED4F24, 8px 8px #6cb144; }
-      .allMother .postGrid .blogPost .blogTitle {
-        background: #6cb144;
-        color: #ffffff;
-        padding: 10px 0;
-        font-size: 1.3rem; }
-      .allMother .postGrid .blogPost .blogText {
-        padding: 10px;
-        width: 90%; }
-      .allMother .postGrid .blogPost .dateTimeDiv {
-        display: flex;
-        flex-direction: row;
-        padding: 10px;
-        justify-content: center; }
-        .allMother .postGrid .blogPost .dateTimeDiv .blogDate:before {
-          color: green;
-          content: "\A0    ||| \A0"; }
-    @media (min-width: 1450px) {
-      .allMother .postGrid {
-        max-width: 1500px;
-        grid-gap: 50px; }
-        .allMother .postGrid .blogPost {
-          max-width: 1400px; }
-          .allMother .postGrid .blogPost .blogTitle {
-            font-size: 1.8rem; }
-          .allMother .postGrid .blogPost .dateTimeDiv .blogDate, .allMother .postGrid .blogPost .dateTimeDiv .blogTime {
-            font-size: 1.1rem; } }
-
 a {
   text-decoration: none;
   color: inherit; }
@@ -121,6 +56,8 @@ a {
             display: flex;
             flex-direction: column; }
           .navMother .navMain .rightNav .loginLogoutSect .loggedInSect .navLogOut {
+            appearance: none;
+            border: none;
             height: 25px;
             color: #333;
             padding: 1px 5px;
@@ -1005,6 +942,68 @@ div .blogMother {
         font-size: 2.1rem; }
       div .blogMother .blogMain .postGrid .blogPost .blogTitle {
         font-size: 1.15rem; } }
+
+.singleHr {
+  border: 1px #6cb144 solid;
+  width: 100%;
+  margin-bottom: 25px; }
+
+.singleMother {
+  height: calc(100vh - 93px);
+  margin-top: 30px;
+  margin-bottom: 100px; }
+  .singleMother .singleMain {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 30px; }
+    .singleMother .singleMain .singlePostContainer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      max-width: 800px; }
+      .singleMother .singleMain .singlePostContainer .singleTitle {
+        margin-bottom: 20px;
+        align-self: flex-start;
+        background: #333;
+        color: #ffffff;
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: 4px 4px #ED4F24, 8px 8px #6cb144; }
+      .singleMother .singleMain .singlePostContainer .singleText {
+        margin-bottom: 10-px;
+        white-space: pre-wrap; }
+      .singleMother .singleMain .singlePostContainer .dateTimeSingle {
+        display: flex;
+        flex-direction: row;
+        align-self: flex-end;
+        background: lightgreen;
+        padding: 15px;
+        border-radius: 5px; }
+        .singleMother .singleMain .singlePostContainer .dateTimeSingle .singleDate:before {
+          color: #6cb144;
+          content: "\A0    ||| \A0"; }
+    @media (min-width: 1400px) {
+      .singleMother .singleMain .singlePostContainer {
+        max-width: 1000px; }
+        .singleMother .singleMain .singlePostContainer .singleTitle {
+          font-size: 2.4rem; }
+        .singleMother .singleMain .singlePostContainer .singleText {
+          font-size: 1.2rem;
+          white-space: pre-wrap; } }
+  @media (max-width: 600px) {
+    .singleMother {
+      height: 100%;
+      margin-top: 0; }
+      .singleMother .singleMain .singlePostContainer {
+        margin-top: 140px; }
+        .singleMother .singleMain .singlePostContainer .singleTitle {
+          font-size: 1.5rem; }
+        .singleMother .singleMain .singlePostContainer .singleText {
+          font-size: 1rem; } }
 
 
 /*# sourceMappingURL=styles.chunk.css.map*/

@@ -104,7 +104,6 @@ const Index = posts => {
       .get(`${statusUrl}/api/blog/all`)
       .then(res => setPosts([...res.data]))
       .catch(err => console.log(err));
-    // setPosts([...posts.json])
   };
 
   const handleSeekerClick = () => {

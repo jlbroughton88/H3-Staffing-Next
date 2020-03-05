@@ -1,0 +1,95 @@
+$green: #6cb144;
+$orange: #ED4F24;
+
+.singleHr{
+    border: 1px $green solid;
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+.singleMother{
+    height: calc(100vh - 93px);
+    margin-top: 30px;
+    margin-bottom: 100px;
+    .singleMain{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 0 30px;
+        .singlePostContainer{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            max-width: 800px;;
+            .singleTitle{
+                margin-bottom: 20px;
+                align-self: flex-start; 
+                background: #333;
+                color: #ffffff;
+                padding: 10px;
+                border-radius: 5px;
+                box-shadow: 4px 4px $orange, 8px 8px $green;
+            }
+            .singleText{
+                margin-bottom: 10-px;
+                white-space: pre-wrap;
+                
+            }
+            .dateTimeSingle{
+                display: flex;
+                flex-direction: row;
+                align-self: flex-end;
+                background: lightgreen;
+                padding: 15px;
+                border-radius: 5px;
+                .singleDate{               
+                    &:before{
+                        color: $green;
+                        content: "\00a0  ||| \00a0";
+                    }}
+                .singleTime{} 
+            }
+        }
+
+        @media(min-width: 1400px) {
+            .singlePostContainer{
+                max-width: 1000px;
+                .singleTitle{
+                    font-size: 2.4rem;
+                }
+                .singleText{
+                    font-size: 1.2rem;
+                    white-space: pre-wrap;
+                }
+            }
+
+
+        }
+    }
+
+    @media(max-width: 600px) {
+        height: 100%;
+        margin-top: 0;
+        .singleMain{
+            // margin-top: 90px;
+            .singlePostContainer{
+                margin-top: 140px;
+                .singleTitle{
+                    font-size: 1.5rem;
+                }
+                .singleText{
+                    font-size: 1rem;
+                }
+                .dateTimeSingle{
+                    .singleDate{
+
+                    }
+                }
+                
+            }
+        }
+    }
+}

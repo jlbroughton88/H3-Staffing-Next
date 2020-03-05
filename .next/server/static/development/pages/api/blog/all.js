@@ -114,11 +114,13 @@ const db = mysql({
 exports.query = async query => {
   try {
     const results = await db.query(query);
+    console.log("Results below...");
     console.log(results);
     await db.end();
     return results;
   } catch (error) {
-    console.log("ERROR FROM DB");
+    console.log("ERROR FROM DB BELOW");
+    console.log(error);
     return {
       error
     };
@@ -136,7 +138,7 @@ exports.query = async query => {
 
 const db = __webpack_require__(/*! ../../../lib/db */ "./lib/db.js");
 
-const escape = __webpack_require__(/*! sql-template-strings */ "sql-template-strings"); // GET USER (email)
+const escape = __webpack_require__(/*! sql-template-strings */ "sql-template-strings"); // GET All 
 
 
 module.exports = async (req, res) => {
