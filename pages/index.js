@@ -102,7 +102,7 @@ const Index = posts => {
   const getBlogPosts = () => {
     axios
       .get(`${statusUrl}/api/blog/all`)
-      .then(res => setPosts([...res.data]))
+      .then(res => setPosts([...res.data].reverse().splice(0, 3)))
       .catch(err => console.log(err));
   };
 
@@ -154,7 +154,7 @@ const Index = posts => {
           <div className="home1CTADiv">
             <Link href="/jobs/#!/search?page=1">
               <a>
-                <button className="home1CTA">Find A Job</button>
+                <button className="home1CTA"><strong>Find A Job</strong></button>
               </a>
             </Link>
           </div>
@@ -332,7 +332,7 @@ const Index = posts => {
           <div className="briefSect2">
             <div className="briefDiv2">
               <h3 className="briefHead2">
-                We Provide Consistent, Professional, Quality Service
+                <strong>We Provide Consistent, Professional, Quality Service</strong>
               </h3>
               <p className="briefPara2">
                 We do whatever it takes to build client and consultant loyalty.
@@ -340,14 +340,14 @@ const Index = posts => {
             </div>
 
             <div className="briefDiv2">
-              <h3 className="briefHead2">We Take Care Of Our People</h3>
+              <h3 className="briefHead2"><strong>We Take Care Of Our People</strong></h3>
               <p className="briefPara2">
                 We understand that our success is because of our people.
               </p>
             </div>
 
             <div className="briefDiv2">
-              <h3 className="briefHead2">We Work Together</h3>
+              <h3 className="briefHead2"><strong>We Work Together</strong></h3>
               <p className="briefPara2">
                 By working as a synchronized, organized team; we are able to
                 provide a better, more  professional service than anyone else.
@@ -441,7 +441,7 @@ const Index = posts => {
             </a>
           </Link>
           <div className="postGrid">
-            {allPosts.splice(0, 3).map(post => (
+            {allPosts.map(post => (
               <Link key={post.uid} href={`/blog/${post.uid}`}>
                 <a>
                   <div key={post.uid} className="blogPost">

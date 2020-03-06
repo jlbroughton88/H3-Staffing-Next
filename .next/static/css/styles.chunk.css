@@ -219,8 +219,7 @@ hr {
   font-family: "Open Sans"; }
 
 strong {
-  font-family: "Open Sans Semibold";
-  color: black; }
+  font-family: "Open Sans Semibold"; }
 
 div .home1Mother {
   height: calc(100vh - 73px); }
@@ -274,8 +273,7 @@ div .home1Mother {
         box-shadow: 3px 3px #6cb144;
         color: #ffffff;
         font-size: 1.15rem;
-        font-weight: 900;
-        padding: 0 15px;
+        padding: 3px 15px;
         transition: all 0.2s ease-in-out;
         cursor: pointer; }
     div .home1Mother .home1Main .arrowDiv {
@@ -344,7 +342,11 @@ div .home2Mother {
           width: 120px;
           border: 2px solid lightgrey;
           font-size: 1.15rem;
-          transition: all 0.2s ease-in-out; }
+          transition: all 0.2s ease-in-out;
+          white-space: nowrap; }
+          @media (max-width: 600px) {
+            div .home2Mother .home2Main .seekerEmployeeDiv .seekerEmployerSlider .seekerSlide {
+              font-size: 1rem; } }
           div .home2Mother .home2Main .seekerEmployeeDiv .seekerEmployerSlider .seekerSlide:hover {
             cursor: pointer; }
           div .home2Mother .home2Main .seekerEmployeeDiv .seekerEmployerSlider .seekerSlide:active {
@@ -353,12 +355,18 @@ div .home2Mother {
             border: 2px #6cb144 solid;
             color: #4b792e;
             font-size: 1.15rem; }
+            @media (max-width: 600px) {
+              div .home2Mother .home2Main .seekerEmployeeDiv .seekerEmployerSlider .seekerSlide:active {
+                font-size: 0.95rem; } }
         div .home2Mother .home2Main .seekerEmployeeDiv .seekerEmployerSlider .seekerSlide.active {
           box-shadow: inset 2px 2px 2px rgba(51, 51, 51, 0.4);
           outline: none;
           border: 2px #6cb144 solid;
           color: #4b792e;
           font-size: 1.15rem; }
+          @media (max-width: 600px) {
+            div .home2Mother .home2Main .seekerEmployeeDiv .seekerEmployerSlider .seekerSlide.active {
+              font-size: 0.95rem; } }
         div .home2Mother .home2Main .seekerEmployeeDiv .seekerEmployerSlider .employerSlide {
           border-top-right-radius: 5px;
           border-bottom-right-radius: 5px;
@@ -366,7 +374,11 @@ div .home2Mother {
           width: 120px;
           border: 2px solid lightgrey;
           font-size: 1.15rem;
-          transition: all 0.2s ease-in-out; }
+          transition: all 0.2s ease-in-out;
+          white-space: nowrap; }
+          @media (max-width: 600px) {
+            div .home2Mother .home2Main .seekerEmployeeDiv .seekerEmployerSlider .employerSlide {
+              font-size: 1rem; } }
           div .home2Mother .home2Main .seekerEmployeeDiv .seekerEmployerSlider .employerSlide:hover {
             cursor: pointer; }
           div .home2Mother .home2Main .seekerEmployeeDiv .seekerEmployerSlider .employerSlide:active {
@@ -375,12 +387,18 @@ div .home2Mother {
             border: 2px #6cb144 solid;
             color: #4b792e;
             font-size: 1.15rem; }
+            @media (max-width: 600px) {
+              div .home2Mother .home2Main .seekerEmployeeDiv .seekerEmployerSlider .employerSlide:active {
+                font-size: 0.95rem; } }
         div .home2Mother .home2Main .seekerEmployeeDiv .seekerEmployerSlider .employerSlide.active {
           box-shadow: inset 2px 2px 2px rgba(51, 51, 51, 0.4);
           outline: none;
           border: 2px #6cb144 solid;
           color: #4b792e;
           font-size: 1.15rem; }
+          @media (max-width: 600px) {
+            div .home2Mother .home2Main .seekerEmployeeDiv .seekerEmployerSlider .employerSlide.active {
+              font-size: 0.95rem; } }
     div .home2Mother .home2Main .checkListDiv {
       display: flex;
       justify-content: center;
@@ -418,6 +436,13 @@ div .home2Mother {
             align-self: flex-start;
             max-width: 320px;
             margin-left: 10px; }
+      @media (max-width: 600px) {
+        div .home2Mother .home2Main .checkListDiv {
+          margin-bottom: 80px; }
+          div .home2Mother .home2Main .checkListDiv .checkListParent .checkList .checkListItem {
+            align-items: center; }
+            div .home2Mother .home2Main .checkListDiv .checkListParent .checkList .checkListItem .checkListPara {
+              margin-left: 0; } }
     div .home2Mother .home2Main .coreValuesParent {
       display: flex;
       flex-direction: column;
@@ -625,7 +650,7 @@ div .home3Mother {
               padding-left: 4%; }
               div .home3Mother .home3Main .overviewSectParent .overviewImgSect2 .overviewParaDiv2 .overviewPara2 {
                 display: inline-block;
-                font-size: 1.5rem;
+                font-size: 1.15rem;
                 margin: 0;
                 font-weight: 500; }
             div .home3Mother .home3Main .overviewSectParent .overviewImgSect2 .overviewImg2 {
@@ -640,11 +665,11 @@ div .home3Mother {
               display: none; } }
       @media (max-width: 550px) {
         div .home3Mother .home3Main .overviewSectParent .overviewSect .overviewImgSect2 .overviewParaDiv2 .overviewPara2 {
-          font-size: 1.15rem; }
+          font-size: 1rem; }
         div .home3Mother .home3Main .overviewSectParent .overviewSect .briefSect .briefDiv .briefHead {
           font-size: 1.15rem; }
         div .home3Mother .home3Main .overviewSectParent .overviewSect .briefSect .briefDiv .briefPara {
-          font-size: 1.15rem; } }
+          font-size: 1rem; } }
     @media (min-width: 826px) {
       div .home3Mother .home3Main .overViewSectParent .overviewSect .briefSect {
         display: inline-block; }
@@ -682,8 +707,10 @@ div .home3Mother {
         padding: 0 35px; }
         div .home3Mother .home3Main .overviewHeadDiv .overviewHead {
           font-size: 2.1rem; }
-        div .home3Mother .home3Main .overviewSectParent .overviewSect .overviewImgSect2 .overviewParaDiv2 .overviewPara2 {
-          font-size: 1.15rem; }
+        div .home3Mother .home3Main .overviewSectParent .overviewSect .overviewImgSect2 .overviewParaDiv2 {
+          padding: none; }
+          div .home3Mother .home3Main .overviewSectParent .overviewSect .overviewImgSect2 .overviewParaDiv2 .overviewPara2 {
+            font-size: 0.9rem; }
         div .home3Mother .home3Main .briefSect2 .briefDiv2 .briefHead2 {
           font-size: 1.3rem; }
         div .home3Mother .home3Main .briefSect2 .briefDiv2 .briefPara2 {
@@ -737,6 +764,9 @@ div .home4Mother {
       div .home4Mother .home4Main .letsTalkDiv1 .letsTalkHeadDiv .letsTalkHead {
         text-align: center;
         color: #ffffff; }
+      @media (max-width: 600px) {
+        div .home4Mother .home4Main .letsTalkDiv1 .letsTalkHeadDiv .letsTalkHead {
+          font-size: 27px; } }
     @media (max-width: 700px) {
       div .home4Mother .home4Main .servicesGridDiv .servicesGrid {
         grid-template-columns: 100%;
@@ -827,7 +857,7 @@ div .letsTalkMother .letsTalkMain {
 
 @media (max-width: 600px) {
   div .letsTalkMother .letsTalkMain .letsTalkBar {
-    height: 150px; }
+    height: 78px; }
     div .letsTalkMother .letsTalkMain .letsTalkBar .letsTalkHead {
       font-size: 3rem; } }
 
@@ -888,6 +918,8 @@ div .blogMother {
       justify-items: center;
       align-items: start;
       grid-gap: 30px; }
+      div .blogMother .blogMain .postGrid a {
+        width: 100%; }
       div .blogMother .blogMain .postGrid .blogPost {
         display: flex;
         flex-direction: column;
@@ -936,74 +968,10 @@ div .blogMother {
         div .blogMother .blogMain .postGrid {
           grid-template-columns: 90%; } }
   @media (max-width: 600px) {
-    div .blogMother {
-      margin-top: 20px; }
-      div .blogMother .blogMain .blogHead {
-        font-size: 2.1rem; }
-      div .blogMother .blogMain .postGrid .blogPost .blogTitle {
-        font-size: 1.15rem; } }
-
-.singleHr {
-  border: 1px #6cb144 solid;
-  width: 100%;
-  margin-bottom: 25px; }
-
-.singleMother {
-  height: calc(100vh - 93px);
-  margin-top: 30px;
-  margin-bottom: 100px; }
-  .singleMother .singleMain {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 0 30px; }
-    .singleMother .singleMain .singlePostContainer {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      max-width: 800px; }
-      .singleMother .singleMain .singlePostContainer .singleTitle {
-        margin-bottom: 20px;
-        align-self: flex-start;
-        background: #333;
-        color: #ffffff;
-        padding: 10px;
-        border-radius: 5px;
-        box-shadow: 4px 4px #ED4F24, 8px 8px #6cb144; }
-      .singleMother .singleMain .singlePostContainer .singleText {
-        margin-bottom: 10-px;
-        white-space: pre-wrap; }
-      .singleMother .singleMain .singlePostContainer .dateTimeSingle {
-        display: flex;
-        flex-direction: row;
-        align-self: flex-end;
-        background: lightgreen;
-        padding: 15px;
-        border-radius: 5px; }
-        .singleMother .singleMain .singlePostContainer .dateTimeSingle .singleDate:before {
-          color: #6cb144;
-          content: "\A0    ||| \A0"; }
-    @media (min-width: 1400px) {
-      .singleMother .singleMain .singlePostContainer {
-        max-width: 1000px; }
-        .singleMother .singleMain .singlePostContainer .singleTitle {
-          font-size: 2.4rem; }
-        .singleMother .singleMain .singlePostContainer .singleText {
-          font-size: 1.2rem;
-          white-space: pre-wrap; } }
-  @media (max-width: 600px) {
-    .singleMother {
-      height: 100%;
-      margin-top: 0; }
-      .singleMother .singleMain .singlePostContainer {
-        margin-top: 140px; }
-        .singleMother .singleMain .singlePostContainer .singleTitle {
-          font-size: 1.5rem; }
-        .singleMother .singleMain .singlePostContainer .singleText {
-          font-size: 1rem; } }
+    div .blogMother .blogMain .blogHead {
+      font-size: 2.1rem; }
+    div .blogMother .blogMain .postGrid .blogPost .blogTitle {
+      font-size: 1.15rem; } }
 
 
 /*# sourceMappingURL=styles.chunk.css.map*/

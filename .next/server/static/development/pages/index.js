@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -2445,16 +2445,19 @@ const Navbar = () => {
 
     if (user) {
       newUser(10000000, 100000000);
-    }
+    } // if (user) {
+    //   if (
+    //     user.email === "jlbroughton88@gmail.com" ||
+    //     user.email === "ablue@h3staffing.com" ||
+    //     user.email === "deberry@deberrycompany.com"
+    //   ) {
+    //     authorized = true;
+    //   } else {
+    //     let navLogOut = document.getElementById("navLogOut");
+    //     navLogOut.style.borderBottom = "2px solid #333";
+    //   }
+    // }
 
-    if (user) {
-      if (user.email === "jlbroughton88@gmail.com" || user.email === "ablue@h3staffing.com" || user.email === "deberry@deberrycompany.com") {
-        authorized = true;
-      } else {
-        let navLogOut = document.getElementById("navLogOut");
-        navLogOut.style.borderBottom = "2px solid #333";
-      }
-    }
   }, []);
   return __jsx("nav", {
     className: "navMother",
@@ -2695,7 +2698,7 @@ const Index = posts => {
   }, []);
 
   const getBlogPosts = () => {
-    axios__WEBPACK_IMPORTED_MODULE_8___default.a.get(`${statusUrl}/api/blog/all`).then(res => setPosts([...res.data])).catch(err => console.log(err));
+    axios__WEBPACK_IMPORTED_MODULE_8___default.a.get(`${statusUrl}/api/blog/all`).then(res => setPosts([...res.data].reverse().splice(0, 3))).catch(err => console.log(err));
   };
 
   const handleSeekerClick = () => {
@@ -2787,7 +2790,13 @@ const Index = posts => {
       lineNumber: 157
     },
     __self: undefined
-  }, "Find A Job")))), __jsx("div", {
+  }, __jsx("strong", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 157
+    },
+    __self: undefined
+  }, "Find A Job"))))), __jsx("div", {
     className: "arrowDiv",
     __source: {
       fileName: _jsxFileName,
@@ -3305,7 +3314,13 @@ const Index = posts => {
       lineNumber: 341
     },
     __self: undefined
-  }, "We Provide Consistent, Professional, Quality Service"), __jsx("p", {
+  }, __jsx("strong", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 342
+    },
+    __self: undefined
+  }, "We Provide Consistent, Professional, Quality Service")), __jsx("p", {
     className: "briefPara2",
     __source: {
       fileName: _jsxFileName,
@@ -3326,7 +3341,13 @@ const Index = posts => {
       lineNumber: 350
     },
     __self: undefined
-  }, "We Take Care Of Our People"), __jsx("p", {
+  }, __jsx("strong", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 350
+    },
+    __self: undefined
+  }, "We Take Care Of Our People")), __jsx("p", {
     className: "briefPara2",
     __source: {
       fileName: _jsxFileName,
@@ -3347,7 +3368,13 @@ const Index = posts => {
       lineNumber: 357
     },
     __self: undefined
-  }, "We Work Together"), __jsx("p", {
+  }, __jsx("strong", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 357
+    },
+    __self: undefined
+  }, "We Work Together")), __jsx("p", {
     className: "briefPara2",
     __source: {
       fileName: _jsxFileName,
@@ -3659,7 +3686,7 @@ const Index = posts => {
       lineNumber: 459
     },
     __self: undefined
-  }, allPosts.splice(0, 3).map(post => __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+  }, allPosts.map(post => __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
     key: post.uid,
     href: `/blog/${post.uid}`,
     __source: {
@@ -3792,7 +3819,7 @@ module.exports = "/_next/static/images/img1-bf92c43028e0b228ce65b1b68945b507.jpg
 
 /***/ }),
 
-/***/ 3:
+/***/ 4:
 /*!******************************!*\
   !*** multi ./pages/index.js ***!
   \******************************/

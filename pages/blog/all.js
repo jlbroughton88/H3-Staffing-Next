@@ -15,7 +15,7 @@ const All = posts => {
     // setPosts([posts.json][0]);
     axios
       .get(`${statusUrl}/api/blog/all`)
-      .then(res => setPosts([...res.data]))
+      .then(res => setPosts([...res.data].reverse()))
       .catch(err => console.log(err));
   }, []);
 
@@ -26,7 +26,7 @@ const All = posts => {
         <h1 className="allHead">All Posts</h1>
         <div className="postGrid">
           {allPosts.length !== 0 ? (
-            allPosts.reverse().map(post => (
+            allPosts.map(post => (
               <Link key={post.uid} href={`/blog/${post.uid}`}>
                 <div key={post.uid} className="blogPost">
                   <h3 className="blogTitle">{post.title}</h3>

@@ -13930,16 +13930,19 @@ var Navbar = function Navbar() {
 
     if (user) {
       newUser(10000000, 100000000);
-    }
+    } // if (user) {
+    //   if (
+    //     user.email === "jlbroughton88@gmail.com" ||
+    //     user.email === "ablue@h3staffing.com" ||
+    //     user.email === "deberry@deberrycompany.com"
+    //   ) {
+    //     authorized = true;
+    //   } else {
+    //     let navLogOut = document.getElementById("navLogOut");
+    //     navLogOut.style.borderBottom = "2px solid #333";
+    //   }
+    // }
 
-    if (user) {
-      if (user.email === "jlbroughton88@gmail.com" || user.email === "ablue@h3staffing.com" || user.email === "deberry@deberrycompany.com") {
-        authorized = true;
-      } else {
-        var navLogOut = document.getElementById("navLogOut");
-        navLogOut.style.borderBottom = "2px solid #333";
-      }
-    }
   }, []);
   return __jsx("nav", {
     className: "navMother",
@@ -14189,7 +14192,7 @@ var Index = function Index(posts) {
 
   var getBlogPosts = function getBlogPosts() {
     axios__WEBPACK_IMPORTED_MODULE_9___default.a.get("".concat(statusUrl, "/api/blog/all")).then(function (res) {
-      return setPosts(Object(_babel_runtime_corejs2_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__["default"])(res.data));
+      return setPosts(Object(_babel_runtime_corejs2_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__["default"])(res.data).reverse().splice(0, 3));
     })["catch"](function (err) {
       return console.log(err);
     });
@@ -14284,7 +14287,13 @@ var Index = function Index(posts) {
       lineNumber: 157
     },
     __self: this
-  }, "Find A Job")))), __jsx("div", {
+  }, __jsx("strong", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 157
+    },
+    __self: this
+  }, "Find A Job"))))), __jsx("div", {
     className: "arrowDiv",
     __source: {
       fileName: _jsxFileName,
@@ -14804,7 +14813,13 @@ var Index = function Index(posts) {
       lineNumber: 341
     },
     __self: this
-  }, "We Provide Consistent, Professional, Quality Service"), __jsx("p", {
+  }, __jsx("strong", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 342
+    },
+    __self: this
+  }, "We Provide Consistent, Professional, Quality Service")), __jsx("p", {
     className: "briefPara2",
     __source: {
       fileName: _jsxFileName,
@@ -14825,7 +14840,13 @@ var Index = function Index(posts) {
       lineNumber: 350
     },
     __self: this
-  }, "We Take Care Of Our People"), __jsx("p", {
+  }, __jsx("strong", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 350
+    },
+    __self: this
+  }, "We Take Care Of Our People")), __jsx("p", {
     className: "briefPara2",
     __source: {
       fileName: _jsxFileName,
@@ -14846,7 +14867,13 @@ var Index = function Index(posts) {
       lineNumber: 357
     },
     __self: this
-  }, "We Work Together"), __jsx("p", {
+  }, __jsx("strong", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 357
+    },
+    __self: this
+  }, "We Work Together")), __jsx("p", {
     className: "briefPara2",
     __source: {
       fileName: _jsxFileName,
@@ -15160,7 +15187,7 @@ var Index = function Index(posts) {
       lineNumber: 459
     },
     __self: this
-  }, allPosts.splice(0, 3).map(function (post) {
+  }, allPosts.map(function (post) {
     return __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
       key: post.uid,
       href: "/blog/".concat(post.uid),
@@ -15262,7 +15289,7 @@ module.exports = "/_next/static/images/img1-bf92c43028e0b228ce65b1b68945b507.jpg
 
 /***/ }),
 
-/***/ 1:
+/***/ 2:
 /*!************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2FJacobBroughton%2Fcoding%2Fwork%2FH3-Staffing-Next%2Fpages%2Findex.js ***!
   \************************************************************************************************************************************************/
@@ -15285,5 +15312,5 @@ module.exports = dll_ef0ff7c60362f24a921f;
 
 /***/ })
 
-},[[1,"static/runtime/webpack.js","styles"]]]);
+},[[2,"static/runtime/webpack.js","styles"]]]);
 //# sourceMappingURL=index.js.map

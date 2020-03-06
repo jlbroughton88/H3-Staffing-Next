@@ -19,12 +19,12 @@
   font-family: "Open Sans";
 }
 
-  strong {
-    font-family: "Open Sans Semibold";
-    // font-weight: 900;
-    color: black;
-  }
-  
+strong {
+  font-family: "Open Sans Semibold";
+  // font-weight: 900;
+  // color: black;
+}
+
 div {
   .home1Mother {
     height: calc(100vh - 73px);
@@ -111,6 +111,7 @@ div {
         height: 60px;
         text-align: center;
         button {
+          // font-size: "Open Sans Semibold";
           appearance: none;
           border: none;
           background: #ed4f24;
@@ -118,8 +119,8 @@ div {
           box-shadow: 3px 3px #6cb144;
           color: #ffffff;
           font-size: 1.15rem;
-          font-weight: 900;
-          padding: 0 15px;
+          // font-weight: 900;
+          padding: 3px 15px;
           transition: all 0.2s ease-in-out;
           cursor: pointer;
         }
@@ -219,6 +220,11 @@ div {
         border: 2px solid lightgrey;
         font-size: 1.15rem;
         transition: all 0.2s ease-in-out;
+        white-space: nowrap;
+
+        @media (max-width: 600px) {
+          font-size: 1rem;
+        }
       }
       @mixin slideFocus {
         box-shadow: inset 2px 2px 2px rgba(51, 51, 51, 0.4);
@@ -226,6 +232,10 @@ div {
         border: 2px #6cb144 solid;
         color: #4b792e;
         font-size: 1.15rem;
+
+        @media (max-width: 600px) {
+          font-size: 0.95rem;
+        }
       }
 
       .seekerEmployeeDiv {
@@ -321,6 +331,20 @@ div {
                 align-self: flex-start;
                 max-width: 320px;
                 margin-left: 10px;
+              }
+            }
+          }
+        }
+        @media (max-width: 600px) {
+          margin-bottom: 80px;
+
+          .checkListParent {
+            .checkList {
+              .checkListItem {
+                align-items: center;
+                .checkListPara {
+                  margin-left: 0;
+                }
               }
             }
           }
@@ -573,8 +597,6 @@ div {
   $green: #6cb144;
   $orange: #ed4f24;
 
-
-
   .home3Mother {
     margin-top: 100px;
     // margin-bottom: 150px;
@@ -648,8 +670,6 @@ div {
           .overviewSect {
             .overviewImgSect2 {
               display: none;
-              .overviewImg2 {
-              }
             }
           }
         }
@@ -666,8 +686,6 @@ div {
             grid-template-rows: auto auto;
             .overviewParaDiv {
               display: none;
-              .overviewPara {
-              }
             }
             .briefSect {
               .briefDiv {
@@ -705,7 +723,7 @@ div {
 
               .overviewPara2 {
                 display: inline-block;
-                font-size: 1.5rem;
+                font-size: 1.15rem;
                 margin: 0;
                 font-weight: 500;
               }
@@ -733,7 +751,7 @@ div {
             .overviewImgSect2 {
               .overviewParaDiv2 {
                 .overviewPara2 {
-                  font-size: 1.15rem;
+                  font-size: 1rem;
                 }
               }
             }
@@ -744,7 +762,7 @@ div {
                   font-size: 1.15rem;
                 }
                 .briefPara {
-                  font-size: 1.15rem;
+                  font-size: 1rem;
                 }
               }
             }
@@ -818,9 +836,11 @@ div {
         .overviewSectParent {
           .overviewSect {
             .overviewImgSect2 {
+              .overviewImg2{}
               .overviewParaDiv2 {
+                padding: none;
                 .overviewPara2 {
-                  font-size: 1.15rem;
+                  font-size: 0.9rem;
                 }
               }
             }
@@ -902,6 +922,14 @@ div {
           .letsTalkHead {
             text-align: center;
             color: #ffffff;
+          }
+        }
+
+        @media (max-width: 600px) {
+          .letsTalkHeadDiv {
+            .letsTalkHead {
+              font-size: 27px;
+            }
           }
         }
       }
@@ -1064,7 +1092,7 @@ div {
     @media (max-width: 600px) {
       .letsTalkMain {
         .letsTalkBar {
-          height: 150px;
+          height: 78px;
           .letsTalkHead {
             font-size: 3rem;
           }
@@ -1141,6 +1169,9 @@ div {
         justify-items: center;
         align-items: start;
         grid-gap: 30px;
+        a {
+          width: 100%;
+        }
 
         .blogPost {
           display: flex;
@@ -1213,7 +1244,7 @@ div {
     }
 
     @media (max-width: 600px) {
-      margin-top: 20px;
+      // margin-top: 20px;
       .blogMain {
         .blogHead {
           font-size: 2.1rem;
