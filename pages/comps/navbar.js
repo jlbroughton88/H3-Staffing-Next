@@ -49,18 +49,18 @@ const Navbar = () => {
       newUser(10000000, 100000000);
     } 
 
-    if (user) {
-      if (
-        user.email === "jlbroughton88@gmail.com" ||
-        user.email === "ablue@h3staffing.com" ||
-        user.email === "deberry@deberrycompany.com"
-      ) {
-        authorized = true;
-      } else {
-        let navLogOut = document.getElementById("navLogOut");
-        navLogOut.style.borderBottom = "2px solid #333";
-      }
-    }
+    // if (user) {
+    //   if (
+    //     user.email === "jlbroughton88@gmail.com" ||
+    //     user.email === "ablue@h3staffing.com" ||
+    //     user.email === "deberry@deberrycompany.com"
+    //   ) {
+    //     authorized = true;
+    //   } else {
+    //     let navLogOut = document.getElementById("navLogOut");
+    //     navLogOut.style.borderBottom = "2px solid #333";
+    //   }
+    // }
   }, []);
 
   return (

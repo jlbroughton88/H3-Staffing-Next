@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import moment from "moment";
+import Navbar from "../../comps/navbar";
+import Footer from "../../comps/footer";
 import "../../../public/static/css/blogpost.scss";
 import { useEnv } from "../../comps/contexts/envProvider";
 
@@ -24,7 +26,7 @@ const BlogPost1 = () => {
 
         const uid = getRandomInt(100000000, 1000000000);
         const formattedUid = uid.toString();
-        const user_uid = dbUser.uid.toString();
+        // const user_uid = dbUser.uid.toString();
         let time = moment().format('LT');
         let date = moment().format('L');
         let formattedTime = time.replace(/\s/g, "");
@@ -33,7 +35,7 @@ const BlogPost1 = () => {
         axios
             .post(`${statusUrl}/api/blog/admin/post`, {
                 uid : formattedUid,
-                user_uid: user_uid,
+                user_uid: "null",
                 author: "null",
                 title: blogTitle,
                 blog_text: blogInput,
@@ -46,6 +48,8 @@ const BlogPost1 = () => {
      }
 
     return (
+        <div>
+            <Navbar/>
         <div className="blogPostMother">
             <div className="blogPostMain">
                 <h1 className="blogPostHead">Create a Blog Post!</h1>
@@ -54,9 +58,11 @@ const BlogPost1 = () => {
                     <textarea type="text" placeholder="Let your job seekers know what H3 has going on..." className="blogPostInput" value={blogInput} onChange={e => setBlogInput(e.target.value)}/>
                     <button type="submit" className="blogPostBtn">Post</button>
                 </form>
-                
             </div>
         </div>
+        <Footer/>
+        </div>
+
     )
 }
 
