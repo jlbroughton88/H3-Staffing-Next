@@ -20,7 +20,7 @@ const All = posts => {
   }, []);
 
   return (
-    <div>
+    <div className="allParent">
       <Navbar />
       <div className="allMother">
         <h1 className="allHead">All Posts</h1>
@@ -37,7 +37,7 @@ const All = posts => {
                   <hr className="blogsHr" />
                   {post.blog_text.length > 150 ? (
                     <p className="blogText">
-                      {post.blog_text.slice(0, 150)}...
+                      {post.blog_text.slice(0, 50)}...
                     </p>
                   ) : (
                     <p className="blogText">{post.blog_text}</p>

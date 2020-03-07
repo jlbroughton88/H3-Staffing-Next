@@ -1,4 +1,6 @@
 import Link from "next/link";
+import InstagramFooter from "./icons/instagramFooter";
+import FacebookFooter from "./icons/facebookFooter"
 import "../../public/static/css/footer.scss";
 
 const Footer = () => {
@@ -31,11 +33,14 @@ const Footer = () => {
               <a href="mailto:h3staffing@gmail.com?Subject=Website%20Inquiry">
                 <p className="connectPara">h3staffing@gmail.com</p>
               </a>
-              <div className="socialsArea">
-                <p>O</p>
-                <p>O</p>
-                <p>O</p>
-              </div>
+              <section className="socialsDivFooter">
+                    <a href="#" className="facebookDivFooter">
+                        <FacebookFooter/>
+                    </a>
+                    <a href="#" className="instagramDivFooter">
+                        <InstagramFooter/>
+                    </a>
+                </section>
             </div>
           </div>
 

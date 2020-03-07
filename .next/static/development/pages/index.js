@@ -13337,11 +13337,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _public_static_css_footer_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../public/static/css/footer.scss */ "./public/static/css/footer.scss");
-/* harmony import */ var _public_static_css_footer_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_public_static_css_footer_scss__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _icons_instagramFooter__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./icons/instagramFooter */ "./pages/comps/icons/instagramFooter.js");
+/* harmony import */ var _icons_facebookFooter__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./icons/facebookFooter */ "./pages/comps/icons/facebookFooter.js");
+/* harmony import */ var _public_static_css_footer_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../public/static/css/footer.scss */ "./public/static/css/footer.scss");
+/* harmony import */ var _public_static_css_footer_scss__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_public_static_css_footer_scss__WEBPACK_IMPORTED_MODULE_4__);
 var _jsxFileName = "/Users/JacobBroughton/coding/work/H3-Staffing-Next/pages/comps/footer.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
 
 
 
@@ -13351,176 +13355,186 @@ var Footer = function Footer() {
     className: "footerMother",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 9
+      lineNumber: 11
     },
     __self: this
   }, __jsx("div", {
     className: "footerMain",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 10
+      lineNumber: 12
     },
     __self: this
   }, __jsx("div", {
     className: "footerBar",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 11
+      lineNumber: 13
     },
     __self: this
   }, __jsx("div", {
     className: "footerLinks",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 12
+      lineNumber: 14
     },
     __self: this
   }, __jsx("div", {
     className: "companyArea",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 13
+      lineNumber: 15
     },
     __self: this
   }, __jsx("h3", {
     className: "companyHead",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 14
+      lineNumber: 16
     },
     __self: this
   }, "Company"), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
     href: "/blog/all",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 16
+      lineNumber: 18
     },
     __self: this
   }, __jsx("a", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 17
+      lineNumber: 19
     },
     __self: this
   }, __jsx("p", {
     className: "companyPara",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 17
+      lineNumber: 19
     },
     __self: this
   }, "Blog")))), __jsx("div", {
     className: "careersArea",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 21
+      lineNumber: 23
     },
     __self: this
   }, __jsx("h3", {
     className: "careersHead",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 22
+      lineNumber: 24
     },
     __self: this
   }, " Careers"), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
     href: "/jobs",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 23
+      lineNumber: 25
     },
     __self: this
   }, __jsx("a", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 23
+      lineNumber: 25
     },
     __self: this
   }, __jsx("p", {
     className: "careersPara",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 23
+      lineNumber: 25
     },
     __self: this
   }, "Search Jobs")))), __jsx("div", {
     className: "connectArea",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 28
+      lineNumber: 30
     },
     __self: this
   }, __jsx("h3", {
     className: "connectHead",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 29
+      lineNumber: 31
     },
     __self: this
   }, "Connect With Us"), __jsx("p", {
     className: "connectPara",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 30
+      lineNumber: 32
     },
     __self: this
   }, "704-999-9999"), __jsx("a", {
     href: "mailto:h3staffing@gmail.com?Subject=Website%20Inquiry",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 31
+      lineNumber: 33
     },
     __self: this
   }, __jsx("p", {
     className: "connectPara",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 32
-    },
-    __self: this
-  }, "h3staffing@gmail.com")), __jsx("div", {
-    className: "socialsArea",
-    __source: {
-      fileName: _jsxFileName,
       lineNumber: 34
     },
     __self: this
-  }, __jsx("p", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 35
-    },
-    __self: this
-  }, "O"), __jsx("p", {
+  }, "h3staffing@gmail.com")), __jsx("section", {
+    className: "socialsDivFooter",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 36
     },
     __self: this
-  }, "O"), __jsx("p", {
+  }, __jsx("a", {
+    href: "#",
+    className: "facebookDivFooter",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 37
     },
     __self: this
-  }, "O")))), __jsx("hr", {
+  }, __jsx(_icons_facebookFooter__WEBPACK_IMPORTED_MODULE_3__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 42
+      lineNumber: 38
+    },
+    __self: this
+  })), __jsx("a", {
+    href: "#",
+    className: "instagramDivFooter",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 40
+    },
+    __self: this
+  }, __jsx(_icons_instagramFooter__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 41
+    },
+    __self: this
+  }))))), __jsx("hr", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 47
     },
     __self: this
   }), __jsx("div", {
     className: "legalDiv",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 43
+      lineNumber: 48
     },
     __self: this
   }, __jsx("p", {
     className: "legalPara",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 44
+      lineNumber: 49
     },
     __self: this
   }, "All Rights Reserved \xA9 2020 | H3 Staffing")))));
@@ -13549,46 +13563,58 @@ var CheckMark = function CheckMark() {
   var style1 = {
     fill: "none",
     stroke: "#000",
-    strokeWidth: "1px"
+    strokeWidth: "1px",
+    opacity: "0.1"
   };
   var style2 = {
     fill: "none",
     stroke: "#fff",
-    strokeWidth: "1px"
+    strokeWidth: "1px",
+    opacity: "0.1"
   };
   var style3 = {
     fill: "#6cb144",
     stroke: "#000",
-    strokeWidth: "0.5px"
+    strokeWidth: "0.5px",
+    opacity: "0.1"
   };
   var style4 = {
     fill: "#ed4f24",
     stroke: "#000",
-    strokeWidth: "0.5px"
+    strokeWidth: "0.5px",
+    opacity: "0.1"
   };
   var style5 = {
-    fill: "#ed4f24"
+    fill: "#ed4f24",
+    opacity: "0.1"
   };
   var style6 = {
     fill: "#fff",
     stroke: "#000",
-    strokeWidth: "1px"
+    strokeWidth: "1px",
+    opacity: "0.1"
   };
   var style7 = {
-    fill: "#fff"
+    fill: "#fff",
+    opacity: "0.1"
   };
   var style8 = {
     fillRule: "evenodd",
     clipRule: "evenodd",
     strokeLinecap: "round",
     strokeLinejoin: "round",
-    strokeMiterlimit: "1.5"
+    strokeMiterlimit: "1.5" // opacity: "0.1"
+
   };
   var style9 = {
-    fill: "#6cb144"
+    fill: "#6cb144",
+    opacity: "0.1"
+  };
+  var style10 = {
+    opacity: "0.1"
   };
   return __jsx("svg", {
-    width: "55px",
+    width: "45px",
     height: "100%",
     viewBox: "0 0 50 45",
     version: "1.1",
@@ -13599,14 +13625,14 @@ var CheckMark = function CheckMark() {
     style: style8,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 49
+      lineNumber: 63
     },
     __self: this
   }, __jsx("g", {
     id: "Check",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 50
+      lineNumber: 64
     },
     __self: this
   }, __jsx("ellipse", {
@@ -13617,7 +13643,7 @@ var CheckMark = function CheckMark() {
     style: style1,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 51
+      lineNumber: 65
     },
     __self: this
   }), __jsx("ellipse", {
@@ -13628,7 +13654,7 @@ var CheckMark = function CheckMark() {
     style: style1,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 52
+      lineNumber: 66
     },
     __self: this
   }), __jsx("ellipse", {
@@ -13639,7 +13665,7 @@ var CheckMark = function CheckMark() {
     style: style2,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 53
+      lineNumber: 67
     },
     __self: this
   }), __jsx("path", {
@@ -13647,7 +13673,7 @@ var CheckMark = function CheckMark() {
     style: style3,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 54
+      lineNumber: 68
     },
     __self: this
   }), __jsx("path", {
@@ -13655,7 +13681,7 @@ var CheckMark = function CheckMark() {
     style: style3,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 55
+      lineNumber: 69
     },
     __self: this
   }), __jsx("path", {
@@ -13663,7 +13689,7 @@ var CheckMark = function CheckMark() {
     style: style9,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 56
+      lineNumber: 70
     },
     __self: this
   }), __jsx("path", {
@@ -13671,7 +13697,7 @@ var CheckMark = function CheckMark() {
     style: style4,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 57
+      lineNumber: 71
     },
     __self: this
   }), __jsx("path", {
@@ -13679,7 +13705,7 @@ var CheckMark = function CheckMark() {
     style: style4,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 58
+      lineNumber: 72
     },
     __self: this
   }), __jsx("path", {
@@ -13687,7 +13713,7 @@ var CheckMark = function CheckMark() {
     style: style5,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 59
+      lineNumber: 73
     },
     __self: this
   }), __jsx("path", {
@@ -13695,7 +13721,7 @@ var CheckMark = function CheckMark() {
     style: style6,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 60
+      lineNumber: 74
     },
     __self: this
   }), __jsx("path", {
@@ -13703,7 +13729,7 @@ var CheckMark = function CheckMark() {
     style: style6,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 61
+      lineNumber: 75
     },
     __self: this
   }), __jsx("path", {
@@ -13711,14 +13737,15 @@ var CheckMark = function CheckMark() {
     style: style7,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 62
+      lineNumber: 76
     },
     __self: this
   }), __jsx("path", {
     d: "M26.031,28.403l-0.562,-0.535l-2.594,2.723l0.561,0.534l2.595,-2.722Z",
+    style: style10,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 63
+      lineNumber: 77
     },
     __self: this
   })));
@@ -13780,6 +13807,104 @@ var DownArrow = function DownArrow() {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (DownArrow);
+
+/***/ }),
+
+/***/ "./pages/comps/icons/facebookFooter.js":
+/*!*********************************************!*\
+  !*** ./pages/comps/icons/facebookFooter.js ***!
+  \*********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _jsxFileName = "/Users/JacobBroughton/coding/work/H3-Staffing-Next/pages/comps/icons/facebookFooter.js";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+var facebookFooter = function facebookFooter() {
+  return __jsx("svg", {
+    // className="instagramFooterSVG"
+    width: "100%",
+    height: "100%",
+    viewBox: "0 -12 50 50",
+    version: "1.1",
+    xmlns: "http://www.w3.org/2000/svg",
+    xlink: "http://www.w3.org/1999/xlink",
+    space: "preserve",
+    serif: "http://www.serif.com/",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 6
+    },
+    __self: this
+  }, __jsx("path", {
+    x: "0",
+    y: "0",
+    width: "100%",
+    height: "100%",
+    d: "M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 18
+    },
+    __self: this
+  }));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (facebookFooter);
+
+/***/ }),
+
+/***/ "./pages/comps/icons/instagramFooter.js":
+/*!**********************************************!*\
+  !*** ./pages/comps/icons/instagramFooter.js ***!
+  \**********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _jsxFileName = "/Users/JacobBroughton/coding/work/H3-Staffing-Next/pages/comps/icons/instagramFooter.js";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+var instagramFooter = function instagramFooter() {
+  return __jsx("svg", {
+    className: "instagramFooterSVG",
+    width: "100%",
+    height: "100%",
+    viewBox: "15 0 64 64",
+    version: "1.1",
+    xmlns: "http://www.w3.org/2000/svg",
+    xlink: "http://www.w3.org/1999/xlink",
+    space: "preserve",
+    serif: "http://www.serif.com/",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 5
+    },
+    __self: this
+  }, __jsx("path", {
+    x: "0",
+    y: "0",
+    width: "100%",
+    height: "100%",
+    d: "M46.91,25.816c-0.073-1.597-0.326-2.687-0.697-3.641c-0.383-0.986-0.896-1.823-1.73-2.657c-0.834-0.834-1.67-1.347-2.657-1.73c-0.954-0.371-2.045-0.624-3.641-0.697C36.585,17.017,36.074,17,32,17s-4.585,0.017-6.184,0.09c-1.597,0.073-2.687,0.326-3.641,0.697c-0.986,0.383-1.823,0.896-2.657,1.73c-0.834,0.834-1.347,1.67-1.73,2.657c-0.371,0.954-0.624,2.045-0.697,3.641C17.017,27.415,17,27.926,17,32c0,4.074,0.017,4.585,0.09,6.184c0.073,1.597,0.326,2.687,0.697,3.641c0.383,0.986,0.896,1.823,1.73,2.657c0.834,0.834,1.67,1.347,2.657,1.73c0.954,0.371,2.045,0.624,3.641,0.697C27.415,46.983,27.926,47,32,47s4.585-0.017,6.184-0.09c1.597-0.073,2.687-0.326,3.641-0.697c0.986-0.383,1.823-0.896,2.657-1.73c0.834-0.834,1.347-1.67,1.73-2.657c0.371-0.954,0.624-2.045,0.697-3.641C46.983,36.585,47,36.074,47,32S46.983,27.415,46.91,25.816z M44.21,38.061c-0.067,1.462-0.311,2.257-0.516,2.785c-0.272,0.7-0.597,1.2-1.122,1.725c-0.525,0.525-1.025,0.85-1.725,1.122c-0.529,0.205-1.323,0.45-2.785,0.516c-1.581,0.072-2.056,0.087-6.061,0.087s-4.48-0.015-6.061-0.087c-1.462-0.067-2.257-0.311-2.785-0.516c-0.7-0.272-1.2-0.597-1.725-1.122c-0.525-0.525-0.85-1.025-1.122-1.725c-0.205-0.529-0.45-1.323-0.516-2.785c-0.072-1.582-0.087-2.056-0.087-6.061s0.015-4.48,0.087-6.061c0.067-1.462,0.311-2.257,0.516-2.785c0.272-0.7,0.597-1.2,1.122-1.725c0.525-0.525,1.025-0.85,1.725-1.122c0.529-0.205,1.323-0.45,2.785-0.516c1.582-0.072,2.056-0.087,6.061-0.087s4.48,0.015,6.061,0.087c1.462,0.067,2.257,0.311,2.785,0.516c0.7,0.272,1.2,0.597,1.725,1.122c0.525,0.525,0.85,1.025,1.122,1.725c0.205,0.529,0.45,1.323,0.516,2.785c0.072,1.582,0.087,2.056,0.087,6.061S44.282,36.48,44.21,38.061z M32,24.297c-4.254,0-7.703,3.449-7.703,7.703c0,4.254,3.449,7.703,7.703,7.703c4.254,0,7.703-3.449,7.703-7.703C39.703,27.746,36.254,24.297,32,24.297z M32,37c-2.761,0-5-2.239-5-5c0-2.761,2.239-5,5-5s5,2.239,5,5C37,34.761,34.761,37,32,37z M40.007,22.193c-0.994,0-1.8,0.806-1.8,1.8c0,0.994,0.806,1.8,1.8,1.8c0.994,0,1.8-0.806,1.8-1.8C41.807,22.999,41.001,22.193,40.007,22.193z",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 16
+    },
+    __self: this
+  }));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (instagramFooter);
 
 /***/ }),
 
@@ -15289,7 +15414,7 @@ module.exports = "/_next/static/images/img1-bf92c43028e0b228ce65b1b68945b507.jpg
 
 /***/ }),
 
-/***/ 2:
+/***/ 6:
 /*!************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2FJacobBroughton%2Fcoding%2Fwork%2FH3-Staffing-Next%2Fpages%2Findex.js ***!
   \************************************************************************************************************************************************/
@@ -15312,5 +15437,5 @@ module.exports = dll_ef0ff7c60362f24a921f;
 
 /***/ })
 
-},[[2,"static/runtime/webpack.js","styles"]]]);
+},[[6,"static/runtime/webpack.js","styles"]]]);
 //# sourceMappingURL=index.js.map

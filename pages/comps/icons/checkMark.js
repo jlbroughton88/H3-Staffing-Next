@@ -5,33 +5,40 @@ const CheckMark = () => {
     const style1 = {
         fill:"none", 
         stroke:"#000",
-        strokeWidth:"1px"
+        strokeWidth:"1px",
+        opacity: "0.1"
     }
     const style2 = {
         fill:"none", 
         stroke:"#fff",
-        strokeWidth:"1px"
+        strokeWidth:"1px",
+        opacity: "0.1"
     }
     const style3 = {
         fill:"#6cb144",
         stroke:"#000",
-        strokeWidth:"0.5px"
+        strokeWidth:"0.5px",
+        opacity: "0.1"
     }
     const style4 = {
         fill:"#ed4f24",
         stroke:"#000",
-        strokeWidth:"0.5px"
+        strokeWidth:"0.5px",
+        opacity: "0.1"
     }
     const style5 = {
-        fill:"#ed4f24"
+        fill:"#ed4f24",
+        opacity: "0.1"
     }
     const style6 = {
         fill:"#fff",
         stroke:"#000",
-        strokeWidth:"1px"
+        strokeWidth:"1px",
+        opacity: "0.1"
     }
     const style7 = {
-        fill:"#fff"
+        fill:"#fff",
+        opacity: "0.1"
     }
 
     const style8 = {
@@ -40,13 +47,20 @@ const CheckMark = () => {
         strokeLinecap:"round",
         strokeLinejoin:"round",
         strokeMiterlimit:"1.5"
+        // opacity: "0.1"
     }
 
     const style9 = {
-        fill:"#6cb144"
+        fill:"#6cb144",
+        opacity: "0.1"
     }
+
+    const style10 = {
+        opacity: "0.1"
+    }
+
     return (
-        <svg width="55px" height="100%" viewBox="0 0 50 45" version="1.1" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" space="preserve" serif="http://www.serif.com/" style={style8}>
+        <svg width="45px" height="100%" viewBox="0 0 50 45" version="1.1" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" space="preserve" serif="http://www.serif.com/" style={style8}>
             <g id="Check">
                 <ellipse cx="22.251" cy="22.247" rx="21.751" ry="21.747" style={style1} />
                 <ellipse cx="22.251" cy="22.247" rx="19.385" ry="19.382" style={style1} />
@@ -60,7 +74,7 @@ const CheckMark = () => {
                 <path d="M25.71,27.779c0,0 -12.277,-9.067 -15.512,-11.456c-0.427,-0.316 -1.029,-0.225 -1.344,0.202c-0.441,0.597 -1.05,1.422 -1.503,2.034c-0.164,0.222 -0.233,0.5 -0.192,0.773c0.041,0.273 0.189,0.519 0.411,0.683c2.809,2.074 11.874,8.77 14.639,10.812c0.447,0.33 1.076,0.235 1.405,-0.211c0.793,-1.074 2.096,-2.837 2.096,-2.837Z" style={style6} />
                 <path d="M22.343,30.695c0.403,0.373 1.031,0.348 1.403,-0.055c3.607,-3.9 20.598,-22.274 24.22,-26.19c0.18,-0.195 0.275,-0.454 0.265,-0.72c-0.01,-0.265 -0.126,-0.516 -0.321,-0.696c-0.544,-0.503 -1.284,-1.187 -1.833,-1.695c-0.419,-0.387 -1.072,-0.362 -1.459,0.057c-4.107,4.441 -24.873,26.897 -24.873,26.897c0,0 1.619,1.497 2.598,2.402Z" style={style6} />
                 <path d="M25.137,28.068c0,0 -11.81,-8.848 -14.954,-11.202c-0.422,-0.317 -1.02,-0.236 -1.343,0.181c-0.298,0.384 -0.66,0.851 -0.961,1.239c-0.16,0.205 -0.23,0.467 -0.194,0.724c0.035,0.258 0.173,0.49 0.383,0.645c2.719,2.008 11.62,8.582 14.296,10.559c0.424,0.314 1.022,0.224 1.336,-0.2c0.592,-0.803 1.437,-1.946 1.437,-1.946Z" style={style7} />
-                <path d="M26.031,28.403l-0.562,-0.535l-2.594,2.723l0.561,0.534l2.595,-2.722Z" />
+                <path d="M26.031,28.403l-0.562,-0.535l-2.594,2.723l0.561,0.534l2.595,-2.722Z" style={style10}/>
             </g>
         </svg>
     )

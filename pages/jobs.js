@@ -15,7 +15,7 @@ const Jobs = () => {
   };
 
   return (
-    <div>
+    <div className="jobsParent">
       <Navbar />
       <div className="jobsMother">
         <div className="jobsMain">

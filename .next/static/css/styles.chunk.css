@@ -1,9 +1,190 @@
+.jobsParent {
+  height: auto; }
+  .jobsParent button {
+    appearance: none;
+    -webkit-appearance: none;
+    background: #ed4f24;
+    color: #ffffff;
+    font-weight: 700; }
+  .jobsParent .jobsMother .jobsMain {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #F8F8F8;
+    background-size: cover;
+    padding-bottom: 70vh; }
+    .jobsParent .jobsMother .jobsMain .loadJobBoardBtn {
+      position: absolute;
+      top: 40vh;
+      -webkit-appearance: none;
+      appearance: none;
+      border: none;
+      background: #ed4f24;
+      border-radius: 5px;
+      color: #ffffff;
+      font-size: 1.2rem;
+      font-weight: 900;
+      padding: 0 15px;
+      transition: all 0.2s ease-in-out;
+      z-index: 1;
+      cursor: pointer; }
+    .jobsParent .jobsMother .jobsMain #jb--job-board {
+      position: relative;
+      top: 50px;
+      z-index: 2;
+      background: #ffffff;
+      width: 80%;
+      max-width: 660px;
+      box-shadow: 3px 3px 5px rgba(58, 58, 58, 0.1);
+      border-radius: 3px; }
+      @media (max-width: 450px) {
+        .jobsParent .jobsMother .jobsMain #jb--job-board {
+          width: 95%; } }
+
+/* OVERRIDES !important must be included on all styles */
+/* container for all pages */
+/* main text color default is set here - IMPORTANT */
+/* can change background, or add borders and padding */
+.jb--jobs {
+  color: #000 !important;
+  /* background: #fff !important; */
+  padding: 1rem !important; }
+
+/* page titles */
+.jb--wrapper h2 {
+  color: #333 !important; }
+
+/* links */
+/* search and apply buttons, pagination */
+/* can change background, or add borders, change border-radius and padding */
+.jb--button {
+  background-color: #ed4f24 !important;
+  color: #ffffff !important;
+  border-radius: 6px;
+  font-weight: 700;
+  margin-top: 10px;
+  cursor: pointer !important;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.jb--button:hover {
+  border: 1px solid #000 !important; }
+
+/* button with arrow when they are at the beginning or end */
+.jb--button.disabled {
+  background-color: #eaeaea !important;
+  border: 1px solid #cecece !important;
+  color: #cecece !important; }
+
+/* button active depending which page of the search results */
+.jb--button-active {
+  background-color: #a9a9a9 !important;
+  border: 1px solid #000 !important;
+  color: #fff !important; }
+
+.jb--wrapper input {
+  border-radius: 6px !important; }
+
+/* height of buttons and form fields */
+.jb--wrapper input,
+button,
+.jb--button {
+  height: 36px !important; }
+
+.nameSubmit {
+  cursor: pointer; }
+
+/* Change the color of the placeholder text in inputs */
+::-webkit-input-placeholder {
+  color: #808080; }
+
+:-ms-input-placeholder {
+  color: #808080; }
+
+::-moz-placeholder {
+  color: #808080; }
+
+:-moz-placeholder {
+  color: #808080; }
+
+/* Changes the loading indicator */
+.jb--loading {
+  color: #d3d3d3;
+  width: 100px; }
+
+/* container that holds search description */
+/* can change background, or add borders and padding */
+.jb--job-listing {
+  background: #fff !important;
+  padding: 1rem !important; }
+
+.jb--job-listing:hover {
+  background: #f7f7f7 !important; }
+
+/* container that holds search description for featured jobs */
+/* can change background, or add borders and padding */
+.jb--job-listing-featured {
+  background: #fff !important;
+  padding: 1rem !important; }
+
+.jb--job-listing-featured:hover {
+  background: #f7f7f7 !important; }
+
+/* featured job label on search results */
+.jb--wrapper .jb--featured-label {
+  background: #555555; }
+
+/* job title on search results */
+/* should pick up <a> color, can change if necessary */
+/* location on search results */
+.jb--location {
+  color: #808080 !important; }
+
+/* date posted on search results */
+.jb--date-posted {
+  color: #000 !important; }
+
+/* job descriptions on search results */
+.jb--description {
+  color: #808080 !important; }
+
+/* job count on bottom of search results */
+.jb--job-count {
+  color: #000 !important; }
+
+/* container for the sidebar on job detail page */
+/* can add background, border, padding */
+/* titles in sidebar */
+.jb--sidebar-title {
+  color: #808080 !important; }
+
+/* content in sidebar */
+.jb--sidebar-content {
+  color: #000 !important; }
+
+/* container for job description on job detail page */
+/* can add background, border, padding */
+/* applying for at top of apply page */
+.jb--applying-for {
+  color: #333 !important; }
+
+/* labels on form field on apply page */
+.jb--label {
+  color: #808080 !important; }
+
+/* accepted file types below resume picker */
+.jb--file-type {
+  color: #666 !important; }
+
 a {
   text-decoration: none;
   color: inherit; }
 
 .navMother {
-  margin-bottom: 3px; }
+  margin-bottom: 3px;
+  width: 100%; }
   .navMother .navMain {
     display: flex;
     flex-direction: row;
@@ -114,93 +295,113 @@ a {
 hr {
   width: 95%;
   margin: 0;
-  margin-top: 50px; }
+  margin-top: 25px; }
 
-.footerMother .footerMain .footerBar {
-  background: #333;
-  height: auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column; }
-  .footerMother .footerMain .footerBar .footerLinks {
-    width: 100%;
-    max-width: 1450px;
-    display: grid;
-    grid-template-columns: 25% 25% 50%;
-    justify-content: center;
-    justify-items: center;
-    padding: 40px 0; }
-    .footerMother .footerMain .footerBar .footerLinks .companyArea {
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      color: #ffffff; }
-      .footerMother .footerMain .footerBar .footerLinks .companyArea .companyHead {
-        font-size: 1.9rem;
-        margin-bottom: 5px; }
-      .footerMother .footerMain .footerBar .footerLinks .companyArea .companyPara {
-        font-size: 1.3rem; }
-    .footerMother .footerMain .footerBar .footerLinks .careersArea {
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      color: #ffffff; }
-      .footerMother .footerMain .footerBar .footerLinks .careersArea .careersHead {
-        font-size: 1.9rem;
-        margin-bottom: 5px; }
-      .footerMother .footerMain .footerBar .footerLinks .careersArea .talentNetworkBtn {
-        background: #333;
-        color: #ffffff;
-        padding: 0;
-        margin: 0;
-        border: none;
-        appearance: none; }
-      .footerMother .footerMain .footerBar .footerLinks .careersArea .careersPara {
-        font-size: 1.3rem; }
-    .footerMother .footerMain .footerBar .footerLinks .connectArea {
-      color: #ED4F24; }
-      .footerMother .footerMain .footerBar .footerLinks .connectArea .connectHead {
-        font-size: 1.9rem;
-        margin-bottom: 5px; }
-      .footerMother .footerMain .footerBar .footerLinks .connectArea .connectPara {
-        color: #ffffff;
-        font-size: 1.3rem; }
-      .footerMother .footerMain .footerBar .footerLinks .connectArea .socialsArea {
-        display: flex;
-        flex-direction: row;
-        color: #ffffff; }
-    @media (max-width: 800px) {
-      .footerMother .footerMain .footerBar .footerLinks {
-        grid-template-columns: 90%;
-        justify-items: start;
-        row-gap: 40px;
-        padding-bottom: 0; } }
-  .footerMother .footerMain .footerBar .legalDiv {
+.footerMother {
+  width: 100%; }
+  .footerMother .footerMain .footerBar {
+    background: #333;
+    height: auto;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100px; }
+    flex-direction: column; }
+    .footerMother .footerMain .footerBar .footerLinks {
+      width: 100%;
+      max-width: 1450px;
+      display: grid;
+      grid-template-columns: 25% 25% 50%;
+      justify-content: center;
+      justify-items: center;
+      padding: 20px 0 0 0; }
+      .footerMother .footerMain .footerBar .footerLinks .companyArea {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        color: #ffffff; }
+        .footerMother .footerMain .footerBar .footerLinks .companyArea .companyHead {
+          font-size: 1.9rem;
+          margin-bottom: 5px; }
+        .footerMother .footerMain .footerBar .footerLinks .companyArea .companyPara {
+          font-size: 1.3rem; }
+      .footerMother .footerMain .footerBar .footerLinks .careersArea {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        color: #ffffff; }
+        .footerMother .footerMain .footerBar .footerLinks .careersArea .careersHead {
+          font-size: 1.9rem;
+          margin-bottom: 5px; }
+        .footerMother .footerMain .footerBar .footerLinks .careersArea .talentNetworkBtn {
+          background: #333;
+          color: #ffffff;
+          padding: 0;
+          margin: 0;
+          border: none;
+          appearance: none; }
+        .footerMother .footerMain .footerBar .footerLinks .careersArea .careersPara {
+          font-size: 1.3rem; }
+      .footerMother .footerMain .footerBar .footerLinks .connectArea {
+        color: #ed4f24; }
+        .footerMother .footerMain .footerBar .footerLinks .connectArea .connectHead {
+          font-size: 1.9rem;
+          margin-bottom: 5px; }
+        .footerMother .footerMain .footerBar .footerLinks .connectArea .connectPara {
+          color: #ffffff;
+          font-size: 1.3rem; }
+        .footerMother .footerMain .footerBar .footerLinks .connectArea .socialsDivFooter {
+          display: flex;
+          align-items: center;
+          align-self: center;
+          height: 50px;
+          width: 150px;
+          background: #333; }
+          .footerMother .footerMain .footerBar .footerLinks .connectArea .socialsDivFooter .facebookDivFooter,
+          .footerMother .footerMain .footerBar .footerLinks .connectArea .socialsDivFooter .instagramDivFooter {
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+            text-align: start;
+            height: 50px;
+            width: 50px;
+            transition: all ease-in-out 0.3s;
+            fill: #ffffff; }
+            .footerMother .footerMain .footerBar .footerLinks .connectArea .socialsDivFooter .facebookDivFooter:hover,
+            .footerMother .footerMain .footerBar .footerLinks .connectArea .socialsDivFooter .instagramDivFooter:hover {
+              fill: #6cb144;
+              cursor: pointer; }
+      @media (max-width: 800px) {
+        .footerMother .footerMain .footerBar .footerLinks {
+          grid-template-columns: 90%;
+          justify-items: start;
+          row-gap: 10px;
+          padding-bottom: 0; }
+          .footerMother .footerMain .footerBar .footerLinks .companyArea p, .footerMother .footerMain .footerBar .footerLinks .careersArea p, .footerMother .footerMain .footerBar .footerLinks .connectArea p {
+            margin: 0; } }
+    .footerMother .footerMain .footerBar .legalDiv {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100px; }
+      .footerMother .footerMain .footerBar .legalDiv .legalPara {
+        color: #ffffff;
+        text-align: center;
+        font-size: 1.3rem; }
+  @media (max-width: 600px) {
+    .footerMother .footerMain .footerBar .footerLinks .companyArea .companyHead {
+      font-size: 1.5rem; }
+    .footerMother .footerMain .footerBar .footerLinks .companyArea .companyPara {
+      font-size: 1.1rem; }
+    .footerMother .footerMain .footerBar .footerLinks .careersArea .careersHead {
+      font-size: 1.5rem; }
+    .footerMother .footerMain .footerBar .footerLinks .careersArea .careersPara {
+      font-size: 1.1rem; }
+    .footerMother .footerMain .footerBar .footerLinks .connectArea .connectHead {
+      font-size: 1.5rem; }
+    .footerMother .footerMain .footerBar .footerLinks .connectArea .connectPara {
+      font-size: 1.1rem; }
     .footerMother .footerMain .footerBar .legalDiv .legalPara {
-      color: #ffffff;
-      text-align: center;
-      font-size: 1.3rem; }
-
-@media (max-width: 600px) {
-  .footerMother .footerMain .footerBar .footerLinks .companyArea .companyHead {
-    font-size: 1.5rem; }
-  .footerMother .footerMain .footerBar .footerLinks .companyArea .companyPara {
-    font-size: 1.1rem; }
-  .footerMother .footerMain .footerBar .footerLinks .careersArea .careersHead {
-    font-size: 1.5rem; }
-  .footerMother .footerMain .footerBar .footerLinks .careersArea .careersPara {
-    font-size: 1.1rem; }
-  .footerMother .footerMain .footerBar .footerLinks .connectArea .connectHead {
-    font-size: 1.5rem; }
-  .footerMother .footerMain .footerBar .footerLinks .connectArea .connectPara {
-    font-size: 1.1rem; }
-  .footerMother .footerMain .footerBar .legalDiv .legalPara {
-    font-size: 1.1rem; } }
+      font-size: 1.1rem; } }
 
 @font-face {
   font-family: "Open Sans";
@@ -211,7 +412,6 @@ hr {
 @font-face {
   font-family: "Open Sans Semibold";
   src: url(/_next/static/chunks/fonts/OpenSans-Semibold-33f225b8f5f7d6b34a0926f58f96c1e9.ttf) format("TrueType");
-  font-weight: bold;
   font-display: auto;
   font-style: normal; }
 
@@ -270,7 +470,6 @@ div .home1Mother {
         border: none;
         background: #ed4f24;
         border-radius: 5px;
-        box-shadow: 3px 3px #6cb144;
         color: #ffffff;
         font-size: 1.15rem;
         padding: 3px 15px;
@@ -319,7 +518,7 @@ div .home2Mother {
       max-width: 1000px;
       align-self: center;
       text-align: center;
-      margin-bottom: 20px; }
+      margin-bottom: 15px; }
       div .home2Mother .home2Main .discoverHeadDiv .discoverHead {
         color: #6cb144;
         font-size: 3rem; }
@@ -343,7 +542,10 @@ div .home2Mother {
           border: 2px solid lightgrey;
           font-size: 1.15rem;
           transition: all 0.2s ease-in-out;
-          white-space: nowrap; }
+          white-space: nowrap;
+          height: 32px;
+          padding-bottom: 3px;
+          text-align: center; }
           @media (max-width: 600px) {
             div .home2Mother .home2Main .seekerEmployeeDiv .seekerEmployerSlider .seekerSlide {
               font-size: 1rem; } }
@@ -375,7 +577,10 @@ div .home2Mother {
           border: 2px solid lightgrey;
           font-size: 1.15rem;
           transition: all 0.2s ease-in-out;
-          white-space: nowrap; }
+          white-space: nowrap;
+          height: 32px;
+          padding-bottom: 3px;
+          text-align: center; }
           @media (max-width: 600px) {
             div .home2Mother .home2Main .seekerEmployeeDiv .seekerEmployerSlider .employerSlide {
               font-size: 1rem; } }
@@ -412,7 +617,8 @@ div .home2Mother {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: auto;
-        width: auto; }
+        width: auto;
+        grid-gap: 5px; }
         div .home2Mother .home2Main .checkListDiv .checkListParent .checkList :nth-child(1) {
           grid-column: 1; }
         div .home2Mother .home2Main .checkListDiv .checkListParent .checkList :nth-child(2) {
@@ -426,13 +632,19 @@ div .home2Mother {
           justify-content: space-evenly;
           align-items: flex-start;
           margin-bottom: 20px;
-          padding: 0px 15px; }
-          div .home2Mother .home2Main .checkListDiv .checkListParent .checkList .checkListItem .checkListIcon {
-            align-self: center; }
+          padding: 0px 15px;
+          position: relative; }
+          div .home2Mother .home2Main .checkListDiv .checkListParent .checkList .checkListItem .iconDiv {
+            align-self: flex-start;
+            position: absolute;
+            left: 0;
+            top: 0; }
+            div .home2Mother .home2Main .checkListDiv .checkListParent .checkList .checkListItem .iconDiv .checkListIcon {
+              align-self: center; }
           div .home2Mother .home2Main .checkListDiv .checkListParent .checkList .checkListItem .checkListPara {
             margin: 0;
             width: auto;
-            font-size: 1.15rem;
+            font-size: 1.3rem;
             align-self: flex-start;
             max-width: 320px;
             margin-left: 10px; }
@@ -466,14 +678,19 @@ div .home2Mother {
           display: grid;
           grid-template-columns: repeat(2, 1fr);
           grid-template-rows: repeat(3, auto);
-          justify-content: flex-start; }
+          justify-content: flex-start;
+          grid-gap: 5px; }
           div .home2Mother .home2Main .coreValuesParent .valuesContent .valuesListDiv .valuesList .valueItem {
             border: #333 solid 2px;
             margin: 10px;
             padding: 5px 10px;
             border-radius: 5px;
             box-shadow: 2px 2px #ed4f24, 4px 4px #6cb144;
-            font-size: 1.15rem; }
+            font-size: 1.15rem;
+            border: none;
+            box-shadow: 3px 3px 5px rgba(58, 58, 58, 0.1);
+            background: #F8F8F8;
+            border-radius: 3px; }
         div .home2Mother .home2Main .coreValuesParent .valuesContent .valuesParaDiv {
           width: 80%;
           padding-right: 8%; }
@@ -500,7 +717,6 @@ div .home2Mother {
               align-items: flex-start; }
               div .home2Mother .home2Main .checkListDiv .checkListParent .checkList .checkListItemParent .checkListItem .checkListPara {
                 max-width: inherit;
-                font-size: 1.6rem;
                 padding-left: 20px; }
       div .home2Mother .home2Main .coreValuesParent {
         width: calc(100% - 100px);
@@ -545,17 +761,17 @@ div .home2Mother {
       font-size: 1.7rem; } }
   @media (max-width: 600px) {
     div .home2Mother .home2Main .discoverHeadDiv .discoverHead {
-      font-size: 2.1rem; }
+      font-size: 2rem; }
     div .home2Mother .home2Main .checkListDiv {
       padding-right: 20px;
       padding-left: 20px;
       width: calc(100% - 40px); }
     div .home2Mother .home2Main .coreValuesParent {
-      width: 82%;
-      padding: 0px 30px; }
+      width: calc(100% - 20px);
+      padding: 0; }
       div .home2Mother .home2Main .coreValuesParent .valuesHeadDiv .valuesHead {
         text-align: center;
-        font-size: 2.1rem; }
+        font-size: 2rem; }
       div .home2Mother .home2Main .coreValuesParent .valuesContent .valuesParaDiv {
         padding-right: 0;
         padding-left: 2.5%; } }
@@ -593,9 +809,13 @@ div .home3Mother {
           font-size: 1.15rem;
           margin: none; }
       div .home3Mother .home3Main .overviewSectParent .overviewSect .briefSect .briefDiv {
-        box-shadow: -3px 0px 0px 0px #ed4f24, -6px 0px 0px 0px #6cb144;
+        background: #F8F8F8;
+        box-shadow: 3px 3px 5px rgba(58, 58, 58, 0.1);
+        border-radius: 3px;
+        padding: 5px 10px;
         margin-bottom: 30px;
-        padding-left: 10px; }
+        margin-right: 15px;
+        max-width: 650px; }
         div .home3Mother .home3Main .overviewSectParent .overviewSect .briefSect .briefDiv .briefHead {
           margin: 0;
           font-size: 1.3rem; }
@@ -609,7 +829,7 @@ div .home3Mother {
           height: auto;
           width: 100%;
           border-radius: 5px;
-          box-shadow: 4px 4px #ed4f24, 8px 8px #6cb144; }
+          box-shadow: 3px 3px 5px rgba(58, 58, 58, 0.1); }
       @media (min-width: 701px) {
         div .home3Mother .home3Main .overviewSectParent .overviewSect .overviewImgSect2 {
           display: none; } }
@@ -639,7 +859,6 @@ div .home3Mother {
             display: flex;
             align-items: center;
             max-width: inherit;
-            box-shadow: 4px 4px #ed4f24, 8px 8px #6cb144;
             border-radius: 5px;
             margin-bottom: 40px; }
             div .home3Mother .home3Main .overviewSectParent .overviewImgSect2 .overviewParaDiv2 {
@@ -658,7 +877,8 @@ div .home3Mother {
               box-shadow: none;
               height: auto;
               width: 100%;
-              border-radius: 5px; }
+              border-radius: 5px;
+              box-shadow: 3px 3px 5px rgba(58, 58, 58, 0.2); }
           div .home3Mother .home3Main .overviewSectParent .overviewImgSect {
             display: none; }
             div .home3Mother .home3Main .overviewSectParent .overviewImgSect .overviewImg {
@@ -685,7 +905,11 @@ div .home3Mother {
       div .home3Mother .home3Main .briefSect2 .briefDiv2 {
         box-shadow: -3px 0px 0px 0px #ed4f24, -6px 0px 0px 0px #6cb144;
         margin-bottom: 30px;
-        padding-left: 10px; }
+        padding-left: 10px;
+        box-shadow: 3px 3px 5px rgba(58, 58, 58, 0.1);
+        background: #F8F8F8;
+        border-radius: 3px;
+        padding: 5px 10px; }
         div .home3Mother .home3Main .briefSect2 .briefDiv2 .briefHead2 {
           margin: 0;
           font-size: 1.3rem; }
@@ -699,18 +923,18 @@ div .home3Mother {
       justify-content: center;
       align-items: center; }
       div .home3Mother .home3Main {
-        width: calc(100% - 70px);
+        width: calc(100% - 35px);
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        padding: 0 35px; }
+        padding: 0; }
         div .home3Mother .home3Main .overviewHeadDiv .overviewHead {
-          font-size: 2.1rem; }
+          font-size: 2rem; }
         div .home3Mother .home3Main .overviewSectParent .overviewSect .overviewImgSect2 .overviewParaDiv2 {
           padding: none; }
           div .home3Mother .home3Main .overviewSectParent .overviewSect .overviewImgSect2 .overviewParaDiv2 .overviewPara2 {
-            font-size: 0.9rem; }
+            font-size: 0.95rem; }
         div .home3Mother .home3Main .briefSect2 .briefDiv2 .briefHead2 {
           font-size: 1.3rem; }
         div .home3Mother .home3Main .briefSect2 .briefDiv2 .briefPara2 {
@@ -734,7 +958,7 @@ div .home4Mother {
     justify-content: center; }
     div .home4Mother .home4Main .home4HeadDiv {
       padding: 0 50px;
-      margin-bottom: 25px; }
+      margin-bottom: 15px; }
       div .home4Mother .home4Main .home4HeadDiv .home4Head {
         font-size: 2.4rem;
         color: #6cb144; }
@@ -744,18 +968,23 @@ div .home4Mother {
       max-width: 1450px; }
       div .home4Mother .home4Main .servicesGridDiv .servicesGrid {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        justify-items: center; }
-        div .home4Mother .home4Main .servicesGridDiv .servicesGrid .serviceDiv {
-          padding: 20px; }
-          div .home4Mother .home4Main .servicesGridDiv .servicesGrid .serviceDiv .serviceHead {
-            margin: 0;
-            font-size: 1.3rem; }
-          div .home4Mother .home4Main .servicesGridDiv .servicesGrid .serviceDiv .servicePara {
-            font-size: 1.15rem; }
-            @media (max-width: 800px) {
-              div .home4Mother .home4Main .servicesGridDiv .servicesGrid .serviceDiv .servicePara {
-                font-size: 1.15rem; } }
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        justify-items: center;
+        grid-gap: 15px; }
+        div .home4Mother .home4Main .servicesGridDiv .servicesGrid .serviceDiv .serviceHead {
+          margin: 0;
+          font-size: 1.3rem; }
+        div .home4Mother .home4Main .servicesGridDiv .servicesGrid .serviceDiv .servicePara {
+          font-size: 1.15rem; }
+          @media (max-width: 800px) {
+            div .home4Mother .home4Main .servicesGridDiv .servicesGrid .serviceDiv .servicePara {
+              font-size: 1.15rem; } }
+        @media (max-width: 500px) {
+          div .home4Mother .home4Main .servicesGridDiv .servicesGrid .serviceDiv {
+            box-shadow: 3px 3px 5px rgba(58, 58, 58, 0.1);
+            background: #F8F8F8;
+            border-radius: 3px;
+            padding: 5px 10px; } }
     div .home4Mother .home4Main .letsTalkDiv1 {
       background-color: #6cb144;
       width: 100%;
@@ -767,21 +996,17 @@ div .home4Mother {
       @media (max-width: 600px) {
         div .home4Mother .home4Main .letsTalkDiv1 .letsTalkHeadDiv .letsTalkHead {
           font-size: 27px; } }
-    @media (max-width: 700px) {
-      div .home4Mother .home4Main .servicesGridDiv .servicesGrid {
-        grid-template-columns: 100%;
-        grid-template-rows: auto auto auto; } }
   @media (max-width: 600px) {
     div .home4Mother .home4Main .home4HeadDiv {
       padding: 0 25px; }
       div .home4Mother .home4Main .home4HeadDiv .home4Head {
-        font-size: 2.1rem; } }
+        font-size: 2rem; } }
 
 div .home5Mother {
   height: 80%; }
   div .home5Mother .home5Main .home5HeadDiv {
     width: 100%;
-    margin-bottom: 20px; }
+    margin-bottom: 15px; }
     div .home5Mother .home5Main .home5HeadDiv .home5Head {
       color: #6cb144;
       text-align: center;
@@ -790,7 +1015,7 @@ div .home5Mother {
     display: flex;
     flex-direction: row;
     width: calc(100% - 60px);
-    padding: 30px;
+    padding: 15px 30px;
     padding-bottom: 0;
     overflow: hidden; }
     div .home5Mother .home5Main .scrollingDiv .testimonialBoxParent {
@@ -804,7 +1029,11 @@ div .home5Mother {
         padding: 20px;
         border-radius: 10px;
         box-shadow: 4px 4px #ed4f24, 8px 8px #6cb144;
-        z-index: 1; }
+        z-index: 1;
+        padding: 15px 20px;
+        box-shadow: 3px 3px 5px rgba(58, 58, 58, 0.1);
+        background: #F8F8F8;
+        border-radius: 3px; }
         div .home5Mother .home5Main .scrollingDiv .testimonialBoxParent .testimonialBox .testimonialPara {
           font-size: 1.15rem; }
       div .home5Mother .home5Main .scrollingDiv .testimonialBoxParent svg {
@@ -829,7 +1058,7 @@ div .home5Mother {
     div .home5Mother .home5Main {
       margin-bottom: 40px; }
       div .home5Mother .home5Main .home5HeadDiv .home5Head {
-        font-size: 2.1rem; }
+        font-size: 2rem; }
       div .home5Mother .home5Main .scrollingDiv .testimonialBoxParent .testimonialBox {
         width: 350px; }
         div .home5Mother .home5Main .scrollingDiv .testimonialBoxParent .testimonialBox .testimonialPara {
@@ -900,7 +1129,6 @@ div .blogMother {
       border: none;
       background: #ed4f24;
       border-radius: 5px;
-      box-shadow: 3px 3px #6cb144;
       color: #ffffff;
       font-size: 1.15rem;
       font-weight: 900;
@@ -926,24 +1154,30 @@ div .blogMother {
         align-items: center;
         align-self: flex-start;
         text-align: center;
-        width: 100%;
+        width: calc(100% - 20px);
         border: #333 solid 1px;
         height: auto;
         border-radius: 5px;
         padding-bottom: 10px;
-        box-shadow: 4px 4px #ed4f24, 8px 8px #6cb144; }
+        box-shadow: 4px 4px #ed4f24, 8px 8px #6cb144;
+        box-shadow: 3px 3px 5px rgba(58, 58, 58, 0.1);
+        background: #F8F8F8;
+        border-radius: 3px;
+        padding: 5px 10px;
+        border: none; }
         div .blogMother .blogMain .postGrid .blogPost .blogTitle {
           background: #6cb144;
           color: #ffffff;
-          padding: 10px 0;
-          font-size: 1.3rem; }
+          padding: 10px 5px;
+          font-size: 1.3rem;
+          border-radius: 3px;
+          width: calc(100% - 10px); }
         div .blogMother .blogMain .postGrid .blogPost .blogText {
-          padding: 10px;
           width: 90%; }
         div .blogMother .blogMain .postGrid .blogPost .dateTimeDiv {
           display: flex;
           flex-direction: row;
-          padding: 10px;
+          padding: 10px 5px;
           justify-content: center; }
           div .blogMother .blogMain .postGrid .blogPost .dateTimeDiv .blogDate:before {
             color: green;
@@ -968,10 +1202,13 @@ div .blogMother {
         div .blogMother .blogMain .postGrid {
           grid-template-columns: 90%; } }
   @media (max-width: 600px) {
-    div .blogMother .blogMain .blogHead {
-      font-size: 2.1rem; }
-    div .blogMother .blogMain .postGrid .blogPost .blogTitle {
-      font-size: 1.15rem; } }
+    div .blogMother .blogMain {
+      width: 100%;
+      justify-content: center; }
+      div .blogMother .blogMain .blogHead {
+        font-size: 2rem; }
+      div .blogMother .blogMain .postGrid .blogPost .blogTitle {
+        font-size: 1.15rem; } }
 
 
 /*# sourceMappingURL=styles.chunk.css.map*/

@@ -1,119 +1,145 @@
 $green: #6cb144;
-$orange: #ED4F24;
-
-.allMother{
+$orange: #ed4f24;
+.allParent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  .allMother {
     min-height: 100%;
+    width: calc(100% - 60px);
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 100px 30px;
+    padding: 50px 30px 100px 30px;
 
-    .allHead{
-        margin-bottom: 40px;
-        font-size: 2.5rem;
-        margin-bottom: 35px;
-        align-self: center; 
-        background: #333;
-        color: #ffffff;
-        padding: 10px;
+    .allHead {
+      margin-bottom: 40px;
+      font-size: 2.5rem;
+      margin-bottom: 35px;
+      align-self: center;
+      background: #333;
+      color: #ffffff;
+      padding: 0px 30px;
+      border-radius: 5px;
+    //   box-shadow: 4px 4px $orange, 8px 8px $green;
+      width: calc(100% - 60px);
+      max-width: 400px;
+    }
+
+    .postGrid {
+      display: grid;
+      width: 100%;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-template-rows: auto;
+      max-width: 1200px;
+      justify-content: center;
+      justify-items: center;
+      align-items: start;
+      grid-gap: 30px;
+
+      .blogPost {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-self: flex-start;
+        text-align: center;
+        width: calc(100% - 20px);
+        border: #333 solid 1px;
+        height: auto;
         border-radius: 5px;
+        padding-bottom: 10px;
         box-shadow: 4px 4px $orange, 8px 8px $green;
-    }
 
-    .postGrid{
-        display: grid;
-        width: 100%;
-        grid-template-columns: repeat(auto-fit, minmax( 300px, 1fr));
-        grid-template-rows: auto;
-        max-width: 1200px;
-        justify-content: center;
-        justify-items: center;
-        align-items: start;;
-        grid-gap: 30px;
-        
-        .blogPost{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            align-self: flex-start;
-            text-align: center;
-            width: 100%;
-            border: #333 solid 1px;
-            height: auto;
-            border-radius: 5px;
-            padding-bottom: 10px;
-            box-shadow: 4px 4px $orange, 8px 8px $green;
+        box-shadow: 3px 3px 5px rgba(58, 58, 58, 0.1);
+        background: #f8f8f8;
+        border-radius: 3px;
+        padding: 5px 10px;
+        border: none;
 
-            .blogTitle{
-                background: $green;
-                color: #ffffff;
-                padding: 10px 0;
-                font-size: 1.3rem;
-            }
-            .blogText{
-                padding: 10px;
-                width: 90%;
-            }
-
-            .dateTimeDiv{
-                display: flex;
-                flex-direction: row;
-                padding: 10px;
-                justify-content: center;
-                
-                .blogDate{ 
-                    &:before{
-                        color: green;
-                        content: "\00a0  ||| \00a0";
-                    }
-                }
-                .blogTime{}
-            }
-
-
-        }                 
-        @media(min-width: 1450px) {
-            max-width: 1500px;
-            grid-gap: 50px;
-            .blogPost{
-                max-width: 1400px;;
-
-                    .blogTitle{
-                        font-size: 1.65rem;
-                    }
-
-                    .dateTimeDiv{
-                        .blogDate, .blogTime{
-                            font-size: 1.1rem;
-                        }
-                    }  
-                }
-            }
-        // @media(max-width: 1000px) {
-        //     grid-template-columns: 80%;
-        //     grid-rows: auto auto auto;
-        //     row-gap: 40px;
-        // }
-
-        @media(max-width: 600px) {
-            .blogPost{
-                            .blogTitle{
-                font-size: 1.15rem;
-            }
-            .blogText{
-                font-size: 1rem;
-            }
-            .dateTimeDiv{
-                .blogDate{
-                    font-size: 1rem;
-                }
-                .blogTime{
-                    font-size: 1rem;
-                }
-            }
-            }
-
+        .blogTitle {
+          background: $green;
+          color: #ffffff;
+          padding: 10px 5px;
+          font-size: 1.3rem;
+          border-radius: 3px;
+          width: calc(100% - 10px);
         }
-    }
+        .blogText {
+          // padding: 10px;
+          width: 90%;
+          margin: 0;
+        }
 
+        .dateTimeDiv {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+
+          .blogDate {
+              margin: 0;
+            &:before {
+              color: green;
+              content: "\00a0  ||| \00a0";
+            }
+          }
+          .blogTime{
+              margin: 0;
+          }
+        }
+
+        hr{
+            margin: 5px 0;
+        }
+      }
+      @media (min-width: 1450px) {
+        max-width: 1500px;
+        grid-gap: 50px;
+        .blogPost {
+          max-width: 1400px;
+
+          .blogTitle {
+            font-size: 1.65rem;
+          }
+
+          .dateTimeDiv {
+            .blogDate,
+            .blogTime {
+              font-size: 1.1rem;
+            }
+          }
+        }
+      }
+      // @media(max-width: 1000px) {
+      //     grid-template-columns: 80%;
+      //     grid-rows: auto auto auto;
+      //     row-gap: 40px;
+      // }
+
+      @media (max-width: 600px) {
+        .blogPost {
+          .blogTitle {
+            font-size: 1.15rem;
+          }
+          .blogText {
+            font-size: 1rem;
+          }
+          .dateTimeDiv {
+            .blogDate {
+              font-size: 1rem;
+            }
+            .blogTime {
+              font-size: 1rem;
+            }
+          }
+        }
+      }
+    }
+    @media (max-width: 600px) {
+      width: calc(100% - 20px);
+      padding: 100px 0px;
+    }
+  }
 }

@@ -24,14 +24,20 @@ $orange: #ED4F24;
             align-items: center;
             justify-content: center;
             max-width: 800px;;
+            margin-top: 50px;
             .singleTitle{
                 margin-bottom: 20px;
                 align-self: flex-start; 
-                background: #333;
-                color: #ffffff;
+                // background: #333;
+                // color: black;
                 padding: 10px;
                 border-radius: 5px;
-                box-shadow: 4px 4px $orange, 8px 8px $green;
+                // box-shadow: 4px 4px $orange, 8px 8px $green;
+
+                box-shadow: 3px 3px 5px rgba(58, 58, 58, 0.1);
+                background: #F8F8F8;
+                border-radius: 3px;
+                padding: 5px 10px;
             }
             .singleText{
                 margin-bottom: 10-px;
@@ -42,12 +48,13 @@ $orange: #ED4F24;
                 display: flex;
                 flex-direction: row;
                 align-self: flex-end;
-                background: lightgreen;
+                background: $green;
+                color: #ffffff;
                 padding: 15px;
                 border-radius: 5px;
                 .singleDate{               
                     &:before{
-                        color: $green;
+                        color: #333;
                         content: "\00a0  ||| \00a0";
                     }}
                 .singleTime{} 
@@ -76,9 +83,9 @@ $orange: #ED4F24;
         .singleMain{
             // margin-top: 90px;
             .singlePostContainer{
-                margin-top: 140px;
+                // margin-top: 140px;
                 .singleTitle{
-                    font-size: 1.5rem;
+                    font-size: 1.3rem;
                 }
                 .singleText{
                     font-size: 1rem;

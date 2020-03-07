@@ -2,7 +2,6 @@
 @font-face {
   font-family: "Open Sans";
   src: url("../fonts/OpenSans-Regular.ttf") format("TrueType");
-  // font-weight: bold;
   font-display: auto;
   font-style: normal;
 }
@@ -11,7 +10,6 @@
 @font-face {
   font-family: "Open Sans Semibold";
   src: url("../fonts/OpenSans-Semibold.ttf") format("TrueType");
-  font-weight: bold;
   font-display: auto;
   font-style: normal;
 }
@@ -116,7 +114,7 @@ div {
           border: none;
           background: #ed4f24;
           border-radius: 5px;
-          box-shadow: 3px 3px #6cb144;
+          // box-shadow: 3px 3px #6cb144;
           color: #ffffff;
           font-size: 1.15rem;
           // font-weight: 900;
@@ -202,7 +200,7 @@ div {
         max-width: 1000px;
         align-self: center;
         text-align: center;
-        margin-bottom: 20px;
+        margin-bottom: 15px;
         .discoverHead {
           color: $green;
           font-size: 3rem;
@@ -221,6 +219,9 @@ div {
         font-size: 1.15rem;
         transition: all 0.2s ease-in-out;
         white-space: nowrap;
+        height: 32px;
+        padding-bottom: 3px;
+        text-align: center;
 
         @media (max-width: 600px) {
           font-size: 1rem;
@@ -286,6 +287,8 @@ div {
 
       // Checklist
       .checkListDiv {
+        // position: absolute;
+        // margin-bottom: 600px;
         display: flex;
         justify-content: center;
         max-width: 1100px;
@@ -301,6 +304,7 @@ div {
             grid-template-columns: repeat(3, 1fr);
             grid-template-rows: auto;
             width: auto;
+            grid-gap: 5px;
 
             :nth-child(1) {
               grid-column: 1;
@@ -320,14 +324,27 @@ div {
               align-items: flex-start;
               margin-bottom: 20px;
               padding: 0px 15px;
+              position: relative;
 
-              .checkListIcon {
-                align-self: center;
+              // padding: 5px 10px;
+              // box-shadow: 3px 3px 5px rgba(58, 58, 58, 0.1);
+              // background: #F8F8F8;
+              // border-radius: 3px;
+              .iconDiv {
+                align-self: flex-start;
+                position: absolute;
+                left: 0;
+                top: 0;
+                .checkListIcon {
+                  align-self: center;
+                }
               }
+
               .checkListPara {
+                // font-family: "Open Sans Semibold";
                 margin: 0;
                 width: auto;
-                font-size: 1.15rem;
+                font-size: 1.3rem;
                 align-self: flex-start;
                 max-width: 320px;
                 margin-left: 10px;
@@ -383,6 +400,7 @@ div {
               grid-template-columns: repeat(2, 1fr);
               grid-template-rows: repeat(3, auto);
               justify-content: flex-start;
+              grid-gap: 5px;
 
               .valueItem {
                 border: #333 solid 2px;
@@ -391,6 +409,12 @@ div {
                 border-radius: 5px;
                 box-shadow: 2px 2px $orange, 4px 4px $green;
                 font-size: 1.15rem;
+
+                // padding: 15px 20px;
+                border: none;
+                box-shadow: 3px 3px 5px rgba(58, 58, 58, 0.1);
+                background: #F8F8F8;
+                border-radius: 3px;
               }
             }
           }
@@ -410,15 +434,6 @@ div {
         .discoverHeadDiv {
           align-self: center;
           .discoverHead {
-          }
-        }
-
-        .seekerEmployeeDiv {
-          .seekerEmployerSlider {
-            .seekerSlide {
-            }
-            .employerSlide {
-            }
           }
         }
 
@@ -445,7 +460,7 @@ div {
 
                   .checkListPara {
                     max-width: inherit;
-                    font-size: 1.6rem;
+                    // font-size: 1.6rem;
                     padding-left: 20px;
                   }
                 }
@@ -562,7 +577,7 @@ div {
       .home2Main {
         .discoverHeadDiv {
           .discoverHead {
-            font-size: 2.1rem;
+            font-size: 2rem;
           }
         }
         .checkListDiv {
@@ -572,12 +587,13 @@ div {
         }
 
         .coreValuesParent {
-          width: 82%;
-          padding: 0px 30px;
+          width: calc(100% - 20px);
+          padding: 0;
+          // padding: 0px 15px;
           .valuesHeadDiv {
             .valuesHead {
               text-align: center;
-              font-size: 2.1rem;
+              font-size: 2rem;
             }
           }
           .valuesContent {
@@ -641,9 +657,14 @@ div {
           }
           .briefSect {
             .briefDiv {
-              box-shadow: -3px 0px 0px 0px $orange, -6px 0px 0px 0px $green;
+              // box-shadow: -3px 0px 0px 0px $orange, -6px 0px 0px 0px $green;
+              background: #F8F8F8;
+              box-shadow: 3px 3px 5px rgba(58, 58, 58, 0.1);
+              border-radius: 3px;
+              padding: 5px 10px;
               margin-bottom: 30px;
-              padding-left: 10px;
+              margin-right: 15px;
+              max-width: 650px;
               .briefHead {
                 margin: 0;
                 font-size: 1.3rem;
@@ -662,7 +683,10 @@ div {
             height: auto;
             width: 100%;
             border-radius: 5px;
-            box-shadow: 4px 4px $orange, 8px 8px $green;
+            // box-shadow: 4px 4px $orange, 8px 8px $green;
+            box-shadow: 3px 3px 5px rgba(58, 58, 58, 0.1);
+
+            
           }
         }
 
@@ -691,6 +715,7 @@ div {
               .briefDiv {
                 // box-shadow: none;
                 padding-right: 10%;
+                
                 .briefHead {
                   font-size: 1.3rem;
                 }
@@ -710,7 +735,8 @@ div {
             display: flex;
             align-items: center;
             max-width: inherit;
-            box-shadow: 4px 4px $orange, 8px 8px $green;
+            // box-shadow: 4px 4px $orange, 8px 8px $green;
+            
             border-radius: 5px;
             margin-bottom: 40px;
 
@@ -735,6 +761,7 @@ div {
               height: auto;
               width: 100%;
               border-radius: 5px;
+              box-shadow: 3px 3px 5px rgba(58, 58, 58, 0.2);
             }
           }
 
@@ -802,6 +829,11 @@ div {
             box-shadow: -3px 0px 0px 0px $orange, -6px 0px 0px 0px $green;
             margin-bottom: 30px;
             padding-left: 10px;
+
+            box-shadow: 3px 3px 5px rgba(58, 58, 58, 0.1);
+              background: #F8F8F8;
+              border-radius: 3px;
+              padding: 5px 10px;
             .briefHead2 {
               margin: 0;
               font-size: 1.3rem;
@@ -821,26 +853,28 @@ div {
       justify-content: center;
       align-items: center;
       .home3Main {
-        width: calc(100% - 70px);
+        width: calc(100% - 35px);
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        padding: 0 35px;
+        padding: 0;;
 
         .overviewHeadDiv {
           .overviewHead {
-            font-size: 2.1rem;
+            font-size: 2rem;
+            
           }
         }
         .overviewSectParent {
           .overviewSect {
             .overviewImgSect2 {
-              .overviewImg2{}
+              .overviewImg2 {
+              }
               .overviewParaDiv2 {
                 padding: none;
                 .overviewPara2 {
-                  font-size: 0.9rem;
+                  font-size: 0.95rem;
                 }
               }
             }
@@ -881,7 +915,7 @@ div {
       // padding: 0 50px;
       .home4HeadDiv {
         padding: 0 50px;
-        margin-bottom: 25px;
+        margin-bottom: 15px;
         .home4Head {
           font-size: 2.4rem;
           color: #6cb144;
@@ -894,12 +928,18 @@ div {
         max-width: 1450px;
         .servicesGrid {
           display: grid;
-          grid-template-columns: repeat(3, 1fr);
+          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
           justify-items: center;
+          grid-gap: 15px;
           .serviceDiv {
-            padding: 20px;
+            // padding: 0 20px;
+            // box-shadow: 3px 3px 5px rgba(58, 58, 58, 0.1);
+            // background: #F8F8F8;
+            // border-radius: 3px;
+            // padding: 5px 10px;
             .serviceHead {
               margin: 0;
+              
               // margin-bottom: 0px;
               font-size: 1.3rem;
             }
@@ -910,6 +950,12 @@ div {
                 font-size: 1.15rem;
               }
             }
+              @media(max-width: 500px) {
+                box-shadow: 3px 3px 5px rgba(58, 58, 58, 0.1);
+                background: #F8F8F8;
+                border-radius: 3px;
+                padding: 5px 10px;
+              }
           }
         }
       }
@@ -937,8 +983,8 @@ div {
       @media (max-width: 700px) {
         .servicesGridDiv {
           .servicesGrid {
-            grid-template-columns: 100%;
-            grid-template-rows: auto auto auto;
+            // grid-template-columns: 100%;
+            // grid-template-rows: auto auto auto;
           }
         }
       }
@@ -950,7 +996,7 @@ div {
         .home4HeadDiv {
           padding: 0 25px;
           .home4Head {
-            font-size: 2.1rem;
+            font-size: 2rem;
           }
         }
       }
@@ -966,7 +1012,7 @@ div {
     .home5Main {
       .home5HeadDiv {
         width: 100%;
-        margin-bottom: 20px;
+        margin-bottom: 15px;
 
         .home5Head {
           color: $green;
@@ -978,7 +1024,7 @@ div {
         display: flex;
         flex-direction: row;
         width: calc(100% - 60px);
-        padding: 30px;
+        padding: 15px 30px;
         padding-bottom: 0;
         // padding-top: 0;
         overflow: hidden;
@@ -993,6 +1039,11 @@ div {
             border-radius: 10px;
             box-shadow: 4px 4px $orange, 8px 8px $green;
             z-index: 1;
+
+            padding: 15px 20px;
+            box-shadow: 3px 3px 5px rgba(58, 58, 58, 0.1);
+            background: #F8F8F8;
+            border-radius: 3px;
 
             .testimonialPara {
               font-size: 1.15rem;
@@ -1040,7 +1091,7 @@ div {
         margin-bottom: 40px;
         .home5HeadDiv {
           .home5Head {
-            font-size: 2.1rem;
+            font-size: 2rem;
           }
         }
 
@@ -1149,7 +1200,7 @@ div {
         border: none;
         background: #ed4f24;
         border-radius: 5px;
-        box-shadow: 3px 3px #6cb144;
+        // box-shadow: 3px 3px #6cb144;
         color: #ffffff;
         font-size: 1.15rem;
         font-weight: 900;
@@ -1179,28 +1230,36 @@ div {
           align-items: center;
           align-self: flex-start;
           text-align: center;
-          width: 100%;
+          width: calc(100% - 20px);
           border: #333 solid 1px;
           height: auto;
           border-radius: 5px;
           padding-bottom: 10px;
           box-shadow: 4px 4px $orange, 8px 8px $green;
 
+          box-shadow: 3px 3px 5px rgba(58, 58, 58, 0.1);
+          background: #F8F8F8;
+          border-radius: 3px;
+          padding: 5px 10px;
+          border: none;
+
           .blogTitle {
             background: $green;
             color: #ffffff;
-            padding: 10px 0;
+            padding: 10px 5px;
             font-size: 1.3rem;
+            border-radius: 3px;
+            width: calc(100% - 10px);
           }
           .blogText {
-            padding: 10px;
+            // padding: 10px;
             width: 90%;
           }
 
           .dateTimeDiv {
             display: flex;
             flex-direction: row;
-            padding: 10px;
+            padding: 10px 5px;
             justify-content: center;
 
             .blogDate {
@@ -1208,8 +1267,6 @@ div {
                 color: green;
                 content: "\00a0  ||| \00a0";
               }
-            }
-            .blogTime {
             }
           }
         }
@@ -1241,13 +1298,16 @@ div {
           grid-template-columns: 90%;
         }
       }
+      
     }
 
     @media (max-width: 600px) {
       // margin-top: 20px;
       .blogMain {
+        width: 100%;
+        justify-content: center;
         .blogHead {
-          font-size: 2.1rem;
+          font-size: 2rem;
         }
         .postGrid {
           .blogPost {

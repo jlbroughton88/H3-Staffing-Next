@@ -1,142 +1,170 @@
-a{
-    text-decoration: none;
-    color: inherit;
-  }
-
-$green: #6cb144;
-$orange: #ED4F24;
-
-hr{
-    width: 95%;
-    margin: 0;
-    margin-top: 50px;
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
-.footerMother{
-    .footerMain{
-        .footerBar{
+$green: #6cb144;
+$orange: #ed4f24;
+
+hr {
+  width: 95%;
+  margin: 0;
+  margin-top: 25px;
+}
+
+.footerMother {
+  width: 100%;
+  .footerMain {
+    .footerBar {
+      background: #333;
+      height: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      .footerLinks {
+        width: 100%;
+        max-width: 1450px;
+        display: grid;
+        grid-template-columns: 25% 25% 50%;
+        justify-content: center;
+        justify-items: center;
+        padding: 20px 0 0 0;
+        .companyArea {
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          color: #ffffff;
+          .companyHead {
+            font-size: 1.9rem;
+            margin-bottom: 5px;
+          }
+          .companyPara {
+            font-size: 1.3rem;
+          }
+        }
+        .careersArea {
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          color: #ffffff;
+          .careersHead {
+            font-size: 1.9rem;
+            margin-bottom: 5px;
+          }
+          .talentNetworkBtn {
             background: #333;
-            height: auto;
+            color: #ffffff;
+            padding: 0;
+            margin: 0;
+            border: none;
+            appearance: none;
+          }
+          .careersPara {
+            font-size: 1.3rem;
+          }
+        }
+        .connectArea {
+          color: $orange;
+          .connectHead {
+            font-size: 1.9rem;
+            margin-bottom: 5px;
+          }
+          .connectPara {
+            color: #ffffff;
+            font-size: 1.3rem;
+          }
+
+          .socialsDivFooter {
             display: flex;
             align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            .footerLinks{
-                width: 100%;
-                max-width: 1450px;
-                display: grid;
-                grid-template-columns: 25% 25% 50%;
-                justify-content: center;
-                justify-items: center;
-                padding: 40px 0;
-                .companyArea{
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: flex-start;
-                    color: #ffffff;
-                    .companyHead{
-                        font-size: 1.9rem;
-                        margin-bottom: 5px;
-                    }
-                    .companyPara{
-                        font-size: 1.3rem;
-                    }
-                }
-                .careersArea{
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: flex-start;
-                    color: #ffffff;
-                    .careersHead{
-                        font-size: 1.9rem;
-                        margin-bottom: 5px;
-                    }
-                    .talentNetworkBtn{
-                        background: #333;
-                        color: #ffffff;
-                        padding: 0;
-                        margin: 0;
-                        border: none;
-                        appearance: none;
-                    }
-                    .careersPara{
-                        font-size: 1.3rem;
-                    }
-                }
-                .connectArea{
-                    color: $orange;
-                    .connectHead{
-                        font-size: 1.9rem;
-                        margin-bottom: 5px;
-                    }
-                    .connectPara{
-                        color: #ffffff;
-                        font-size: 1.3rem;
-                    }
+            align-self: center;
+            // justify-content: space-evenly;
+            height: 50px;
+            width: 150px;
+            background: #333;
 
-                    .socialsArea{
-                        display: flex;
-                        flex-direction: row;
-                        color: #ffffff;
-                    }
-                }
-    
-                @media(max-width: 800px) {
-                    grid-template-columns: 90%;
-                    justify-items: start;
-                    row-gap: 40px;
-                    padding-bottom: 0;
-                }
-            }
-            .legalDiv{
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                height: 100px;
-                .legalPara{
-                    color: #ffffff;
-                    text-align: center;
-                    font-size: 1.3rem;
-                }
-            }
-        }
-    }
+            .facebookDivFooter,
+            .instagramDivFooter {
+              align-items: center;
+              text-align: center;
+              justify-content: center;
+              text-align: start;
+              height: 50px;
+              width: 50px;
+              transition: all ease-in-out 0.3s;
+              fill: #ffffff;
 
-    @media(max-width: 600px) {
-        .footerMain{
-            .footerBar{
-                .footerLinks{
-                    .companyArea{
-                        .companyHead{
-                            font-size: 1.5rem;
-                        }
-                        .companyPara{
-                            font-size: 1.1rem;
-                        }
-                    }
-                    .careersArea{
-                        .careersHead{
-                            font-size: 1.5rem;
-                        }
-                        .careersPara{
-                            font-size: 1.1rem;
-                        }
-                    }
-                    .connectArea{
-                        .connectHead{
-                            font-size: 1.5rem;
-                        }
-                        .connectPara{
-                            font-size: 1.1rem;
-                        }
-                    }
-                }
-                .legalDiv{
-                    .legalPara{
-                        font-size: 1.1rem;
-                    }
-                }
+              &:hover {
+                fill: $green;
+                cursor: pointer;
+              }
             }
+          }
         }
+
+        @media (max-width: 800px) {
+          grid-template-columns: 90%;
+          justify-items: start;
+          row-gap: 10px;
+          padding-bottom: 0;
+
+          .companyArea, .careersArea, .connectArea{
+              p{
+                  margin: 0;
+              }
+          }
+        }
+      }
+      .legalDiv {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100px;
+        .legalPara {
+          color: #ffffff;
+          text-align: center;
+          font-size: 1.3rem;
+        }
+      }
     }
+  }
+
+  @media (max-width: 600px) {
+    .footerMain {
+      .footerBar {
+        .footerLinks {
+          .companyArea {
+            .companyHead {
+              font-size: 1.5rem;
+            }
+            .companyPara {
+              font-size: 1.1rem;
+            }
+          }
+          .careersArea {
+            .careersHead {
+              font-size: 1.5rem;
+            }
+            .careersPara {
+              font-size: 1.1rem;
+            }
+          }
+          .connectArea {
+            .connectHead {
+              font-size: 1.5rem;
+            }
+            .connectPara {
+              font-size: 1.1rem;
+            }
+          }
+        }
+        .legalDiv {
+          .legalPara {
+            font-size: 1.1rem;
+          }
+        }
+      }
+    }
+  }
 }
