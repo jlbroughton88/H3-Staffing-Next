@@ -3,17 +3,15 @@ import axios from "axios";
 import moment from "moment";
 import Navbar from "../../comps/navbar";
 import Footer from "../../comps/footer";
+import Link from "next/link";
 import "../../../public/static/css/blogpost.scss";
 import { useEnv } from "../../comps/contexts/envProvider";
 
 const BlogPost1 = () => {
     const [blogTitle, setBlogTitle] = useState("");
     const [blogInput, setBlogInput] = useState("");
+    const [postUid, setPostUid] = useState("");
     const statusUrl = useEnv();
-
-    // const { user, dbUser, statusUrl } = useAuth();
-
-
 
     const getRandomInt = (min, max) => {
         min = Math.ceil(min);
@@ -21,10 +19,9 @@ const BlogPost1 = () => {
         return Math.floor(Math.random() * (max - min) + max)
     }
 
-
      const handleSubmit = (e) => {
-
         const uid = getRandomInt(100000000, 1000000000);
+        setPostUid(uid);
         const formattedUid = uid.toString();
         // const user_uid = dbUser.uid.toString();
         let time = moment().format('LT');
@@ -44,6 +41,8 @@ const BlogPost1 = () => {
             }, { timeout: 300 })
             .then(response => console.log(response))
             .catch(err => console.log(err))
+        let hiddenDiv = document.getElementById("hidden");
+        hiddenDiv.style.display = "block"
         e.preventDefault();
      }
 
@@ -58,6 +57,13 @@ const BlogPost1 = () => {
                     <textarea type="text" placeholder="Let your job seekers know what H3 has going on..." className="blogPostInput" value={blogInput} onChange={e => setBlogInput(e.target.value)}/>
                     <button type="submit" className="blogPostBtn">Post</button>
                 </form>
+            </div>
+            <div id="hidden" style={{display: "none"}}>
+                <Link href={`${statusUrl}/blog/${postUid}`}>
+                    <a>
+                        Your new post
+                    </a>
+                </Link>
             </div>
         </div>
         <Footer/>

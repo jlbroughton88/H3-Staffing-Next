@@ -1275,17 +1275,6 @@ div {
           grid-gap: 50px;
           .blogPost {
             max-width: 1400px;
-
-            .blogTitle {
-              font-size: 1.8rem;
-            }
-
-            .dateTimeDiv {
-              .blogDate,
-              .blogTime {
-                font-size: 1.15rem;
-              }
-            }
           }
         }
         @media (max-width: 1000px) {

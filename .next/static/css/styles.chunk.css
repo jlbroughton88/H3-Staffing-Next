@@ -13,7 +13,7 @@
     align-items: center;
     background: #F8F8F8;
     background-size: cover;
-    padding-bottom: 70vh; }
+    padding-bottom: 55vh; }
     .jobsParent .jobsMother .jobsMain .loadJobBoardBtn {
       position: absolute;
       top: 40vh;
@@ -308,7 +308,7 @@ hr {
     flex-direction: column; }
     .footerMother .footerMain .footerBar .footerLinks {
       width: 100%;
-      max-width: 1450px;
+      max-width: 1100px;
       display: grid;
       grid-template-columns: 25% 25% 50%;
       justify-content: center;
@@ -1187,12 +1187,7 @@ div .blogMother {
           max-width: 1500px;
           grid-gap: 50px; }
           div .blogMother .blogMain .postGrid .blogPost {
-            max-width: 1400px; }
-            div .blogMother .blogMain .postGrid .blogPost .blogTitle {
-              font-size: 1.8rem; }
-            div .blogMother .blogMain .postGrid .blogPost .dateTimeDiv .blogDate,
-            div .blogMother .blogMain .postGrid .blogPost .dateTimeDiv .blogTime {
-              font-size: 1.15rem; } }
+            max-width: 1400px; } }
       @media (max-width: 1000px) {
         div .blogMother .blogMain .postGrid {
           grid-template-columns: 80%;

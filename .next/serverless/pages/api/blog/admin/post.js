@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "l+zf");
+/******/ 	return __webpack_require__(__webpack_require__.s = "keLR");
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -14060,7 +14060,7 @@ const escape = __webpack_require__("Tv0P"); // ADD BLOG POST
 module.exports = async (req, res) => {
   console.log(req.body);
   let rb = req.body;
-  const post = await db.query(escape`INSERT INTO blog_posts (uid, user_uid, author, title, blog_text, date_created, time_created) VALUES ("${rb.uid}", "${rb.user_uid}", "${rb.author}", "${rb.title}", "${rb.blog_text}", "${rb.date_created}", "${rb.time_created}")`);
+  const post = await db.query(escape`INSERT INTO blog_posts (uid, user_uid, author, title, blog_text, date_created, time_created) VALUES (${rb.uid}, ${rb.user_uid}, ${rb.author}, ${rb.title}, ${rb.blog_text}, ${rb.date_created}, ${rb.time_created})`);
   res.status(200).json(post);
 };
 
@@ -21833,7 +21833,7 @@ function findIdx(table, val) {
 
 /***/ }),
 
-/***/ "l+zf":
+/***/ "keLR":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -21903,7 +21903,7 @@ __webpack_require__.r(__webpack_exports__);
             res,
             Object.assign({}, parsedUrl.query, params ),
             resolver,
-            {previewModeId:"12e97988bfaca3d6056579fd5e6d40bf",previewModeSigningKey:"51f0ec9718297dc622312d1aedfb439d1c255be2eeae1e90ced858fe1242f6de",previewModeEncryptionKey:"d07626006d242aa8b5b53c4c244926cb028ba802867ccb006ee39197e71049b9"},
+            {previewModeId:"6e29b5d27ed0694791757e4186213506",previewModeSigningKey:"d75aa101928fd59ed0d024c09eddf4846498c3d82054544c43b443b7524350c4",previewModeEncryptionKey:"cd404df29cb79d2547f204ad91d57bd6ad64f0409887bc782bfc1f75fa25e424"},
             next_plugin_loader_middleware_on_error_server___WEBPACK_IMPORTED_MODULE_1__["default"]
           )
         } catch (err) {
