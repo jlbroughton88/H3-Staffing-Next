@@ -1962,46 +1962,60 @@ const Footer = () => {
       lineNumber: 25
     },
     __self: undefined
-  }, "Search Jobs")))), __jsx("div", {
+  }, "Search Jobs"))), __jsx("button", {
+    className: "talentNetworkBtn",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 26
+    },
+    __self: undefined
+  }, __jsx("p", {
+    className: "careersPara",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 26
+    },
+    __self: undefined
+  }, "Join Our Talent Network"))), __jsx("div", {
     className: "connectArea",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 30
+      lineNumber: 28
     },
     __self: undefined
   }, __jsx("h3", {
     className: "connectHead",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 31
+      lineNumber: 29
     },
     __self: undefined
   }, "Connect With Us"), __jsx("p", {
     className: "connectPara",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 32
+      lineNumber: 30
     },
     __self: undefined
   }, "704-999-9999"), __jsx("a", {
     href: "mailto:h3staffing@gmail.com?Subject=Website%20Inquiry",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 33
+      lineNumber: 31
     },
     __self: undefined
   }, __jsx("p", {
     className: "connectPara",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 34
+      lineNumber: 32
     },
     __self: undefined
   }, "h3staffing@gmail.com")), __jsx("section", {
     className: "socialsDivFooter",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 36
+      lineNumber: 34
     },
     __self: undefined
   }, __jsx("a", {
@@ -2009,13 +2023,13 @@ const Footer = () => {
     className: "facebookDivFooter",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 37
+      lineNumber: 35
     },
     __self: undefined
   }, __jsx(_icons_facebookFooter__WEBPACK_IMPORTED_MODULE_3__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 38
+      lineNumber: 36
     },
     __self: undefined
   })), __jsx("a", {
@@ -2023,33 +2037,33 @@ const Footer = () => {
     className: "instagramDivFooter",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 40
+      lineNumber: 38
     },
     __self: undefined
   }, __jsx(_icons_instagramFooter__WEBPACK_IMPORTED_MODULE_2__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 41
+      lineNumber: 39
     },
     __self: undefined
   }))))), __jsx("hr", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 47
+      lineNumber: 45
     },
     __self: undefined
   }), __jsx("div", {
     className: "legalDiv",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 48
+      lineNumber: 46
     },
     __self: undefined
   }, __jsx("p", {
     className: "legalPara",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 49
+      lineNumber: 47
     },
     __self: undefined
   }, "All Rights Reserved \xA9 2020 | H3 Staffing")))));
@@ -2802,7 +2816,7 @@ const Index = posts => {
   const statusUrl = Object(_comps_contexts_envProvider__WEBPACK_IMPORTED_MODULE_11__["useEnv"])();
   const seekerEmployerArray = {
     seeker: ["Completely free for job seekers.", "Dedicated to getting you a great role.", "Close relationships to important decision makers."],
-    employer: ["Employer sample phrase 1", "Employer sample phrase 2", "Employer sample phrase 3"]
+    employer: ["Lorem ipsum dolor sit amet, adipiscing elit 1", "Lorem ipsum dolor sit amet, adipiscing elit 2", "Lorem ipsum dolor sit amet, adipiscing elit 3"]
   };
 
   const getRandomInt = (min, max) => {

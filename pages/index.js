@@ -75,9 +75,9 @@ const Index = posts => {
     ],
 
     employer: [
-      "Employer sample phrase 1",
-      "Employer sample phrase 2",
-      "Employer sample phrase 3"
+      "Lorem ipsum dolor sit amet, adipiscing elit 1",
+      "Lorem ipsum dolor sit amet, adipiscing elit 2",
+      "Lorem ipsum dolor sit amet, adipiscing elit 3"
     ]
   };
 

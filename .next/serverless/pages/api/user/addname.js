@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "ImLd");
+/******/ 	return __webpack_require__(__webpack_require__.s = "hM4M");
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -7662,90 +7662,6 @@ function spliceConnection(array, connection) {
   }
 }
 
-
-/***/ }),
-
-/***/ "ImLd":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var next_plugin_loader_middleware_on_init_server___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("GX0O");
-/* harmony import */ var next_plugin_loader_middleware_on_error_server___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("KqAr");
-
-      
-      
-      
-      const runtimeConfig = {}
-      
-      const { parse } = __webpack_require__("bzos")
-      const { apiResolver } = __webpack_require__("PCLx")
-      
-    const { rewrites } = __webpack_require__("Skye")
-    const { pathToRegexp, default: pathMatch } = __webpack_require__("uDRR")
-  
-
-      
-      
-    const getCustomRouteMatcher = pathMatch(true)
-
-    function handleRewrites(parsedUrl) {
-      for (const rewrite of rewrites) {
-        const matcher = getCustomRouteMatcher(rewrite.source)
-        const params = matcher(parsedUrl.pathname)
-
-        if (params) {
-          parsedUrl.query = {
-            ...parsedUrl.query,
-            ...params
-          }
-          const parsedDest = parse(rewrite.destination)
-          const destCompiler = pathToRegexp.compile(
-            `${parsedDest.pathname}${parsedDest.hash || ''}`
-          )
-          const newUrl = destCompiler(params)
-          const parsedNewUrl = parse(newUrl)
-
-          parsedUrl.pathname = parsedNewUrl.pathname
-          parsedUrl.hash = parsedNewUrl.hash
-
-          if (parsedUrl.pathname === '/api/user/addname'){
-            break
-          }
-          
-        }
-      }
-
-      return parsedUrl
-    }
-  
-
-      /* harmony default export */ __webpack_exports__["default"] = (async (req, res) => {
-        try {
-          await Object(next_plugin_loader_middleware_on_init_server___WEBPACK_IMPORTED_MODULE_0__["default"])()
-
-          
-          const parsedUrl = parse(req.url, true)
-
-          const params = {}
-
-          const resolver = __webpack_require__("aIZQ")
-          apiResolver(
-            req,
-            res,
-            Object.assign({}, parsedUrl.query, params ),
-            resolver,
-            {previewModeId:"6e29b5d27ed0694791757e4186213506",previewModeSigningKey:"d75aa101928fd59ed0d024c09eddf4846498c3d82054544c43b443b7524350c4",previewModeEncryptionKey:"cd404df29cb79d2547f204ad91d57bd6ad64f0409887bc782bfc1f75fa25e424"},
-            next_plugin_loader_middleware_on_error_server___WEBPACK_IMPORTED_MODULE_1__["default"]
-          )
-        } catch (err) {
-          console.error(err)
-          await Object(next_plugin_loader_middleware_on_error_server___WEBPACK_IMPORTED_MODULE_1__["default"])(err)
-          res.statusCode = 500
-          res.end('Internal Server Error')
-        }
-      });
-    
 
 /***/ }),
 
@@ -16219,6 +16135,90 @@ module.exports = {
 /***/ (function(module) {
 
 module.exports = JSON.parse("[[\"a140\",\"\",62],[\"a180\",\"\",32],[\"a240\",\"\",62],[\"a280\",\"\",32],[\"a2ab\",\"\",5],[\"a2e3\",\"€\"],[\"a2ef\",\"\"],[\"a2fd\",\"\"],[\"a340\",\"\",62],[\"a380\",\"\",31,\"　\"],[\"a440\",\"\",62],[\"a480\",\"\",32],[\"a4f4\",\"\",10],[\"a540\",\"\",62],[\"a580\",\"\",32],[\"a5f7\",\"\",7],[\"a640\",\"\",62],[\"a680\",\"\",32],[\"a6b9\",\"\",7],[\"a6d9\",\"\",6],[\"a6ec\",\"\"],[\"a6f3\",\"\"],[\"a6f6\",\"\",8],[\"a740\",\"\",62],[\"a780\",\"\",32],[\"a7c2\",\"\",14],[\"a7f2\",\"\",12],[\"a896\",\"\",10],[\"a8bc\",\"\"],[\"a8bf\",\"ǹ\"],[\"a8c1\",\"\"],[\"a8ea\",\"\",20],[\"a958\",\"\"],[\"a95b\",\"\"],[\"a95d\",\"\"],[\"a989\",\"〾⿰\",11],[\"a997\",\"\",12],[\"a9f0\",\"\",14],[\"aaa1\",\"\",93],[\"aba1\",\"\",93],[\"aca1\",\"\",93],[\"ada1\",\"\",93],[\"aea1\",\"\",93],[\"afa1\",\"\",93],[\"d7fa\",\"\",4],[\"f8a1\",\"\",93],[\"f9a1\",\"\",93],[\"faa1\",\"\",93],[\"fba1\",\"\",93],[\"fca1\",\"\",93],[\"fda1\",\"\",93],[\"fe50\",\"⺁⺄㑳㑇⺈⺋㖞㘚㘎⺌⺗㥮㤘㧏㧟㩳㧐㭎㱮㳠⺧⺪䁖䅟⺮䌷⺳⺶⺷䎱䎬⺻䏝䓖䙡䙌\"],[\"fe80\",\"䜣䜩䝼䞍⻊䥇䥺䥽䦂䦃䦅䦆䦟䦛䦷䦶䲣䲟䲠䲡䱷䲢䴓\",6,\"䶮\",93]]");
+
+/***/ }),
+
+/***/ "hM4M":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var next_plugin_loader_middleware_on_init_server___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("GX0O");
+/* harmony import */ var next_plugin_loader_middleware_on_error_server___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("KqAr");
+
+      
+      
+      
+      const runtimeConfig = {}
+      
+      const { parse } = __webpack_require__("bzos")
+      const { apiResolver } = __webpack_require__("PCLx")
+      
+    const { rewrites } = __webpack_require__("Skye")
+    const { pathToRegexp, default: pathMatch } = __webpack_require__("uDRR")
+  
+
+      
+      
+    const getCustomRouteMatcher = pathMatch(true)
+
+    function handleRewrites(parsedUrl) {
+      for (const rewrite of rewrites) {
+        const matcher = getCustomRouteMatcher(rewrite.source)
+        const params = matcher(parsedUrl.pathname)
+
+        if (params) {
+          parsedUrl.query = {
+            ...parsedUrl.query,
+            ...params
+          }
+          const parsedDest = parse(rewrite.destination)
+          const destCompiler = pathToRegexp.compile(
+            `${parsedDest.pathname}${parsedDest.hash || ''}`
+          )
+          const newUrl = destCompiler(params)
+          const parsedNewUrl = parse(newUrl)
+
+          parsedUrl.pathname = parsedNewUrl.pathname
+          parsedUrl.hash = parsedNewUrl.hash
+
+          if (parsedUrl.pathname === '/api/user/addname'){
+            break
+          }
+          
+        }
+      }
+
+      return parsedUrl
+    }
+  
+
+      /* harmony default export */ __webpack_exports__["default"] = (async (req, res) => {
+        try {
+          await Object(next_plugin_loader_middleware_on_init_server___WEBPACK_IMPORTED_MODULE_0__["default"])()
+
+          
+          const parsedUrl = parse(req.url, true)
+
+          const params = {}
+
+          const resolver = __webpack_require__("aIZQ")
+          apiResolver(
+            req,
+            res,
+            Object.assign({}, parsedUrl.query, params ),
+            resolver,
+            {previewModeId:"f509bdb937c9ffafa53ce76bcf5efc8b",previewModeSigningKey:"58ff46b217f561b3645349dbf91f317c590035994c4973753ac21ce5b54e35ff",previewModeEncryptionKey:"05bbb870420020a5533043a681cf92f3bdc20b34b4885c5fd9eeb7be2b703857"},
+            next_plugin_loader_middleware_on_error_server___WEBPACK_IMPORTED_MODULE_1__["default"]
+          )
+        } catch (err) {
+          console.error(err)
+          await Object(next_plugin_loader_middleware_on_error_server___WEBPACK_IMPORTED_MODULE_1__["default"])(err)
+          res.statusCode = 500
+          res.end('Internal Server Error')
+        }
+      });
+    
 
 /***/ }),
 

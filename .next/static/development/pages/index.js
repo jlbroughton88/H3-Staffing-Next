@@ -13447,46 +13447,60 @@ var Footer = function Footer() {
       lineNumber: 25
     },
     __self: this
-  }, "Search Jobs")))), __jsx("div", {
+  }, "Search Jobs"))), __jsx("button", {
+    className: "talentNetworkBtn",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 26
+    },
+    __self: this
+  }, __jsx("p", {
+    className: "careersPara",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 26
+    },
+    __self: this
+  }, "Join Our Talent Network"))), __jsx("div", {
     className: "connectArea",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 30
+      lineNumber: 28
     },
     __self: this
   }, __jsx("h3", {
     className: "connectHead",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 31
+      lineNumber: 29
     },
     __self: this
   }, "Connect With Us"), __jsx("p", {
     className: "connectPara",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 32
+      lineNumber: 30
     },
     __self: this
   }, "704-999-9999"), __jsx("a", {
     href: "mailto:h3staffing@gmail.com?Subject=Website%20Inquiry",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 33
+      lineNumber: 31
     },
     __self: this
   }, __jsx("p", {
     className: "connectPara",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 34
+      lineNumber: 32
     },
     __self: this
   }, "h3staffing@gmail.com")), __jsx("section", {
     className: "socialsDivFooter",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 36
+      lineNumber: 34
     },
     __self: this
   }, __jsx("a", {
@@ -13494,13 +13508,13 @@ var Footer = function Footer() {
     className: "facebookDivFooter",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 37
+      lineNumber: 35
     },
     __self: this
   }, __jsx(_icons_facebookFooter__WEBPACK_IMPORTED_MODULE_3__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 38
+      lineNumber: 36
     },
     __self: this
   })), __jsx("a", {
@@ -13508,33 +13522,33 @@ var Footer = function Footer() {
     className: "instagramDivFooter",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 40
+      lineNumber: 38
     },
     __self: this
   }, __jsx(_icons_instagramFooter__WEBPACK_IMPORTED_MODULE_2__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 41
+      lineNumber: 39
     },
     __self: this
   }))))), __jsx("hr", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 47
+      lineNumber: 45
     },
     __self: this
   }), __jsx("div", {
     className: "legalDiv",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 48
+      lineNumber: 46
     },
     __self: this
   }, __jsx("p", {
     className: "legalPara",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 49
+      lineNumber: 47
     },
     __self: this
   }, "All Rights Reserved \xA9 2020 | H3 Staffing")))));
@@ -14295,7 +14309,7 @@ var Index = function Index(posts) {
   var statusUrl = Object(_comps_contexts_envProvider__WEBPACK_IMPORTED_MODULE_12__["useEnv"])();
   var seekerEmployerArray = {
     seeker: ["Completely free for job seekers.", "Dedicated to getting you a great role.", "Close relationships to important decision makers."],
-    employer: ["Employer sample phrase 1", "Employer sample phrase 2", "Employer sample phrase 3"]
+    employer: ["Lorem ipsum dolor sit amet, adipiscing elit 1", "Lorem ipsum dolor sit amet, adipiscing elit 2", "Lorem ipsum dolor sit amet, adipiscing elit 3"]
   };
 
   var getRandomInt = function getRandomInt(min, max) {
@@ -15414,7 +15428,7 @@ module.exports = "/_next/static/images/img1-bf92c43028e0b228ce65b1b68945b507.jpg
 
 /***/ }),
 
-/***/ 6:
+/***/ 5:
 /*!************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2FJacobBroughton%2Fcoding%2Fwork%2FH3-Staffing-Next%2Fpages%2Findex.js ***!
   \************************************************************************************************************************************************/
@@ -15437,5 +15451,5 @@ module.exports = dll_ef0ff7c60362f24a921f;
 
 /***/ })
 
-},[[6,"static/runtime/webpack.js","styles"]]]);
+},[[5,"static/runtime/webpack.js","styles"]]]);
 //# sourceMappingURL=index.js.map

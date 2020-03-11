@@ -1,183 +1,3 @@
-.jobsParent {
-  height: auto; }
-  .jobsParent button {
-    appearance: none;
-    -webkit-appearance: none;
-    background: #ed4f24;
-    color: #ffffff;
-    font-weight: 700; }
-  .jobsParent .jobsMother .jobsMain {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background: #F8F8F8;
-    background-size: cover;
-    padding-bottom: 55vh; }
-    .jobsParent .jobsMother .jobsMain .loadJobBoardBtn {
-      position: absolute;
-      top: 40vh;
-      -webkit-appearance: none;
-      appearance: none;
-      border: none;
-      background: #ed4f24;
-      border-radius: 5px;
-      color: #ffffff;
-      font-size: 1.2rem;
-      font-weight: 900;
-      padding: 0 15px;
-      transition: all 0.2s ease-in-out;
-      z-index: 1;
-      cursor: pointer; }
-    .jobsParent .jobsMother .jobsMain #jb--job-board {
-      position: relative;
-      top: 50px;
-      z-index: 2;
-      background: #ffffff;
-      width: 80%;
-      max-width: 660px;
-      box-shadow: 3px 3px 5px rgba(58, 58, 58, 0.1);
-      border-radius: 3px; }
-      @media (max-width: 450px) {
-        .jobsParent .jobsMother .jobsMain #jb--job-board {
-          width: 95%; } }
-
-/* OVERRIDES !important must be included on all styles */
-/* container for all pages */
-/* main text color default is set here - IMPORTANT */
-/* can change background, or add borders and padding */
-.jb--jobs {
-  color: #000 !important;
-  /* background: #fff !important; */
-  padding: 1rem !important; }
-
-/* page titles */
-.jb--wrapper h2 {
-  color: #333 !important; }
-
-/* links */
-/* search and apply buttons, pagination */
-/* can change background, or add borders, change border-radius and padding */
-.jb--button {
-  background-color: #ed4f24 !important;
-  color: #ffffff !important;
-  border-radius: 6px;
-  font-weight: 700;
-  margin-top: 10px;
-  cursor: pointer !important;
-  display: flex;
-  align-items: center;
-  justify-content: center; }
-
-.jb--button:hover {
-  border: 1px solid #000 !important; }
-
-/* button with arrow when they are at the beginning or end */
-.jb--button.disabled {
-  background-color: #eaeaea !important;
-  border: 1px solid #cecece !important;
-  color: #cecece !important; }
-
-/* button active depending which page of the search results */
-.jb--button-active {
-  background-color: #a9a9a9 !important;
-  border: 1px solid #000 !important;
-  color: #fff !important; }
-
-.jb--wrapper input {
-  border-radius: 6px !important; }
-
-/* height of buttons and form fields */
-.jb--wrapper input,
-button,
-.jb--button {
-  height: 36px !important; }
-
-.nameSubmit {
-  cursor: pointer; }
-
-/* Change the color of the placeholder text in inputs */
-::-webkit-input-placeholder {
-  color: #808080; }
-
-:-ms-input-placeholder {
-  color: #808080; }
-
-::-moz-placeholder {
-  color: #808080; }
-
-:-moz-placeholder {
-  color: #808080; }
-
-/* Changes the loading indicator */
-.jb--loading {
-  color: #d3d3d3;
-  width: 100px; }
-
-/* container that holds search description */
-/* can change background, or add borders and padding */
-.jb--job-listing {
-  background: #fff !important;
-  padding: 1rem !important; }
-
-.jb--job-listing:hover {
-  background: #f7f7f7 !important; }
-
-/* container that holds search description for featured jobs */
-/* can change background, or add borders and padding */
-.jb--job-listing-featured {
-  background: #fff !important;
-  padding: 1rem !important; }
-
-.jb--job-listing-featured:hover {
-  background: #f7f7f7 !important; }
-
-/* featured job label on search results */
-.jb--wrapper .jb--featured-label {
-  background: #555555; }
-
-/* job title on search results */
-/* should pick up <a> color, can change if necessary */
-/* location on search results */
-.jb--location {
-  color: #808080 !important; }
-
-/* date posted on search results */
-.jb--date-posted {
-  color: #000 !important; }
-
-/* job descriptions on search results */
-.jb--description {
-  color: #808080 !important; }
-
-/* job count on bottom of search results */
-.jb--job-count {
-  color: #000 !important; }
-
-/* container for the sidebar on job detail page */
-/* can add background, border, padding */
-/* titles in sidebar */
-.jb--sidebar-title {
-  color: #808080 !important; }
-
-/* content in sidebar */
-.jb--sidebar-content {
-  color: #000 !important; }
-
-/* container for job description on job detail page */
-/* can add background, border, padding */
-/* applying for at top of apply page */
-.jb--applying-for {
-  color: #333 !important; }
-
-/* labels on form field on apply page */
-.jb--label {
-  color: #808080 !important; }
-
-/* accepted file types below resume picker */
-.jb--file-type {
-  color: #666 !important; }
-
 a {
   text-decoration: none;
   color: inherit; }
@@ -1204,6 +1024,75 @@ div .blogMother {
         font-size: 2rem; }
       div .blogMother .blogMain .postGrid .blogPost .blogTitle {
         font-size: 1.15rem; } }
+
+.singleHr {
+  border: 1px #6cb144 solid;
+  width: 100%;
+  margin-bottom: 25px; }
+
+.singleMother {
+  height: calc(100vh - 93px);
+  margin-top: 30px;
+  margin-bottom: 100px; }
+  .singleMother .singleMain {
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; }
+    .singleMother .singleMain .singlePostContainer {
+      position: relative;
+      top: 50px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      align-self: center;
+      max-width: 800px;
+      margin: 0 30px; }
+      .singleMother .singleMain .singlePostContainer .singleTitle {
+        margin-bottom: 20px;
+        align-self: flex-start;
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: 3px 3px 5px rgba(58, 58, 58, 0.1);
+        background: #F8F8F8;
+        border-radius: 3px;
+        padding: 5px 10px; }
+      .singleMother .singleMain .singlePostContainer .singleText {
+        margin-bottom: 10px;
+        white-space: pre-wrap; }
+      .singleMother .singleMain .singlePostContainer .dateTimeSingle {
+        display: flex;
+        flex-direction: row;
+        align-self: flex-end;
+        background: #6cb144;
+        color: #ffffff;
+        padding: 5px 10px;
+        border-radius: 5px; }
+        .singleMother .singleMain .singlePostContainer .dateTimeSingle .singleDate:before {
+          color: #333;
+          content: "\A0    ||| \A0"; }
+        .singleMother .singleMain .singlePostContainer .dateTimeSingle .singleTime, .singleMother .singleMain .singlePostContainer .dateTimeSingle .singleDate {
+          margin: 0; }
+    @media (min-width: 1400px) {
+      .singleMother .singleMain .singlePostContainer {
+        max-width: 1000px; }
+        .singleMother .singleMain .singlePostContainer .singleTitle {
+          font-size: 2.4rem; }
+        .singleMother .singleMain .singlePostContainer .singleText {
+          font-size: 1.2rem;
+          white-space: pre-wrap; } }
+  @media (max-width: 600px) {
+    .singleMother {
+      margin-top: 0; }
+      .singleMother .singleMain .singlePostContainer {
+        margin-top: 50px; }
+        .singleMother .singleMain .singlePostContainer .singleTitle {
+          font-size: 1.3rem; }
+        .singleMother .singleMain .singlePostContainer .singleText {
+          font-size: 1rem; } }
 
 
 /*# sourceMappingURL=styles.chunk.css.map*/

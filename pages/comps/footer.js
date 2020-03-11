@@ -23,9 +23,7 @@ const Footer = () => {
             <div className="careersArea">
               <h3 className="careersHead"> Careers</h3>
               <Link href="/jobs" ><a><p className="careersPara">Search Jobs</p></a></Link>
-              {/* { !user && (
-                    <button className="talentNetworkBtn" onClick={loginWithRedirect}><p className="careersPara">Join Our Talent Network</p></button>
-              )} */}
+              <button className="talentNetworkBtn"><p className="careersPara">Join Our Talent Network</p></button>
             </div>
             <div className="connectArea">
               <h3 className="connectHead">Connect With Us</h3>
